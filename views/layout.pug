@@ -1,0 +1,123 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		title Саламат - центр строительных материалов
+		link(href='https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i,700,900' rel='stylesheet')
+		link(rel="stylesheet" href="./css/main.css")
+		link(rel="stylesheet" href="./css/layout.css")
+		block css
+		script(src="https://use.fontawesome.com/335720a3b2.js")
+		block scripts
+	body.page
+		.page-top-line
+			.page-top-line-wrap.clearfix
+				.nav-social-links
+					.nav-link.nav-social(style='padding:0')
+						span.nav-span Мы в соц. сетях
+						i.fa.fa-lg.fa-facebook(aria-hidden="true").social-icon
+						i.fa.fa-lg.fa-instagram(aria-hidden="true").social-icon
+						i.fa.fa-lg.fa-vk(aria-hidden="true").social-icon
+				.nav-links.clearfix
+					.nav-link.nav-brands
+						span.nav-span Бренды
+					.nav-link.nav-nav-contacts
+						span.nav-span Наши контакты
+					.nav-link.nav-subsribe
+						span.nav-span Подпишитесь
+					.nav-link.nav-write
+						span.nav-span Напишите нам
+					.nav-link.nav-log(style='padding-right: 0')
+						span.nav-span Войти 
+						span(style='color: #999;font-size: 12px;font-weight: 200') или 
+						span.nav-span Зарегистрироваться
+		.page-header
+			.page-header-main
+				.page-header-main-wrap
+					.page-header-logo
+						a(href='home').logo-link.link
+					.page-header-co.clearfix
+						.renters.link-item
+							i.fa.fa-address-book(aria-hidden="true" style='font-size:1.2em').link-icon
+							span.co-link-title Арендаторы
+						.producers.link-item
+							i.fa.fa-truck(aria-hidden="true" style='font-size:1.2em').link-icon
+							span.co-link-title Производители
+						.partners.link-item
+							i.fa.fa-handshake-o(aria-hidden="true" style='font-size:1.2em').link-icon
+							span.co-link-title Партнеры
+					.page-header-search
+						.search-block
+							.search-box-input
+								input(placeholder='поиск...').input-search
+								.search-box-results
+							.search-box-button
+								i.fa.fa-search.button-search(aria-hidden="true" style='font-size: 1.2em; display: block')
+			.page-header-nav
+				.page-header-nav-wrap.clearfix
+					.header-nav-category
+						span.nav-category-title Категории
+						i.fa.fa-angle-down.category-arrow(style='font-size:1.5em')
+						.side-menu-block.page-block
+							ul.menu-list.list
+								each item1, index in lvl1
+									li(data-id= item1.id).menu-item= item1.name
+										.submenu-block.page-block
+											.submenu-img-block(style='background: url(./img/categories_1/= ${)')
+											-var newLn = 0;
+											each item2 in lvl2
+												if newLn == 3
+													- newLn = 0
+													.newLine.clearfix
+												if item2.idparent == item1.id
+													- newLn++
+													.submenu-block-list
+														ul.submenu-list.list
+															span.submenu-list-span(data-id= item2.id)= item2.name
+															- var n = 0;
+															each item3 in lvl3
+																if n < 5 && item3.idparent == item2.id
+																	li.submenu-item
+																		- var name = item3.name
+																		if name.indexOf("(") > -1
+																			- name = name.substring(0, name.indexOf("("))
+																		span.submenu-item-span(data-id= item3.id)= name
+																	- n++
+					.header-nav-menu.clearfix
+						each link in links
+							a.nav-menu-link.link(href= link.link)= link.linktitle
+		.page-content
+			block content
+		//- .page-footer.page-block.mt-block.clearfix
+		//- 	.page-footer-container
+		//- 		.page-footer-aboutus.page-footer-item.mr-block
+		//- 			ul.list.footer-list Новости
+		//- 				li.list-item.footer-list-item Последние новости
+		//- 				li.list-item.footer-list-item Для арендаторов
+		//- 				li.list-item.footer-list-item Саламат вестник
+		//- 		.page-footer-rent.page-footer-item.mr-block
+		//- 			ul.list.footer-list Бренды
+		//- 				li.list-item.footer-list-item Итальянские
+		//- 				li.list-item.footer-list-item Китайские
+		//- 				li.list-item.footer-list-item Прочие
+		//- 		.page-footer-producers.page-footer-item.mr-block
+		//- 			ul.list.footer-list Обратная связь
+		//- 				li.list-item.footer-list-item Клиентам
+		//- 				li.list-item.footer-list-item Арендаторам
+		//- 				li.list-item.footer-list-item Партнерам
+		//- 		.page-footer-contacts.page-footer-item.mr-block
+		//- 			ul.list.footer-list Контакты
+		//- 				li.list-item.footer-list-item Адрес: ул. Шевченко, 204а
+		//- 				li.list-item.footer-list-item Тел: +7 (727) 394 40 82
+		//- 				li.list-item.footer-list-item Аренда: +7 (700) 451 51 80
+		//- 				li.list-item.footer-list-item Эл. адрес: info@tc-salamat.kz
+		//- 		.page-footer-subscribe.page-footer-item
+		//- 			ul.list.footer-list Подписка
+		//- 				li.list-item.footer-list-item 
+		//- 					.subscribe-footer-block
+		//- 						input(type='text' placeholder='Ваш email...').subscribe-footer-input
+		//- 						.subscribe-footer-button Отправить
+		//- 	.page-footer-bottom-info
+		//- 			span powered by node.js
+		script(src='./js/searchbox.js')
+		block scripts

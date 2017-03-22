@@ -1,0 +1,135 @@
+.side-block{
+	float: left;
+	width: 25%;
+	margin-right: 15px;
+}
+	.side-block-item{
+		padding: 20px;
+		border-bottom: 1px solid #e6e7eb;
+	}
+		.side-block-item-main-header{
+			margin-bottom: 20px;
+		}
+			.side-block-item-main-header-title {
+				font-size: 20px;
+			}
+			.side-block-item-header-title{
+				font-weight: 400;
+			}
+		.side-block-item-body{
+			margin: 10px 0;
+			border-top: 1px solid #e6e7eb;
+			border-bottom: 1px solid #e6e7eb;
+			padding: 10px 0;
+		}
+		.side-block-item-body-img{
+			width: 100%;
+			height: auto;
+		}
+		.side-block-item-bottom{
+
+		}
+		.side-block-item-bottom-span{
+			font-size: 12px;
+			color: #1686CC;
+		}
+		.side-block-item-bottom-span:hover{
+			color: #7ecdff;
+		}
+.slide-block:after{
+	content: '';
+	visibility: hidden;
+	clear: both;
+	height: 0;
+}
+.main-block{
+	width: calc(75% - 15px);
+	width: -ms-cala(75% - 15px);
+	width: -moz-calc(75% - 15px);
+	width: -webkit-calc(75% - 15px);
+	float: left;
+}
+
+.salamat-img-block{
+	position: relative;
+	background: url(../img/salamatimg.jpg);
+	height: 300px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+	.salamat-hover-block{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.8);
+	}
+		.hover-about-block{
+			position: absolute;
+			top: 15px;
+			left: 15px;
+			right: 15px;
+			bottom: 15px;
+			border: 1px solid #fff;
+			padding: 20px;
+		}
+			.hover-about-header{
+				margin-bottom: 20px;
+				font-size: 25px;
+				color: #fff;
+				font-weight: 700;
+			}
+			.hover-about-text{
+				font-size: 14px;
+				font-weight: 400;
+				color: #fff;
+			}
+.aboutus-block{
+
+}
+	.aboutus-block-items{
+		padding: 20px 0;
+	}
+		.aboutus-block-item{
+			border-bottom: 1px solid #e6e7eb;
+			padding: 25px 40px;
+		}
+		.aboutus-block-item:nth-last-child(1){
+			border-bottom: none;
+		}
+			.aboutus-block-header{
+
+			}
+				.aboutus-block-header-title{
+					font-weight: 700;
+					font-size: 14px;
+					color: #333;
+				}
+			.aboutus-block-body{
+				margin-top: 20px;
+			}
+				.aboutus-block-body-left{
+					float: left;
+					width: 30%;
+					margin-right: 20px;
+				}
+					.aboutus-block-body-item-img{
+						width: 100%;
+						height: auto;
+					}
+					.under-img-title{
+						font-size: 12px;
+						color: #9e9e9e;
+						font-weight: 400;
+					}
+				.aboutus-block-body-right{
+					float: left;
+					width: -ms-calc(70% - 20px);
+					width: -moz-calc(70% - 20px);
+					width: -webkit-calc(70% - 20px);
+				}
+		.aboutus-text{
+			padding: 20px;
+		}

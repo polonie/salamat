@@ -1,0 +1,49 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+}
+li{
+	list-style: none;
+}
+plan-block{
+
+}
+.floor{
+	display: block;
+	margin: 0 auto;
+}
+.tooltip-block{
+	display: none;
+	position: absolute;
+	height: 150px;
+	background: #fff;
+	border: 1px solid #e0e0e0;
+	color: #666666;
+	padding: 20px;
+	padding-bottom: 0;
+}
+	.tooltip-item{
+		margin-top: 10px;
+	}
+	.tooltip-list-item-floor{
+
+	}
+	.tooltip-list-item-boutique{
+
+	}
+	.tooltip-button{
+		color: #fff;
+		border-radius: 2px;
+		cursor: pointer;
+		text-align: center;
+		padding: 7px 8px;
+		background: #d64242;
+		background-image: -webkit-linear-gradient(bottom right, rgba(243, 122, 101, 0) 0%, #f37a65);
+	}
+.tooltip-block-active{
+	display: block;
+	margin-top: -150px;
+}

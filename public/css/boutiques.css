@@ -1,0 +1,177 @@
+.side-block{
+float: left;
+width: 20%;
+margin-right: 15px;
+}
+	.side-menu-block{
+	position: relative;
+	}
+		.menu-list{
+		list-style: none;
+		}
+			.menu-item{
+			padding: 10px 0 10px 13px;
+			border-left: 2px solid transparent;
+			cursor: pointer;
+			}
+			.menu-item:hover{
+			border-left: 2px solid #f77c7c;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			}
+				.submenu-block{
+					overflow: hidden;
+					z-index: 1000 !important;
+					display: none;
+					position: absolute;
+					top: 0;
+					left: 100%;
+					min-height: 100%;
+					width: 350%;
+					padding-bottom: 20px;
+				}
+				.menu-item:hover .submenu-block{
+					display: block;
+				}
+.submenu-block-list{
+	width: calc((100% - 60px) / 3);
+	margin-top: 20px;
+	margin-left: 20px;
+	float: left;
+}
+.submenu-list{
+
+}
+.submenu-list-span{
+	color: #f55959;
+	cursor: pointer;
+	font-weight: 700;
+}
+.submenu-list-span:hover{
+	color: #ff9f9f;
+}
+.submenu-item{
+	
+}
+.submenu-item-span{
+	cursor: pointer;
+	margin-top: 5px;
+	font-weight: 400;
+}
+.submenu-item-span:hover{
+	color: #ccc;
+}
+.main-block{
+width: calc(80% - 15px);
+width: -ms-cala(80% - 15px);
+width: -moz-calc(80% - 15px);
+width: -webkit-calc(80% - 15px);
+float: left;
+}
+.boutiques-block{
+
+}
+	.boutiques-block-items{
+
+	}
+		.boutiques-block-item{
+			position: relative;
+			padding: 20px;
+			border-bottom: 1px solid #f1f1f1;
+		}
+			.more-arrow{
+				position: absolute;
+				width: 10%;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				text-align: center;
+			}
+				.more-icon{
+					cursor: pointer;
+					position: relative;
+					color: #aaa;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+				.more-icon{
+					color: #484848;
+				}
+		.boutiques-block-item:hover{
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		}
+			.boutiques-block-header{
+				width: 30%;
+				text-align: center;
+			}
+				.boutique-name{
+					font-size: 20px;
+					font-weight: 500;
+					color: #f77c7c;
+				}
+			.boutiques-block-body{
+				width: 100%;
+			}
+				.boutiques-block-left{
+					float: left;
+					width: 30%;
+				}
+					.profile-block{
+						padding-top: 20px;
+						width: 100%;
+						text-align: center;
+					}
+						.profile-img{
+							margin: 0 auto;
+							width: 50%;
+							height: auto;
+						}
+				.boutiques-block-right{
+					float: left;
+					width: 70%;
+				}
+					.boutique-list-items{
+						padding-top: 20px;
+					}
+						.boutique-list-item{
+							padding: 5px 0;
+						}
+							.bord{
+								font-weight: 700;
+							}
+	.boutiques-block-pages{
+		margin-top: 20px;
+		padding: 20px;
+	}
+		.pages-panel{
+			position: relative;
+			text-align: center;
+		}
+			.pages{
+				display: inline-block;
+				margin: 0 auto;
+			}
+				.page-item{
+					cursor: pointer;
+					width: 25px;
+					height: 30px;
+					line-height: 30px;
+					text-align: center;
+					background: #d64242;
+					background-image: linear-gradient(to left top, rgba(243, 122, 101, 0) 0, #f37a65);
+					color: #fff;
+					float: left;
+				}
+				.active-page{
+					background: #fff;
+					color: #f77c7c;
+					border: 1px solid #f77c7c;
+				}
+				.page-item:hover{
+					background: #f77c7c;
+				}
+				.page-item:nth-child(1){
+					border-radius: 3px 0 0 3px;
+				}
+				.page-item:nth-last-child(1){
+					border-radius: 0 3px 3px 0;
+				}

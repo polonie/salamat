@@ -1,0 +1,27 @@
+.side-block{
+float: left;
+width: 20%;
+margin-right: 15px;
+}
+	.boutique-profile-block{
+		padding: 20px;
+	}
+		.profile-logo{
+			margin: 20px 0;
+			width: 100%;
+			position: relative;
+		}
+			.profile-logo-img{
+				display: block;
+				margin: 0 auto;
+			}
+.main-block{
+width: calc(80% - 15px);
+width: -ms-calc(80% - 15px);
+width: -moz-calc(80% - 15px);
+width: -webkit-calc(80% - 15px);
+float: left;
+}
+.boutique-block{
+	padding: 20px;
+}

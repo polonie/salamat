@@ -1,0 +1,35 @@
+extends layout.pug
+block css
+	link(rel="stylesheet" href="./css/contacts.css")
+block scripts
+	script(type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js")
+	script(src='./js/email.js')
+	script(type="text/javascript" src="http://maps.api.2gis.ru/1.0")
+	script(src='./js/map.js')
+block content
+	.contacts-block.page-block.mt-block
+		.contacts-block-container.clearfix
+			.contacts-block-header
+				h2.header-block Наши контакты
+				p.contacts-block-header-text Администрация ТЦ Саламат благодарит вас за проявленный интерес к нашей компании и готова ответить на любые интересующий вас вопросы. Пожалуйста, заполните форму ниже вашими данными и кратким описанием вопроса или предложения. Администрация ТЦ Саламат постарается ответить вам в самые кратчайшие сроки.
+			.form-block.contacts-block-item
+				form(action='', method='post', enctype='multipart/form-data').form-block-form
+					.form-field
+						label.form-label(for='name') Имя:
+						input.form-input.form-input-name(type='text', name='name', placeholder='Ваше имя').form-item
+						label.form-label(for='email') Email:
+						input.form-input.form-input-email(type='email', name='email', placeholder='Ваш эл. адрес').form-item
+						label(for='description') Описание:
+						textarea.form-textarea(name='description', placeholder='Краткое описание').form-item
+						div.form-button.page-button Отправить
+					.form-message
+			.address-block.contacts-block-item
+				.map-block
+					#myMapId.address-map-block.page-block(style= 'position:absolute')
+			.contacts-items.contacts-block-item.mt-block
+				ul.list
+					li.list-item Адрес: ул. Шевченко, 204а
+					li.list-item Тел: +7 (727) 394 40 82
+					li.list-item Аренда: +7 (700) 451 51 80
+					li.list-item Эл. адрес: info@tc-salamat.kz
+	script(src='./js/sendemail.js')

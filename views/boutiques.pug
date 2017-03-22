@@ -1,0 +1,63 @@
+extends layout.pug
+block css
+	link(rel="stylesheet" href="./css/boutiques.css")
+block content
+	.side-block
+		.side-menu-block.page-block
+			.side-header-block Категории
+			ul.menu-list.list
+				each item1 in lvl1
+					li(data-id= item1.id).menu-item= item1.name
+						.submenu-block.page-block
+							each item2 in lvl2
+								if item2.idparent == item1.id
+									.submenu-block-list
+										ul.submenu-list.list
+											span.submenu-list-span(data-id= item2.id)= item2.name
+											- var n = 0;
+											each item3 in lvl3
+												if n < 5 && item3.idparent == item2.id
+													li.submenu-item
+														- var name = item3.name
+														if name.indexOf("(") > -1
+															- name = name.substring(0, name.indexOf("("))
+														span.submenu-item-span(data-id= item3.id)= name
+													- n++
+	.main-block
+		.boutiques-block.page-block
+			.boutiques-block-items
+				each boutique in docs
+					.boutiques-block-item
+						.boutiques-block-header
+							h3.boutique-name= boutique.name
+						.boutiques-block-body.clearfix
+							.boutiques-block-left
+								.profile-block
+									- var url = './img/boutiques/' + boutique.logo
+									image.profile-img(src= url)
+							.boutiques-block-right
+								.more-arrow
+									i.fa.fa-2x.fa-angle-right.more-icon(aria-hidden="true")
+								ul.list.boutique-list-items
+									li.boutique-list-item
+										span.bord Саламат: 
+										span= boutique.salamat
+									li.boutique-list-item
+										span.bord Салон: 
+										span= boutique.salon
+									li.boutique-list-item
+										span.bord Телефон: 
+										span= boutique.phone
+								.boutiques-description-block
+									h3 Описание:
+									p.boutiques-description= boutique.about
+			.boutiques-block-pages
+				- var i = 0
+				if pages
+					div.pages-panel
+						div.pages.clearfix
+							while i < pages
+								div.page-item(data-page= ++i)= i
+block scripts
+	script(src='./js/side-menu.js')
+	script(src='./js/pagination.js')

@@ -1,0 +1,251 @@
+.slider-block{
+width: 100%;
+height: 400px;
+position: relative;
+}
+.slide{
+position: absolute;
+width: 100%;
+height:100%;
+background-position: top;
+background-repeat: no-repeat;
+background-size: cover;
+transition: opacity 2.5s ease;
+}
+.blur-block{
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	width: 200px;
+	height: 200px;
+	background: rgba(255, 255, 255, 0.4);
+	-webkit-filter: blur(2px);
+	-moz-filter: blur(2px);
+	-o-filter: blur(2px);
+	-ms-filter: blur(2px);
+	filter: blur(2px);
+}
+.slide-about{
+position: absolute;
+top: 40%;
+left: 10px;
+padding: 10px;
+}
+.slide-about-heading{
+font-weight: 700;
+font-size: 25px;
+color: #fff;
+}
+.slide-about-text{
+margin-top: 10px;
+width: 250px;
+color: #fff;
+}
+.more-button{
+font-size: 12px;
+background: #d64242;
+background-image: linear-gradient(to left top, rgba(243, 122, 101, 0) 0, #f37a65);
+border-radius: 3px;
+padding: 5px 10px;
+color: #fff;
+display: inline-block;
+margin-top: 10px;
+cursor: pointer;
+}
+.slide-building-materials{
+background-image: url(../img/стройматериалы.jpg);
+opacity: 1;
+}
+.slide-bath{
+background-image: url(../img/bath.jpg);
+color: #333;
+opacity: 0;
+}
+.slide-about-heading--bath{
+color: #333;
+}
+.slide-about-text--bath{
+color: #333;
+}
+.slide-tools{
+background-image: url(../img/instruments.jpg);
+opacity: 0;
+}
+.services-block{
+padding: 40px;
+padding-bottom: 60px;
+}
+.services-header{
+padding-bottom: 20px;
+}
+.services-header__name{
+font-size: 25px;
+color: #333;
+font-size: 700;
+}
+.services-body{
+margin-top: 10px;
+}
+.services-body-item{
+float: left;
+width: calc((100% - 80px) / 3);
+height: 100%;
+}
+.services-body-item:hover{
+background: #f2f3f7;
+}
+.services-body-item__img{
+float: left;
+display: block;
+width: 30px;
+height: 30px;
+}
+.services-body-item-about{
+display: inline-block;
+margin-left: 10px;
+width: calc(100% - 40px);
+}
+.services-body-item-about__heading{
+line-height: 30px;
+font-size: 16px;
+font-weight: 700;
+}
+.services-body-item-about__text{
+font-size: 14px;
+color: #666666;
+}
+.favourites-block{
+padding: 40px 60px;
+}
+.favourites-header{
+padding-bottom: 20px;
+}
+.favourites-header__name{
+/*float: left;*/
+font-size: 25px;
+color: #333;
+font-weight: 700;
+/*border-bottom: 3px solid #ff9244;*/
+}
+.favourites-header__about{
+
+}
+.favourites-body{
+
+}
+.favourites-body-item{
+float: left;
+width: calc((100% - 120px) / 3);
+margin-right: 60px;
+margin-top: 20px;
+}
+.favourites-body-item:nth-last-child(1){
+	margin-right: 0;
+}
+.favourites-body-item__image{
+width: 100%;
+height: auto;
+}
+.favourites-body-item__text{
+
+}
+.favourites-body-item__text-heading{
+color: #333;
+font-weight: 700;
+font-size: 16px;
+}
+.favourites-body-item__text-body{
+/*font-size: 12px;*/
+font-weight: 200;
+color: #666;
+}
+.favourites-body-item__more-button{
+cursor: pointer;
+margin-top: 5px;
+display: inline-block;
+background: #d64242;
+background-image: linear-gradient(to left top, rgba(243, 122, 101, 0) 0, #f37a65);
+color: #fff;
+font-size: 12px;
+border-radius: 2px;
+font-weight: 200;
+padding: 2px 5px;
+}
+.favourites-body-item__more-button:hover{
+background: #f77c7c;
+background-image: linear-gradient(to left top, rgba(243, 122, 101, 0) 0, #f37a65);
+}
+.kitchen-block{
+position: relative;
+width: 100%;
+height: 25vh;
+background-image: url(../img/kitchenbg.jpg);
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+.kitchen-hover-bg{
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0, 0, 0, .3);
+}
+.kitchen-about{
+position: relative;
+top: 50%;
+left: 10%;
+transform: translateY(-50%);
+color: #fff;
+}
+.kitchen-about-heading{
+color: inherit;
+font-size: 30px;
+font-weight: 700;
+}
+.kitchen-about-text{
+color: inherit;
+font-size: 14px;
+font-weight: 200;
+}
+.kitchen-about-button{
+cursor: pointer;
+margin-top: 10px;
+font-size: 12px;
+color: inherit;
+padding: 5px;
+border-radius: 3px;
+display: inline-block;
+background: #d64242;
+background-image: linear-gradient(to left top, rgba(243, 122, 101, 0) 0, #f37a65);
+}
+.kitchen-about-button:hover{
+background: #f77c7c;
+background-image: linear-gradient(to left top, rgba(243, 122, 101, 0) 0, #f37a65);
+}
+.brands-block{
+	height: 160px;
+}
+.brands-items{
+	height: 100%;
+}
+	.brand-item{
+		float: left;
+		height: 100%;
+		width: calc(100% / 5);
+		border-right: 1px solid #e6e7eb;
+	}
+	.brand-item:hover{
+		background: #f2f3f7;
+	}
+	.brand-item:nth-last-child(1){
+		border-right: none;
+	}
+		.brand-logo-img{
+			width: 60%;
+			display: block;
+			margin: 0 auto;
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+		}

@@ -1,0 +1,20 @@
+extends layout.pug
+block css
+	link(rel="stylesheet" href="./css/boutique.css")
+block content
+	.side-block
+		.boutique-profile-block.page-block
+			.profile-logo
+				img.profile-logo-img(src='./img/boutiques/nologo.png')
+			.profile-categories Категории
+				ul.list Categories
+					li.list-item Сантехника
+					li.list-item Стройматериалы
+			.profile-services
+				ul.services
+	.main-block
+		.boutique-block.page-block
+			.boutique-header-block
+				h3.boutique-title
+			.boutique-body-block
+
