@@ -182,7 +182,7 @@
 				float: left;
 				width: 240px;
 				height: 100%;
-				background: #cc0000;
+				background: #bb2b2b;
 				padding: 0 20px;
 			}
 			.header-nav-category:hover .side-menu-block{
@@ -291,7 +291,7 @@
 					margin-right: 0;
 				}
 				.nav-menu-link:hover{
-					color: red;
+					color: #ffd6d6;
 				}
 
 
