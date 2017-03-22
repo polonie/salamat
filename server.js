@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
-var mongoose = require('./db/mongoose');
-// var {Category} = require('./models/Category');
-var Category = require('./db/mongoose').Category;
+// var mongoose = require('./db/mongoose');
+var {Category} = require('./models/Category');
+// var Category = require('./db/mongoose').Category;
 var {Boutique} = require('./models/Boutique');
 const port = process.env.PORT || 3000;
 var category;
