@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
-// var mongoose = require('./db/mongoose');
-var {Category} = require('./models/Category');
-// var Category = require('./db/mongoose').Category;
+var mongoose = require('./db/mongoose');
+// var {Category} = require('./models/Category');
+var Category = require('./db/mongoose').Category;
 var {Boutique} = require('./models/Boutique');
 const port = process.env.PORT || 3000;
 var category;
@@ -10,77 +10,75 @@ var links = [{link: 'home', linktitle: 'Главная'}, {link: 'categories', l
 'План'}, {link: 'company', linktitle: 'О нас'}, {link: 'contacts', linktitle: 'Контакты'}];
 
 
-
-
 app.set('view engine', 'pug');
 app.use(express.static('public'));
 
 
-app.get('/boutiques', (req, res)=>{
-	if (!req.query.name && !req.query.salamat && !req.query.salon && !req.query.phone && !req.query.total && !req.query.about && !req.query.logo && !req.query.picts){
-		Boutique.find().then(
-			(boutiques)=>{
-				res.send({
-					boutiques
-				})
-			},
-			(err)=>{
-				res.status(400).send(err)
-			}
-		);
-		return;
-	}
-	var boutique = new Boutique({
-		name: req.query.name,
-		salamat: req.query.salamat,
-		salon: req.query.salon,
-		phone: req.query.phone,
-		total: req.query.total,
-		about: req.query.about,
-		logo: req.query.logo,
-		picts: req.query.picts
-	});
-	boutique.save().then(
-		(bot)=>{
-			res.send('document has been saved');
-		},
-		(err)=>{
-			res.status(400).send(err);
-		}
-	);
-});
+// app.get('/boutiques', (req, res)=>{
+// 	if (!req.query.name && !req.query.salamat && !req.query.salon && !req.query.phone && !req.query.total && !req.query.about && !req.query.logo && !req.query.picts){
+// 		Boutique.find().then(
+// 			(boutiques)=>{
+// 				res.send({
+// 					boutiques
+// 				})
+// 			},
+// 			(err)=>{
+// 				res.status(400).send(err)
+// 			}
+// 		);
+// 		return;
+// 	}
+// 	var boutique = new Boutique({
+// 		name: req.query.name,
+// 		salamat: req.query.salamat,
+// 		salon: req.query.salon,
+// 		phone: req.query.phone,
+// 		total: req.query.total,
+// 		about: req.query.about,
+// 		logo: req.query.logo,
+// 		picts: req.query.picts
+// 	});
+// 	boutique.save().then(
+// 		(bot)=>{
+// 			res.send('document has been saved');
+// 		},
+// 		(err)=>{
+// 			res.status(400).send(err);
+// 		}
+// 	);
+// });
 
-app.get('/categories', (req, res)=>{
-	if (!req.query.index && !req.query.id && !req.query.idparent && !req.query.name && !req.query.count && !req.query.idgrand){
-		Category.find().then(
-			(categories)=>{
-				res.send({
-					categories
-				})
-			},
-			(err)=>{
-				res.status(400).send(err)
-			}
-		);
-		return;
-	};
-	var category = new Category({
-		index: req.query.index,
-		id: req.query.id,
-		idparent: req.query.idparent,
-		name: req.query.name,
-		count: req.query.count,
-		idgrand: req.query.idgrand
-	});
-	category.save().then(
-		(doc)=>{
-			res.send('document has been saved');
-		},
-		(err)=>{
-			res.status(400).send(err);
-		}
-	);
-});
+// app.get('/categories', (req, res)=>{
+// 	if (!req.query.index && !req.query.id && !req.query.idparent && !req.query.name && !req.query.count && !req.query.idgrand){
+// 		Category.find().then(
+// 			(categories)=>{
+// 				res.send({
+// 					categories
+// 				})
+// 			},
+// 			(err)=>{
+// 				res.status(400).send(err)
+// 			}
+// 		);
+// 		return;
+// 	};
+// 	var category = new Category({
+// 		index: req.query.index,
+// 		id: req.query.id,
+// 		idparent: req.query.idparent,
+// 		name: req.query.name,
+// 		count: req.query.count,
+// 		idgrand: req.query.idgrand
+// 	});
+// 	category.save().then(
+// 		(doc)=>{
+// 			res.send('document has been saved');
+// 		},
+// 		(err)=>{
+// 			res.status(400).send(err);
+// 		}
+// 	);
+// });
 
 
 
@@ -167,93 +165,6 @@ app.use('/:page?', (req, res, next)=>{
 
 
 
-
-
-
 app.listen(port, ()=>{
 	console.log('Server is running...');
 });
-
-
-
-
-// app.get('/boutiques', (req, res)=>{
-// 	if (!req.query.name && !req.query.salamat && !req.query.salon && !req.query.phone && !req.query.total && !req.query.about && !req.query.full && !req.query.logo && !req.query.picts){
-// 		Boutique.find().then(
-// 			(boutiques)=>{
-// 				res.send({
-// 					boutiques
-// 				})
-// 			},
-// 			(err)=>{
-// 				res.status(400).send(err)
-// 			}
-// 		);
-// 		return;
-// 	}
-// 	var boutique = new Boutique({
-// 		name: req.query.name,
-// 		salamat: req.query.salamat,
-// 		salon: req.query.salon,
-// 		phone: req.query.phone,
-// 		total: req.query.total,
-// 		about: req.query.about,
-// 		full: req.query.full,
-// 		logo: req.query.logo,
-// 		picts: req.query.picts
-// 	});
-// 	boutique.save().then(
-// 		(bot)=>{
-// 			res.send('document has been saved');
-// 		},
-// 		(err)=>{
-// 			res.status(400).send(err);
-// 		}
-// 	);
-// });
-
-// app.get('/categories', (req, res)=>{
-// 	if (!req.query.index && !req.query.id && !req.query.idparent && !req.query.name && !req.query.count && !req.query.idgrand){
-// 		Category.find().then(
-// 			(categories)=>{
-// 				res.send({
-// 					categories
-// 				})
-// 			},
-// 			(err)=>{
-// 				res.status(400).send(err)
-// 			}
-// 		);
-// 		return;
-// 	};
-// 	var category = new Category({
-// 		index: req.query.index,
-// 		id: req.query.id,
-// 		idparent: req.query.idparent,
-// 		name: req.query.name,
-// 		count: req.query.count,
-// 		idgrand: req.query.idgrand
-// 	});
-// 	category.save().then(
-// 		(doc)=>{
-// 			res.send('document has been saved');
-// 		},
-// 		(err)=>{
-// 			res.status(400).send(err);
-// 		}
-// 	);
-// });
-
-
-
-// app.get('/delete', (req, res)=>{
-// 	Boutique.remove({}).then((result)=>{
-// 	res.send('Все удалено!')
-// 	});
-// });
-
-// app.get('/deletecat', (req, res)=>{
-// 	Category.remove({}).then((result)=>{
-// 	res.send('Все удалено!')
-// 	});
-// });
