@@ -155,7 +155,9 @@ app.use('/:page?', (req, res, next)=>{
 		page = 'home';
 		data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links: links};
 	}else if(page == 'categories'){
-		data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links: links}
+		data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links: links};
+	}else if (page == 'salamat1-1'){
+		data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links: links};
 	}else{
 		data = {links: links};
 	}
