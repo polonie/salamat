@@ -1,5 +1,14 @@
+.sidebar{
+	width: 20%;
+	min-width: 200px;
+	margin-right: 20px;
+}
+.boutiques-content{
+	width: calc(80% - 20px);
+}
 .boutiques-block{
-
+	background: whitesmoke;
+	border: 1px solid #ededed;
 }
 	.boutiques-block-items{
 
