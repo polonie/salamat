@@ -12,14 +12,9 @@ block content
 							span.clean-filter Сбросить
 						.filter-block-body
 							ul.filtered-items
-								li.list.filtered-item
-									span= grand
-								li.list.filtered-item= parent
-									span   
-									span= parent
-								li.list.filtered-item
-									span     
-									span= category
+								li.grand.filtered-item= grand
+								li.parent.filtered-item= parent
+								li.category.filtered-item= category
 				.boutiques-content
 					.boutiques-block-items
 						each boutique in docs

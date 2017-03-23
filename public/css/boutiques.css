@@ -6,7 +6,7 @@
 }
 .sidebar{
 	float: left;
-	width: 25%;
+	width: 22%;
 	margin-right: 20px;
 }
 	.filter-block{
@@ -22,7 +22,10 @@
 				
 			}
 			.clean-filter{
-
+				display: block;
+				float: right;
+				color: #0084B4;
+				font-weight: 200;
 			}
 		.filter-block-body{
 
@@ -33,9 +36,18 @@
 				.filtered-item{
 
 				}
+				.grand{
+					padding-left: 0;
+				}
+				.parent{
+					padding-left: 10px;
+				}
+				.category{
+					padding-left: 20px;
+				}
 .boutiques-content{
 	float: left;
-	width: calc(75% - 20px);
+	width: calc(78% - 20px);
 }
 	.boutiques-block-items{
 		background: whitesmoke;
