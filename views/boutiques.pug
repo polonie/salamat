@@ -3,45 +3,46 @@ block css
 	link(rel="stylesheet" href="./css/boutiques.css")
 block content
 	.page-content-wrap
-		.page-min-container.clearfix
-			.sidebar
-				.filter-block
-					.filter-block-header
-						h3.filter-title Ваш фильтр
-						span.clean-filter Сбросить
-					.filter-block-body
-						ul.filtered-items
-							li.list.filtered-item grand
-							li.list.filtered-item parent
-							li.list.filtered-item category
-			.boutiques-content
-				.boutiques-block
-					.boutiques-block-items
-						each boutique in docs
-							.boutiques-block-item
-								.boutiques-block-header
-									h3.boutique-name= boutique.name
-								.boutiques-block-body.clearfix
-									.boutiques-block-left
-										.profile-block
-											- var url = './img/boutiques/' + boutique.logo
-											image.profile-img(src= url)
-									.boutiques-block-right
-										.more-arrow
-											i.fa.fa-2x.fa-angle-right.more-icon(aria-hidden="true")
-										ul.list.boutique-list-items
-											li.boutique-list-item
-												span.bord Саламат: 
-												span= boutique.salamat
-											li.boutique-list-item
-												span.bord Салон: 
-												span= boutique.salon
-											li.boutique-list-item
-												span.bord Телефон: 
-												span= boutique.phone
-										.boutiques-description-block
-											h3 Описание:
-											p.boutiques-description= boutique.about
+		.page-min-container
+			.boutiques-page-block.clearfix
+				.sidebar
+					.filter-block
+						.filter-block-header
+							h3.filter-title Ваш фильтр
+							span.clean-filter Сбросить
+						.filter-block-body
+							ul.filtered-items
+								li.list.filtered-item= grand
+								li.list.filtered-item= parent
+								li.list.filtered-item= category
+				.boutiques-content
+					.boutiques-block
+						.boutiques-block-items
+							each boutique in docs
+								.boutiques-block-item
+									.boutiques-block-header
+										h3.boutique-name= boutique.name
+									.boutiques-block-body.clearfix
+										.boutiques-block-left
+											.profile-block
+												- var url = './img/boutiques/' + boutique.logo
+												image.profile-img(src= url)
+										.boutiques-block-right
+											.more-arrow
+												i.fa.fa-2x.fa-angle-right.more-icon(aria-hidden="true")
+											ul.list.boutique-list-items
+												li.boutique-list-item
+													span.bord Саламат: 
+													span= boutique.salamat
+												li.boutique-list-item
+													span.bord Салон: 
+													span= boutique.salon
+												li.boutique-list-item
+													span.bord Телефон: 
+													span= boutique.phone
+											.boutiques-description-block
+												h3 Описание:
+												p.boutiques-description= boutique.about
 			.boutiques-block-pages
 				- var i = 0
 				if pages
