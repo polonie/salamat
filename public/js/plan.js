@@ -18,8 +18,8 @@ document.onclick = (e)=>{
 			.then((docs)=>{
 				console.log(docs);
 				var doc = docs[0];
-				tooltip.style.top = e.clientY + 'px';
-				tooltip.style.left = e.clientX + 'px';
+				tooltip.style.top = e.pageY + 'px';
+				tooltip.style.left = e.pageX + 'px';
 				tooltip.classList.add('tooltip-block-active');
 				title.innerText = doc.name;
 				salamat_field.innerText = `Саламат: ${doc.salamat}`;

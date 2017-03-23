@@ -53,7 +53,7 @@ html{
 .mr-block{
 	margin-right: 40px;
 }
-.list{
+ul,li{
 	list-style: none;
 }
 .link{
