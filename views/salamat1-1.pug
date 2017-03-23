@@ -2,7 +2,13 @@ extends layout.pug
 block css
 	link(rel="stylesheet" href="./css/plan.css")
 block content
-	svg#salamat1-1.floor(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 800 600', style='enable-background:new 0 0 800 600;', xml:space='preserve')
+	.tooltip-block
+		h3.title
+		ul.tooltip-list
+			li.tooltip-list-item-salamat.tooltip-item
+			li.tooltip-list-item-boutique.tooltip-item
+		.tooltip-button.tooltip-item Перейти
+	svg.floor(version='1.1' xmlns='http://www.w3.org/2000/svg' width='800px' height='600px')
 		style(type='text/css').
 			.st0{fill:#FAB4FC;}
 			.st1{fill:#FFFBB3;}
@@ -10,7 +16,7 @@ block content
 			.st3{fill:#CDF9E0;}
 			.st4{fill:none;stroke:#FF7F66;stroke-miterlimit:10;}
 			.st5{fill:#4F4F4F;}
-			.st6{font-family:'MyriadPro-Regular';}
+			.st6{font-family:'Roboto';}
 			.st7{font-size:14px;}
 			.st8{fill:none;stroke:#4F4F4F;stroke-miterlimit:10;}
 			.st9{fill:none;}
