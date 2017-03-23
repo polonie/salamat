@@ -123,18 +123,12 @@ app.get('/boutique', (req, res)=>{
 app.use('/category', (req, res)=>{
 	category = req.query.dataid;
 	Category.find({id: category}, (err, doc)=>{
-		console.log('DOC ============================ ' + doc);
-		console.log('DOCNAME ==================== ' + doc[0].name);
-		var categoryname = doc.name;
-		console.log('CATEGORY NAME =============== ' + categoryname);
-		Category.find({id: doc.idparent}, (err, parent)=>{
-			var parentname = parent.name;
-			console.log('PARENT NAME =============== ' + parentname);
-			Category.find({id: parent.idparent}, (err, grand)=>{
-				var grandname = grand.name;
-				console.log('GRAND NAME =============== ' + grandname);
+		var categoryname = doc[0].name;
+		Category.find({id: doc[0].idparent}, (err, parent)=>{
+			var parentname = parent[0].name;
+			Category.find({id: parent[0].idparent}, (err, grand)=>{
+				var grandname = grand[0].name;
 				Boutique.count({total: new RegExp(category, "i")}, (err, numb)=>{
-					console.log(numb);
 					var numbofpages = (numb % 10)==0 ? (numb/10) : (Math.floor(numb/10)+1); 
 					if (numbofpages == 1){
 						numbofpages = false;
