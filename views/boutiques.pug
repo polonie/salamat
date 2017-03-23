@@ -7,13 +7,19 @@ block content
 			.boutiques-page-block.clearfix
 				.sidebar
 					.filter-block
-						.filter-block-header
-							h3.filter-title Ваш фильтр
-							span.clean-filter Сбросить
+						.filter-block-header.clearfix
+							span.filter-title Ваш фильтр
+							.clean-filter-block
+								i.fa.fa-times(aria-hidden="true")
+								span.clean-filter Сбросить
 						.filter-block-body
 							ul.filtered-items
-								li.grand.filtered-item= grand
-								li.parent.filtered-item= parent
+								li.grand.filtered-item
+									i.fa.fa-level-down(aria-hidden="true")
+									span= grand
+								li.parent.filtered-item
+									i.fa.fa-level-down(aria-hidden="true")
+									span= parent
 								li.category.filtered-item= category
 				.boutiques-content
 					.boutiques-block-items

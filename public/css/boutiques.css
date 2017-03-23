@@ -16,17 +16,18 @@
 	}
 		.filter-block-header{
 			padding-bottom: 10px;
-			border-bottom: 1px solid #e0e0e0;
+			/*border-bottom: 1px solid #e0e0e0;*/
 		}
 			.filter-title{
-				
+				color: inherit;
 			}
-			.clean-filter{
-				display: block;
+			.clean-filter-block{
 				float: right;
-				color: #0084B4;
-				font-weight: 200;
 			}
+				.clean-filter{
+					color: #0084B4;
+					font-weight: 200;
+				}
 		.filter-block-body{
 
 		}
@@ -34,16 +35,8 @@
 
 			}
 				.filtered-item{
-
-				}
-				.grand{
-					padding-left: 0;
-				}
-				.parent{
-					padding-left: 10px;
-				}
-				.category{
-					padding-left: 20px;
+					color: #666;
+					font-weight: 200;
 				}
 .boutiques-content{
 	float: left;
