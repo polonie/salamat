@@ -1,11 +1,10 @@
 .floor-plan-header{
-
+margin-top: 40px;
 }
 	.salamat-title{
 		color: #d2583d;
-		font-size: 30px;
-		font-weight: 500;
-		font-style: italic;
+		font-size: 35px;
+		font-weight: 700;
 		text-align: center;
 	}
 	.floor-title{
