@@ -16,11 +16,12 @@ block content
 							ul.filtered-items
 								li.grand.filtered-item
 									i.fa.fa-level-down(aria-hidden="true")
-									span= grand
+									span.filtered-item-title= grand
 								li.parent.filtered-item
 									i.fa.fa-level-down(aria-hidden="true")
-									span= parent
-								li.category.filtered-item= category
+									span.filtered-item-title= parent
+								li.category.filtered-item
+									span.filtered-item-title= category
 				.boutiques-content
 					.boutiques-block-items
 						each boutique in docs
