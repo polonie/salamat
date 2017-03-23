@@ -12,44 +12,48 @@ block content
 							span.clean-filter Сбросить
 						.filter-block-body
 							ul.filtered-items
-								li.list.filtered-item= grand
+								li.list.filtered-item
+									span= grand
 								li.list.filtered-item= parent
-								li.list.filtered-item= category
+									span   
+									span= parent
+								li.list.filtered-item
+									span     
+									span= category
 				.boutiques-content
-					.boutiques-block
-						.boutiques-block-items
-							each boutique in docs
-								.boutiques-block-item
-									.boutiques-block-header
-										h3.boutique-name= boutique.name
-									.boutiques-block-body.clearfix
-										.boutiques-block-left
-											.profile-block
-												- var url = './img/boutiques/' + boutique.logo
-												image.profile-img(src= url)
-										.boutiques-block-right
-											.more-arrow
-												i.fa.fa-2x.fa-angle-right.more-icon(aria-hidden="true")
-											ul.list.boutique-list-items
-												li.boutique-list-item
-													span.bord Саламат: 
-													span= boutique.salamat
-												li.boutique-list-item
-													span.bord Салон: 
-													span= boutique.salon
-												li.boutique-list-item
-													span.bord Телефон: 
-													span= boutique.phone
-											.boutiques-description-block
-												h3 Описание:
-												p.boutiques-description= boutique.about
-			.boutiques-block-pages
-				- var i = 0
-				if pages
-					div.pages-panel
-						div.pages.clearfix
-							while i < pages
-								div.page-item(data-page= ++i)= i
+					.boutiques-block-items
+						each boutique in docs
+							.boutiques-block-item
+								.boutiques-block-header
+									h3.boutique-name= boutique.name
+								.boutiques-block-body.clearfix
+									.boutiques-block-left
+										.profile-block
+											- var url = './img/boutiques/' + boutique.logo
+											image.profile-img(src= url)
+									.boutiques-block-right
+										.more-arrow
+											i.fa.fa-2x.fa-angle-right.more-icon(aria-hidden="true")
+										ul.list.boutique-list-items
+											li.boutique-list-item
+												span.bord Саламат: 
+												span= boutique.salamat
+											li.boutique-list-item
+												span.bord Салон: 
+												span= boutique.salon
+											li.boutique-list-item
+												span.bord Телефон: 
+												span= boutique.phone
+										.boutiques-description-block
+											h3 Описание:
+											p.boutiques-description= boutique.about
+					.boutiques-block-pages
+						- var i = 0
+						if pages
+							div.pages-panel
+								div.pages.clearfix
+									while i < pages
+										div.page-item(data-page= ++i)= i
 block scripts
 	script(src='./js/side-menu.js')
 	script(src='./js/pagination.js')

@@ -6,12 +6,12 @@
 }
 .sidebar{
 	float: left;
-	width: 20%;
+	width: 25%;
 	margin-right: 20px;
 }
 	.filter-block{
 		border: 1px solid #e0e0e0;
-		border-radius: 3px;
+		border-radius: 4px;
 		padding: 10px;
 	}
 		.filter-block-header{
@@ -35,15 +35,12 @@
 				}
 .boutiques-content{
 	float: left;
-	width: calc(80% - 20px);
-}
-.boutiques-block{
-	background: whitesmoke;
-	border: 1px solid #ededed;
-	border-radius: 3px;
+	width: calc(75% - 20px);
 }
 	.boutiques-block-items{
-
+		background: whitesmoke;
+		border: 1px solid #ededed;
+		border-radius: 4px;
 	}
 		.boutiques-block-item{
 			position: relative;
@@ -69,6 +66,7 @@
 					color: #484848;
 				}
 		.boutiques-block-item:hover{
+			background: #fff;
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 		}
 			.boutiques-block-header{
