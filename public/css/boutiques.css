@@ -1,9 +1,10 @@
 .page-content-wrap{
 	background: #fff;
+	margin-top: 40px;
 }
 .sidebar{
 	float: left;
-	width: 22%;
+	width: 20%;
 	min-width: 200px;
 	margin-right: 20px;
 }
@@ -33,11 +34,12 @@
 				}
 .boutiques-content{
 	float: left;
-	width: calc(78% - 20px);
+	width: calc(80% - 20px);
 }
 .boutiques-block{
 	background: whitesmoke;
 	border: 1px solid #ededed;
+	border-radius: 3px;
 }
 	.boutiques-block-items{
 

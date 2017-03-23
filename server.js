@@ -122,20 +122,39 @@ app.get('/boutique', (req, res)=>{
 
 app.use('/category', (req, res)=>{
 	category = req.query.dataid;
-	Boutique.count({total: new RegExp(category, "i")}, (err, numb)=>{
-		console.log(numb);
-		var numbofpages = (numb % 5)==0 ? (numb/5) : (Math.floor(numb/5)+1); 
-		if (numbofpages == 1){
-			numbofpages = false;
-		};
-		Boutique
-		.find({total: new RegExp(category, "i")})
-		.limit(5)
-		.exec((err, docs)=>{
-			res.render('boutiques', {docs: docs, lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, pages: numbofpages, links: links})
-		});
+	Category.find({id: category}).then((doc)=>{
+		var categoryname = doc.name;
+		Category.find({id: doc.idparent}).then((parent)=>{
+			var parentname = parent.name;
+			Category.find({id: parent.idparent}).then((grand)=>{
+				var grandname = grand.name;
+				Boutique.count({total: new RegExp(category, "i")}, (err, numb)=>{
+					console.log(numb);
+					var numbofpages = (numb % 10)==0 ? (numb/10) : (Math.floor(numb/10)+1); 
+					if (numbofpages == 1){
+						numbofpages = false;
+					};
+					Boutique
+					.find({total: new RegExp(category, "i")})
+					.limit(10)
+					.exec((err, docs)=>{
+						res.render('boutiques', {docs: docs, lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, pages: numbofpages, links: links, parent: parentname, grand: grandname, category: categoryname});
+					});
+				});
+			})
+		})
+
 	});
+
 });
+
+
+
+
+
+
+
+
 
 
 app.use('/boutiques', (req, res)=>{
