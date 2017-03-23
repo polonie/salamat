@@ -122,11 +122,11 @@ app.get('/boutique', (req, res)=>{
 
 app.use('/category', (req, res)=>{
 	category = req.query.dataid;
-	Category.find({id: category}).then((doc)=>{
+	Category.find({id: category}, (err, doc)=>{
 		var categoryname = doc.name;
-		Category.find({id: doc.idparent}).then((parent)=>{
+		Category.find({id: doc.idparent}, (err, parent)=>{
 			var parentname = parent.name;
-			Category.find({id: parent.idparent}).then((grand)=>{
+			Category.find({id: parent.idparent}, (err, grand)=>{
 				var grandname = grand.name;
 				Boutique.count({total: new RegExp(category, "i")}, (err, numb)=>{
 					console.log(numb);
