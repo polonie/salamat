@@ -1,16 +1,19 @@
-*{
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-	font-family: 'Roboto', sans-serif;
-	font-size: 14px;
-}
-li{
-	list-style: none;
-}
-plan-block{
+.floor-plan-header{
 
 }
+	.salamat-title{
+		color: #d2583d;
+		font-size: 30px;
+		font-weight: 500;
+		font-style: italic;
+		text-align: center;
+	}
+	.floor-title{
+		color: #666666;
+		font-size: 20px;
+		font-weight: 200;
+		text-align: center;
+	}
 .floor{
 	display: block;
 	margin: 0 auto;
