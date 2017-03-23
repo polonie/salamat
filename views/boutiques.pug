@@ -2,28 +2,7 @@ extends layout.pug
 block css
 	link(rel="stylesheet" href="./css/boutiques.css")
 block content
-	.side-block
-		.side-menu-block.page-block
-			.side-header-block Категории
-			ul.menu-list.list
-				each item1 in lvl1
-					li(data-id= item1.id).menu-item= item1.name
-						.submenu-block.page-block
-							each item2 in lvl2
-								if item2.idparent == item1.id
-									.submenu-block-list
-										ul.submenu-list.list
-											span.submenu-list-span(data-id= item2.id)= item2.name
-											- var n = 0;
-											each item3 in lvl3
-												if n < 5 && item3.idparent == item2.id
-													li.submenu-item
-														- var name = item3.name
-														if name.indexOf("(") > -1
-															- name = name.substring(0, name.indexOf("("))
-														span.submenu-item-span(data-id= item3.id)= name
-													- n++
-	.main-block
+	.page-container
 		.boutiques-block.page-block
 			.boutiques-block-items
 				each boutique in docs
