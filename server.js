@@ -124,6 +124,7 @@ app.use('/category', (req, res)=>{
 	category = req.query.dataid;
 	Category.find({id: category}, (err, doc)=>{
 		console.log('DOC ============================ ' + doc);
+		console.log('DOCNAME ==================== ' + doc.name);
 		var categoryname = doc.name;
 		console.log('CATEGORY NAME =============== ' + categoryname);
 		Category.find({id: doc.idparent}, (err, parent)=>{
