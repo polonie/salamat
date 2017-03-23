@@ -6,9 +6,9 @@ var boutique_field = document.querySelector('.tooltip-list-item-boutique');
 var tooltip_button = document.querySelector('.tooltip-button');
 var currentBoutique,_salamat,_boutique;
 document.onclick = (e)=>{
-	if (e.target.matches('.st4')){
+	if (e.target.matches('.boutique')){
 		currentBoutique = e.target;
-		_boutique = currentBoutique.getAttribute('id').substr(1);
+		_boutique = currentBoutique.getAttribute('data-boutique').substr(1);
 		_salamat = plan.getAttribute('data-salamat');
 		console.log(`${_salamat}, ${_boutique}`);
 		fetch(`/getboutique?salamat=${_salamat}&boutique=${_boutique}`)
