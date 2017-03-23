@@ -124,10 +124,13 @@ app.use('/category', (req, res)=>{
 	category = req.query.dataid;
 	Category.find({id: category}, (err, doc)=>{
 		var categoryname = doc.name;
+		console.log('CATEGORY NAME =============== ' + categoryname);
 		Category.find({id: doc.idparent}, (err, parent)=>{
 			var parentname = parent.name;
+			console.log('PARENT NAME =============== ' + parentname);
 			Category.find({id: parent.idparent}, (err, grand)=>{
 				var grandname = grand.name;
+				console.log('GRAND NAME =============== ' + grandname);
 				Boutique.count({total: new RegExp(category, "i")}, (err, numb)=>{
 					console.log(numb);
 					var numbofpages = (numb % 10)==0 ? (numb/10) : (Math.floor(numb/10)+1); 
