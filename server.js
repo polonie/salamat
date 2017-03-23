@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
-// var mongoose = require('./db/mongoose');
-var {Category} = require('./models/Category');
-// var Category = require('./db/mongoose').Category;
+var mongoose = require('./db/mongoose');
+// var {Category} = require('./models/Category');
+var Category = require('./db/mongoose').Category;
 var {Boutique} = require('./models/Boutique');
 const port = process.env.PORT || 3000;
 var category;
@@ -14,39 +14,39 @@ app.set('view engine', 'pug');
 app.use(express.static('public'));
 
 
-app.get('/boutiques', (req, res)=>{
-	if (!req.query.name && !req.query.salamat && !req.query.salon && !req.query.phone && !req.query.total && !req.query.about && !req.query.logo && !req.query.picts){
-		Boutique.find().then(
-			(boutiques)=>{
-				res.send({
-					boutiques
-				})
-			},
-			(err)=>{
-				res.status(400).send(err)
-			}
-		);
-		return;
-	}
-	var boutique = new Boutique({
-		name: req.query.name,
-		salamat: req.query.salamat,
-		salon: req.query.salon,
-		phone: req.query.phone,
-		total: req.query.total,
-		about: req.query.about,
-		logo: req.query.logo,
-		picts: req.query.picts
-	});
-	boutique.save().then(
-		(bot)=>{
-			res.send('document has been saved');
-		},
-		(err)=>{
-			res.status(400).send(err);
-		}
-	);
-});
+// app.get('/boutiques', (req, res)=>{
+// 	if (!req.query.name && !req.query.salamat && !req.query.salon && !req.query.phone && !req.query.total && !req.query.about && !req.query.logo && !req.query.picts){
+// 		Boutique.find().then(
+// 			(boutiques)=>{
+// 				res.send({
+// 					boutiques
+// 				})
+// 			},
+// 			(err)=>{
+// 				res.status(400).send(err)
+// 			}
+// 		);
+// 		return;
+// 	}
+// 	var boutique = new Boutique({
+// 		name: req.query.name,
+// 		salamat: req.query.salamat,
+// 		salon: req.query.salon,
+// 		phone: req.query.phone,
+// 		total: req.query.total,
+// 		about: req.query.about,
+// 		logo: req.query.logo,
+// 		picts: req.query.picts
+// 	});
+// 	boutique.save().then(
+// 		(bot)=>{
+// 			res.send('document has been saved');
+// 		},
+// 		(err)=>{
+// 			res.status(400).send(err);
+// 		}
+// 	);
+// });
 
 // app.get('/categories', (req, res)=>{
 // 	if (!req.query.index && !req.query.id && !req.query.idparent && !req.query.name && !req.query.count && !req.query.idgrand){

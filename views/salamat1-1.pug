@@ -2,26 +2,20 @@ extends layout.pug
 block css
 	link(rel="stylesheet" href="./css/plan.css")
 block content
-	.tooltip-block
-		h3.title
-		ul.tooltip-list
-			li.tooltip-list-item-salamat.tooltip-item
-			li.tooltip-list-item-boutique.tooltip-item
-		.tooltip-button.tooltip-item Перейти
-	svg#salamat1_1.floor(version='1.1', xmlns='http://www.w3.org/2000/svg' width='800px' height='600px' data-salamat = '1')
+	svg#salamat1-1.floor(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 800 600', style='enable-background:new 0 0 800 600;', xml:space='preserve')
 		style(type='text/css').
-			.st0{fill:#FCBC49;}
-			.st1{fill:#FFFB64;}
-			.st2{fill:#7789FF;}
-			.st3{fill:#88EDBA;}
-			.st4{fill:none;stroke:#FF7F66;stroke-miterlimit:10;cursor:poiner}
-			.st4:hover{fill:#f77f7f}
+			.st0{fill:#FAB4FC;}
+			.st1{fill:#FFFBB3;}
+			.st2{fill:#B2DBF7;}
+			.st3{fill:#CDF9E0;}
+			.st4{fill:none;stroke:#FF7F66;stroke-miterlimit:10;}
 			.st5{fill:#4F4F4F;}
 			.st6{font-family:'MyriadPro-Regular';}
 			.st7{font-size:14px;}
 			.st8{fill:none;stroke:#4F4F4F;stroke-miterlimit:10;}
 			.st9{fill:none;}
 			.st10{fill:none;stroke:#4F4F4F;stroke-width:0.5;stroke-miterlimit:10;}
+			.st11{fill:none;stroke:#484848;stroke-width:2;stroke-miterlimit:10;}
 		rect.st0(x='618.8', y='131.2', width='43.6', height='24.9')
 		rect.st1(x='458.7', y='217.6', width='29.1', height='33')
 		rect.st2(x='543.7', y='256.1', width='45', height='34')
@@ -78,8 +72,6 @@ block content
 			line.st8(x1='693.4', y1='162.6', x2='684.8', y2='169.3')
 			line.st8(x1='684.8', y1='169.3', x2='693.4', y2='176')
 		polygon#s48.st4(points='538.2,457.1 505.7,457.1 505.7,514 557.9,514 557.9,488.2 538.2,488.2 ')
-		polyline#main(points='673.8,180.6 673.7,514 505.7,514 505.7,295.6 133.3,295.6 102.4,250.6 102.4,86 673.8,86 \
-		673.8,160.2 ')
 		g
 			text.st5.st6.st7(transform='matrix(1 0 0 1 125.2552 217.5898)') 9
 		g
@@ -165,5 +157,6 @@ block content
 			line.st10(x1='124.2', y1='214', x2='116.6', y2='214')
 			line.st10(x1='116.6', y1='214', x2='118', y2='215.4')
 			line.st10(x1='118', y1='212.6', x2='116.6', y2='214')
+		polygon.st11(points='673.8,86 102.4,86 102.4,250.6 538.2,250.6 538.2,488.2 673.8,488.2 ')
 block scripts
 	script(src='./js/plan.js')
