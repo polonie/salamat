@@ -1,10 +1,39 @@
+.page-content-wrap{
+	background: #fff;
+}
 .sidebar{
-	width: 20%;
+	float: left;
+	width: 22%;
 	min-width: 200px;
 	margin-right: 20px;
 }
+	.filter-block{
+		border: 1px solid #e0e0e0;
+		border-radius: 3px;
+		padding: 10px;
+	}
+		.filter-block-header{
+			padding-bottom: 10px;
+			border-bottom: 1px solid #e0e0e0;
+		}
+			.filter-title{
+				
+			}
+			.clean-filter{
+
+			}
+		.filter-block-body{
+
+		}
+			.filtered-items{
+
+			}
+				.filtered-item{
+
+				}
 .boutiques-content{
-	width: calc(80% - 20px);
+	float: left;
+	width: calc(78% - 20px);
 }
 .boutiques-block{
 	background: whitesmoke;
