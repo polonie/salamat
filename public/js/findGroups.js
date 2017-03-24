@@ -6,7 +6,7 @@ for(i=0; i<potentialGroups.length; i++){
 		for(j=0; j<textFields.length; j++){
 			currentBoutique.classList.add(textFields[j].innerHTML);
 		};
-		currentBoutique.setAttribute('data-boutique', currentBoutique.className);
+		currentBoutique.setAttribute('data-boutique', toString(currentBoutique.className));
 		currentBoutique.className = 'boutique';
 	}
 };
