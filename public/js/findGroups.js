@@ -6,9 +6,8 @@ for(i=0; i<potentialGroups.length; i++){
 		for(j=0; j<textFields.length; j++){
 			currentBoutique.classList.add(textFields[j].innerHTML);
 		};
-		console.log(currentBoutique.className);
 		currentBoutique.setAttribute('data-boutique', currentBoutique.classList);
-		currentBoutique.classList.remove();
+		currentBoutique.classList.remove(currentBoutique.classList);
 		currentBoutique.classList.add('boutique');
 	}
 };
