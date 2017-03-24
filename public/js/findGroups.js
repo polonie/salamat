@@ -4,7 +4,7 @@ for(i=0; i<potentialGroups.length; i++){
 		var currentBoutique = potentialGroups[i];
 		var textFields = currentBoutique.querySelectorAll('.st5');
 		for(j=0; j<textFields.length; j++){
-			currentBoutique.classList.add(textFields[i].innerHTML);
+			currentBoutique.classList.add(textFields[j].innerHTML);
 		};
 		currentBoutique.setAttribute('data-boutique', currentBoutique.className);
 		currentBoutique.className = 'boutique';
