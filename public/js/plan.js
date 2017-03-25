@@ -4,7 +4,7 @@ var title = document.querySelector('.title');
 var salamat_field = document.querySelector('.tooltip-list-item-salamat')
 var boutique_field = document.querySelector('.tooltip-list-item-boutique');
 var tooltip_button = document.querySelector('.tooltip-button');
-var currentBoutique,_salamat,_boutique;
+var currentBoutique,_salamat,_boutique, doc;
 document.onclick = (e)=>{
 	if (e.target.matches('.rect') && e.target.parentElement.matches('.boutique')){
 		currentBoutique = e.target.parentElement;
@@ -22,24 +22,17 @@ document.onclick = (e)=>{
 			return response.json();
 		})
 		.then((docs)=>{
-			if (docs){
-				console.log(docs);
-				var doc = docs[0];
-				tooltip.style.top = e.pageY + 'px';
-				tooltip.style.left = e.pageX + 'px';
-				tooltip.classList.add('tooltip-block-active');
-				title.innerText = doc.name;
-				salamat_field.innerText = `Саламат: ${doc.salamat}`;
-				boutique_field.innerText = `Салон: ${doc.salon}`;
+			if (docs.length!=0){
+				doc = docs[0];
 			}else{
-				tooltip.style.top = e.pageY + 'px';
-				tooltip.style.left = e.pageX + 'px';
-				tooltip.classList.add('tooltip-block-active');
-				title.innerText = 'нет информации';
-				salamat_field.innerText = 'нет информации';
-				boutique_field.innerText = 'нет информации';
+				doc = {name: 'нет информации', salamat: 'нет информации', salon: 'нет информации'};
 			}
-
+			tooltip.style.top = e.pageY + 'px';
+			tooltip.style.left = e.pageX + 'px';
+			tooltip.classList.add('tooltip-block-active');
+			title.innerText = doc.name;
+			salamat_field.innerText = `Саламат: ${doc.salamat}`;
+			boutique_field.innerText = `Салон: ${doc.salon}`;
 		});
 };
 
