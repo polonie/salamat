@@ -1,12 +1,13 @@
 .content-wrapper{
 	background: #fff;
+	margin-top: 50px;
 }
 .plan-container{
 	width: 1020px;
 	margin: 0 auto;
 }
 .floor-plan-header{
-margin-top: 40px;
+
 }
 	.salamat-title{
 		color: #f77c7c;
