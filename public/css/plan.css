@@ -69,8 +69,8 @@
 						border: 1px solid #e0e0e0;
 						border-radius: 3px;
 					}
-						.floor-item{
-							
+						.floor-item:hover{
+							background: #f9f9f9;
 						}
 							.floor-item-link{
 								cursor: pointer;
@@ -78,8 +78,8 @@
 								font-weight: 200;
 								color: #666666;
 							}
-							.floor-item-link:hover{
-								background: #f9f9f9;
+							.floor-item-link{
+
 							}
 
 .floor{
