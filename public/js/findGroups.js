@@ -9,6 +9,7 @@ for(i=0; i<potentialGroups.length; i++){
 		currentBoutique.setAttribute('data-boutique', currentBoutique.classList);
 		currentBoutique.classList.add('boutique');
 		var Classes = currentBoutique.classList;
+		console.log(Classes);
 		var arrClasses= Classes.split(' ');
 		console.log(arrClasses);
 		console.log(arrClasses[0]);
