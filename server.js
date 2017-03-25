@@ -8,6 +8,49 @@ const port = process.env.PORT || 3000;
 var category;
 var links = [{link: 'home', linktitle: 'Главная'}, {link: 'categories', linktitle: 'Категории'}, {link: 'rent', linktitle: 'Аренда'}, {link: 'salamat1-3', linktitle: 
 'План'}, {link: 'company', linktitle: 'О нас'}, {link: 'contacts', linktitle: 'Контакты'}];
+var floors = [
+		{
+			tcname: 'Саламат 1',
+			floors: [
+				{floor: '1 этаж', link: 'salamat1-1'},
+				{floor: '2 этаж', link: 'salamat1-2'},
+				{floor: '3 этаж', link: 'salamat1-3'},
+				{floor: '4 этаж', link: 'salamat1-4'}
+			]
+		},
+		{
+			tcname: 'Саламат 2',
+			floors: [
+				{floor: '1 этаж', link: 'salamat2-1'},
+				{floor: '2 этаж', link: 'salamat2-2'}
+			]
+		},
+		{
+			tcname: 'Саламат 3',
+			floors: [
+				{floor: '1 этаж', link: 'salamat3-1'},
+				{floor: '2 этаж', link: 'salamat3-2'},
+				{floor: '3 этаж', link: 'salamat3-3'},
+				{floor: '4 этаж', link: 'salamat3-4'}
+			]
+		},
+		{
+			tcname: 'Саламат 4',
+			floors: [
+				{floor: '1 этаж', link: 'salamat4-1'},
+				{floor: '2 этаж', link: 'salamat4-2'}
+			]
+		},
+		{
+			tcname: 'Саламат 5',
+			floors: [
+				{floor: '1 этаж', link: 'salamat5-1'},
+				{floor: '2 этаж', link: 'salamat5-2'},
+				{floor: '3 этаж', link: 'salamat5-3'},
+				{floor: '4 этаж', link: 'salamat5-4'}
+			]
+		}
+]
 
 
 app.set('view engine', 'pug');
@@ -19,7 +62,7 @@ app.get('testplan', (req,res)=>{
 	res.render('testplan');
 });
 
-app.get('/boutiques', (req, res)=>{
+app.get('/rw-boutiques', (req, res)=>{
 	if (!req.query.name && !req.query.salamat && !req.query.salon && !req.query.phone && !req.query.total && !req.query.about && !req.query.logo && !req.query.picts){
 		Boutique.find().then(
 			(boutiques)=>{
@@ -156,11 +199,11 @@ app.use('/category', (req, res)=>{
 
 
 app.use('/boutiques', (req, res)=>{
-	var offset = (+req.query.pagenumber - 1) * 5;
+	var offset = (+req.query.pagenumber - 1) * 10;
 	Boutique
 		.find({total: new RegExp(category, "i")})
 		.skip(offset)
-		.limit(5)
+		.limit(10)
 		.exec((err, docs)=>{
 			res.send(docs);
 		});
@@ -173,8 +216,8 @@ app.use('/:page?', (req, res, next)=>{
 		data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links: links};
 	}else if(page == 'categories'){
 		data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links: links};
-	}else if (page == 'salamat1-1'){
-		data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links: links};
+	}else if (page.substr(0, 7) == 'salamat'){
+		data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links: links, tcs: floors};
 	}else{
 		data = {links: links};
 	}
