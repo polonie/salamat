@@ -54,12 +54,12 @@
 					cursor: pointer;
 				}
 				.tc-item:hover .floor-selection{
-					display: block;
+					/*display: block;*/
 					opacity: 1;
 				}
 					.floor-selection{
 						z-index: 1000 !important;
-						display: none;
+						/*display: none;*/
 						position: absolute;
 						left: 100%;
 						top: 0;
