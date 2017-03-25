@@ -51,11 +51,14 @@
 					position: relative;
 					color: #f77c7c;
 					font-weight: 200;
+					cursor: pointer;
 				}
 				.tc-item:hover .floor-selection{
 					display: block;
+					opacity: 1;
 				}
 					.floor-selection{
+						z-index: 1000 !important;
 						display: none;
 						position: absolute;
 						left: 100%;
@@ -64,14 +67,15 @@
 						padding: 0 7px;
 						border: 1px solid #e0e0e0;
 						border-radius: 3px;
+						opacity: 0;
+						transition: opacity 3s ease 1s;
 					}
 						.floor-item{
-
+							
 						}
 							.floor-item-link{
 								cursor: pointer;
 								border-radius: 3px;
-								padding: 5px 7px;
 								font-weight: 200;
 								color: #666666;
 							}
