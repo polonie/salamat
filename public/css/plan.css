@@ -42,7 +42,6 @@
 				color: #484848;
 			}
 		.floor-selection-content{
-			padding-left: 15px;
 			width: 50%;
 		}
 			.tc-selection{
@@ -63,16 +62,16 @@
 						top: 0;
 					}
 						.floor-item{
-							padding: 5px;
+
 						}
-							.floor-item-span{
+							.floor-item-link{
 								cursor: pointer;
 								border-radius: 3px;
 								padding: 5px 7px;
 								font-weight: 200;
 								color: #666666;
 							}
-							.floor-item-span:hover{
+							.floor-item-link:hover{
 								background: #f9f9f9;
 							}
 
