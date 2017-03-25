@@ -10,6 +10,7 @@ document.onclick = (e)=>{
 		currentBoutique = e.target.parentElement;
 	}else if(e.target.matches('.str_numb')){
 		currentBoutique = e.target.parentElement.parentElement;
+		console.log(currentBoutique);
 	}else{
 		tooltip.classList.remove('tooltip-block-active');
 		return;
