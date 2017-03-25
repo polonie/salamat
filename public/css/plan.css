@@ -42,7 +42,7 @@
 				color: #484848;
 			}
 		.floor-selection-content{
-			margin-top: 15px;
+			margin-top: 10px;
 			width: 50%;
 		}
 			.tc-selection{
@@ -61,7 +61,7 @@
 						z-index: 1000 !important;
 						display: none;
 						position: absolute;
-						left: 70%;
+						left: 100%;
 						top: 0;
 						width: 100%;
 						padding: 0 7px;
