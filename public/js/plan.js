@@ -6,9 +6,9 @@ var boutique_field = document.querySelector('.tooltip-list-item-boutique');
 var tooltip_button = document.querySelector('.tooltip-button');
 var currentBoutique,_salamat,_boutique;
 document.onclick = (e)=>{
-	if (e.target.matches('.st3')){
+	if (e.target.matches('.rect')){
 		currentBoutique = e.target.parentElement;
-	}else if(e.target.matches('.st4')){
+	}else if(e.target.matches('.str_numb')){
 		currentBoutique = e.target.parentElement.parentElement;
 	}else{
 		tooltip.classList.remove('tooltip-block-active');
