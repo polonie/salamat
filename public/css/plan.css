@@ -38,10 +38,11 @@
 
 		}
 			.selet-floor-title{
-				font-weight: 200;
+				font-weight: 400;
 				color: #484848;
 			}
 		.floor-selection-content{
+			margin-top: 15px;
 			width: 50%;
 		}
 			.tc-selection{
@@ -54,13 +55,11 @@
 					cursor: pointer;
 				}
 				.tc-item:hover .floor-selection{
-					/*display: block;*/
-					opacity: 1;
-					left: 100%;
+					display: block;
 				}
 					.floor-selection{
 						z-index: 1000 !important;
-						/*display: none;*/
+						display: none;
 						position: absolute;
 						left: 70%;
 						top: 0;
@@ -68,8 +67,6 @@
 						padding: 0 7px;
 						border: 1px solid #e0e0e0;
 						border-radius: 3px;
-						opacity: 0;
-						transition: all .3s ease;
 					}
 						.floor-item{
 							
