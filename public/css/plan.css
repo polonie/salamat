@@ -1,10 +1,10 @@
 .content-wrapper{
 	background: #fff;
-	margin-top: 50px;
 }
 .plan-container{
 	width: 1020px;
 	margin: 0 auto;
+	padding-top: 50px;
 }
 .floor-plan-header{
 
