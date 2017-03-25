@@ -1,0 +1,16 @@
+extends layout.pug
+block css
+	link(rel="stylesheet" href="./css/plan.css")
+block content
+	.floor-plan-header
+		h2.salamat-title Саламат 1
+		h3.floor-title второй этаж
+	.tooltip-block
+		h3.title
+		ul.tooltip-list
+			li.tooltip-list-item-salamat.tooltip-item
+			li.tooltip-list-item-boutique.tooltip-item
+		.tooltip-button.tooltip-item Перейти
+
+block scripts
+	script(src='./js/findGroups.js')

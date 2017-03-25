@@ -7,7 +7,6 @@ for(i=0; i<potentialGroups.length; i++){
 			currentBoutique.classList.add(textFields[j].innerHTML);
 		};
 		currentBoutique.setAttribute('data-boutique', currentBoutique.classList);
-		currentBoutique.classList.remove(currentBoutique.classList);
 		currentBoutique.classList.add('boutique');
 	}
 };
