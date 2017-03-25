@@ -8,14 +8,13 @@ var currentBoutique,_salamat,_boutique, doc;
 document.onclick = (e)=>{
 	if (e.target.matches('.rect') && e.target.parentElement.matches('.boutique')){
 		currentBoutique = e.target.parentElement;
+		_boutique = currentBoutique.getAttribute('data-boutique');
 	}else if(e.target.matches('.str_numb')){
-		currentBoutique = e.target.parentElement.parentElement;
-		console.log(currentBoutique);
+		_boutique = e.target.innerHTML;
 	}else{
 		tooltip.classList.remove('tooltip-block-active');
 		return;
 	}
-	_boutique = currentBoutique.getAttribute('data-boutique');
 	_salamat = plan.getAttribute('data-salamat');
 	console.log(`${_salamat}, ${_boutique}`);
 	fetch(`/getboutique?salamat=${_salamat}&boutique=${_boutique}`)
