@@ -48,6 +48,7 @@
 
 			}
 				.tc-item{
+					display: inline-block;
 					position: relative;
 					color: #f77c7c;
 					font-weight: 200;
