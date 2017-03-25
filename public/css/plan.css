@@ -59,6 +59,7 @@
 				}
 					.floor-selection{
 						z-index: 1000 !important;
+						background: #fff;
 						display: none;
 						position: absolute;
 						left: 100%;
