@@ -8,9 +8,10 @@ for(i=0; i<potentialGroups.length; i++){
 		};
 		currentBoutique.setAttribute('data-boutique', currentBoutique.classList);
 		currentBoutique.classList.add('boutique');
-		var Classes = currentBoutique.classList.split(' ');
-		console.log(Classes);
-		console.log(Classes[0]);
+		var Classes = currentBoutique.classList;
+		var arrClasses= Classes.split(' ');
+		console.log(arrClasses);
+		console.log(arrClasses[0]);
 		currentBoutique.classList.remove(Classes[0]);
 	}
 };
