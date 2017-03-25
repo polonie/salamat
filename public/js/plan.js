@@ -23,6 +23,7 @@ document.onclick = (e)=>{
 		})
 		.then((docs)=>{
 			if (docs){
+				console.log(docs);
 				var doc = docs[0];
 				tooltip.style.top = e.pageY + 'px';
 				tooltip.style.left = e.pageX + 'px';
