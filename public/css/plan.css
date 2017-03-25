@@ -20,6 +20,9 @@ margin-top: 40px;
 		font-weight: 200;
 		text-align: center;
 	}
+.plan-wrapper{
+	margin-top: 40px;
+}
 .plan-controller{
 	float: left;
 	margin-right: 20px;
@@ -30,15 +33,40 @@ margin-top: 40px;
 		border: 1px solid #e0e0e0;
 		border-radius: 4px;
 	}
+		.floor-selection-header{
+
+		}
+			.selet-floor-title{
+				font-weight: 200;
+				color: #484848;
+			}
+		.floor-selection-content{
+
+		}
+			.tc-selection{
+
+			}
+				.tc-item{
+					color: #f77c7c;
+					font-weight: 200;
+				}
+					.floor-selection{
+						padding-left: 15px;
+					}
+						.floor-item{
+						}
+							.floor-item-span{
+								padding: 5px;
+								font-weight: 200;
+								color: #666666;
+							}
+							.floor-item-span:hover{
+								background: #whitesmoke;
+							}
 
 .floor{
 	width: 800px;
 	float: left;
-/*	position: relative;
-	top: -70px;
-	margin-top: -40px;
-	display: block;
-	margin: 0 auto;*/
 }
 .tooltip-block{
 	z-index: 1000 !important;

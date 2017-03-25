@@ -3,7 +3,7 @@ block css
 	link(rel="stylesheet" href="./css/plan.css")
 block content
 	.content-wrapper
-		.plan-container.clearfix
+		.plan-container
 			.floor-plan-header
 				h2.salamat-title Саламат 1
 				h3.floor-title первый этаж
@@ -13,185 +13,190 @@ block content
 					li.tooltip-list-item-salamat.tooltip-item
 					li.tooltip-list-item-boutique.tooltip-item
 				.tooltip-button.tooltip-item Перейти
-			.plan-controller
-				.floor-selection-block
-					.floor-selection-header
-						h3.selet-floor-title  Выберите этаж
-					.floor-selection-content
-						ul.tc-selection
-							li.tc-item Саламат 1
-								ul.floor-selection
-									li.floor-item этаж 1
-									li.floor-item этаж 2
-									li.floor-item этаж 3
-									li.floor-item этаж 4
-							li.tc-item Саламат 2
-								ul.floor-selection
-									li.floor-item этаж 1
-									li.floor-item этаж 2
-							li.tc-item Саламат 3
-								ul.floor-selection
-									li.floor-item этаж 1
-									li.floor-item этаж 2
-									li.floor-item этаж 3
-									li.floor-item этаж 4
-							li.tc-item Саламат 4
-								ul.floor-selection
-									li.floor-item этаж 1
-									li.floor-item этаж 2
-							li.tc-item Саламат 5
-								ul.floor-selection
-									li.floor-item этаж 1
-									li.floor-item этаж 2
-									li.floor-item этаж 3
-									li.floor-item этаж 4
-			svg.floor(version='1.1', xmlns='http://www.w3.org/2000/svg', width='800px', height='600px' x="0px"
-			 y="0px" viewBox="0 0 800 600" data-salamat='1')
-				style(type='text/css').
-					.boutique:hover .rect{fill:rgba(255, 128, 128, .45);cursor:pointer}
-					.boutique:hover .str_numb{fill:#FFFFFF}
-					.rect{fill:rgba(255, 255, 255, .1);stroke:#FF7F66;stroke-miterlimit:10;}
-					.str_numb{fill:#4F4F4F;font-family:'Roboto';font-size:14px;user-select:none;cursor:pointer;}
-					.st0{fill:#FAB4FC;}
-					.st1{fill:#FFFBB3;}
-					.st2{fill:#B2DBF7;}
-					.st3{fill:#CDF9E0;}
-					.st8{fill:none;stroke:#4F4F4F;stroke-miterlimit:10;}
-					.st9{fill:none;}
-					.st10{fill:none;stroke:#484848;stroke-width:2;stroke-miterlimit:10;}
-				rect.st0(x='618.8', y='131.2', width='43.6', height='24.9')
-				rect.st1(x='458.7', y='217.6', width='29.1', height='33')
-				rect.st2(x='543.7', y='256.1', width='45', height='34')
-				rect.st2(x='583.9', y='180.6', width='54.4', height='31')
-				rect.st0(x='152.4', y='92.8', width='20', height='28.2')
-				rect.st2(x='172.7', y='86', width='43.7', height='35')
-				polygon.st3(points='650.8,131.2 650.8,98.7 673.9,98.7 673.8,156 662.3,156.1 662.3,131.2 ')
-				g
-					rect#s63.rect(x='414.6', y='221.6', width='22', height='29')
-					text.str_numb(transform='matrix(1 0 0 1 418.9434 241.7035)') 63
-				g
-					rect#s43.rect(x='414.6', y='180.6', width='22', height='27.7')
-					text.str_numb(transform='matrix(1 0 0 1 418.9435 199.5898)') 43
-				g
-					line.st8(x1='717.6', y1='169.3', x2='684.8', y2='169.3')
-					line.st8(x1='693.4', y1='162.6', x2='684.8', y2='169.3')
-					line.st8(x1='684.8', y1='169.3', x2='693.4', y2='176')
-				g
-					rect#s61.rect(x='102.4', y='86', width='26.1', height='70')
-					text.str_numb(transform='matrix(1 0 0 1 112.7312 114.3806)') 61
-				g
-					rect#s8_x5F_1.rect(x='128.5', y='86', width='44.2', height='70')
-					text.str_numb(transform='matrix(1 0 0 1 150.1102 139.9959)') 8
-				g
-					rect#s9.rect(x='216.4', y='86', width='44.2', height='70')
-					text.str_numb(transform='matrix(1 0 0 1 238.5001 114.3804)') 9
-				g
-					rect#s8.rect(x='260.6', y='86', width='50.3', height='70')
-					text.str_numb(transform='matrix(1 0 0 1 283.1249 114.3808)') 8
-				g
-					rect#s7.rect(x='310.9', y='86', width='53.3', height='70')
-					text.str_numb(transform='matrix(1 0 0 1 334.9369 114.3805)') 7
-				g
-					rect#s6.rect(x='364.2', y='86', width='50.3', height='70')
-					text.str_numb(transform='matrix(1 0 0 1 384.7998 114.3805)') 6
-				g
-					rect#s5.rect(x='414.5', y='86', width='44.2', height='70')
-					text.str_numb(transform='matrix(1 0 0 1 433.5501 114.3804)') 5
-				g
-					rect#s4.rect(x='458.7', y='86', width='44.2', height='70')
-					text.str_numb(transform='matrix(1 0 0 1 477.8501 114.3804)') 4
-				g
-					rect#s3.rect(x='502.9', y='86', width='44.2', height='70')
-					text.str_numb(transform='matrix(1 0 0 1 521.9354 114.3804)') 3
-				g
-					rect#s2.rect(x='547.2', y='86', width='44.2', height='70')
-					text.str_numb(transform='matrix(1 0 0 1 566.3 114.3804)') 2
-				g
-					rect#s1.rect(x='591.4', y='86', width='82.4', height='70')
-					text.str_numb(transform='matrix(1 0 0 1 616.9651 114.3803)') 1
-				g
-					rect#s40.rect(x='673.9', y='102', width='25.9', height='38')
-					text.str_numb(transform='matrix(1 0 0 1 679.4716 124.7563)') 40
-				g
-					rect#s10.rect(x='183.9', y='180.6', width='59.3', height='70')
-					text.str_numb(transform='matrix(1 0 0 1 210.7114 215.9957)') 10
-				g
-					rect#s11.rect(x='243.2', y='180.6', width='59.3', height='70')
-					text.str_numb(transform='matrix(1 0 0 1 266.4848 215.9955)') 11
-				g
-					rect#s12.rect(x='302.5', y='180.6', width='112', height='70')
-					text.str_numb(transform='matrix(1 0 0 1 355.2303 215.9958)') 12
-				g
-					polygon#s13.rect(points='583.9,180.6 458.6,180.6 458.6,217.6 487.8,217.6 487.8,250.6 576.8,250.6 576.8,211.6 \
-					583.9,211.6 	')
-					text.str_numb(transform='matrix(1 0 0 1 532.6501 215.9955)') 13
-				g
-					rect#salon14.rect(x='577.1', y='211.6', width='61.1', height='39')
-					text.str_numb(transform='matrix(1 0 0 1 606.0001 234.0895)') 14
-				g
-					polygon#s15.rect(points='673.9,199.6 650.8,231.6 650.8,250.6 673.9,250.6 	')
-					text.str_numb(transform='matrix(1 0 0 1 655.1292 241.0782)') 15
-				g
-					rect.rect(id='s41а', x='673.9', y='199.6', width='25.9', height='30.3')
-					text.str_numb(transform='matrix(1 0 0 1 677.0345 219.756)') 41&acy;
-				g
-					polygon#s58.rect(points='102.4,250.6 202.1,250.6 202.1,295.6 133.3,295.6 	')
-					text.str_numb(transform='matrix(1 0 0 1 162.4036 277.6977)') 58
-				g
-					rect#s59.rect(x='202.4', y='250.6', width='100', height='45')
-					text.str_numb(transform='matrix(1 0 0 1 252.3998 277.6976)') 59
-				g
-					rect#s62.rect(x='414.6', y='250.6', width='44', height='45')
-					text.str_numb(transform='matrix(1 0 0 1 433.5499 277.6974)') 62
-				g
-					rect#s60.rect(x='302.4', y='250.6', width='112.1', height='45')
-					text.str_numb(transform='matrix(1 0 0 1 355.2301 277.6976)') 60
-				g
-					rect#s50.rect(x='458.7', y='250.6', width='38.3', height='45')
-					text.str_numb(transform='matrix(1 0 0 1 473.26 277.6976)') 50
-				g
-					rect#s46.rect(x='497', y='250.6', width='41.2', height='45')
-					text.str_numb(transform='matrix(1 0 0 1 514.2965 277.6973)') 46
-				g
-					rect#s65.rect(x='538.2', y='250.6', width='135.6', height='45')
-					text.str_numb(transform='matrix(1 0 0 1 625.876 277.6982)') 65
-				g
-					rect#s47.rect(x='505.7', y='295.6', width='32.5', height='69')
-					text.str_numb(transform='matrix(1 0 0 1 517.5995 333.3409)') 47
-				g
-					rect.rect(id='s42а', x='673.7', y='445.6', width='26.3', height='68.4')
-					text.str_numb(transform='matrix(1 0 0 1 676.824 481.3571)') 42&acy;
-				g
-					rect#s42.rect(x='673.7', y='390.9', width='26.3', height='54.7')
-					text.str_numb(transform='matrix(1 0 0 1 679.0348 421.9636)') 42
-				g
-					rect#s41.rect(x='673.7', y='328.8', width='26.3', height='61.8')
-					text.str_numb(transform='matrix(1 0 0 1 679.0343 364.5898)') 41
-				g
-					rect#s49.rect(x='505.7', y='402.8', width='32.5', height='38.3')
-					text.str_numb(transform='matrix(1 0 0 1 517.5994 423.8346)') 49
-				g
-					rect.rect(id='s44а', x='505.7', y='364.6', width='32.5', height='38.2')
-					text.str_numb(transform='matrix(1 0 0 1 511.2458 386.8528)') 44&acy;
-				g
-					rect#s46_1_.rect(x='538.2', y='295.6', width='135.6', height='192.7')
-					text.str_numb(transform='matrix(1 0 0 1 605.5995 391.9148)') 46
-				g
-					rect#salon44.rect(x='557.9', y='488.2', width='115.8', height='25.8')
-					text.str_numb(transform='matrix(1 0 0 1 611.0895 505.1219)') 44
-				g
-					polygon#s48.rect(points='538.2,457.1 505.7,457.1 505.7,514 557.9,514 557.9,488.2 538.2,488.2 	')
-					text.str_numb(transform='matrix(1 0 0 1 517.5994 494.8271)') 48
-				g
-					rect.rect(x='128.6', y='180.6', width='55.3', height='70')
-					rect.rect(x='102.4', y='180.6', width='26.2', height='70')
-					text.str_numb(transform='matrix(1 0 0 1 152.2497 215.9958)') 9
-					text.str_numb(transform='matrix(1 0 0 1 112.7312 215.9955)') 9
-				g
-					line.st8(x1='717.6', y1='271', x2='684.8', y2='271')
-					line.st8(x1='693.4', y1='264.3', x2='684.8', y2='271')
-					line.st8(x1='684.8', y1='271', x2='693.4', y2='277.7')
-				polygon.st10(points='673.8,86 102.4,86 102.4,250.6 538.2,250.6 538.2,488.2 673.8,488.2 ')
+			.plan-wrapper.clearfix
+				.plan-controller
+					.floor-selection-block
+						.floor-selection-header
+							h3.selet-floor-title  Выберите этаж
+						.floor-selection-content
+							ul.tc-selection
+								li.tc-item Саламат 1
+									ul.floor-selection
+										li.floor-item
+											span.floor-item-span этаж 1
+										li.floor-item
+											span.floor-item-span этаж 2
+										li.floor-item
+											span.floor-item-span этаж 3
+										li.floor-item
+											span.floor-item-span этаж 4
+								li.tc-item Саламат 2
+									ul.floor-selection
+										li.floor-item этаж 1
+										li.floor-item этаж 2
+								li.tc-item Саламат 3
+									ul.floor-selection
+										li.floor-item этаж 1
+										li.floor-item этаж 2
+										li.floor-item этаж 3
+										li.floor-item этаж 4
+								li.tc-item Саламат 4
+									ul.floor-selection
+										li.floor-item этаж 1
+										li.floor-item этаж 2
+								li.tc-item Саламат 5
+									ul.floor-selection
+										li.floor-item этаж 1
+										li.floor-item этаж 2
+										li.floor-item этаж 3
+										li.floor-item этаж 4
+				svg.floor(version='1.1', xmlns='http://www.w3.org/2000/svg', width='800px', height='600px' x="0px"
+				 y="0px" viewBox="0 0 800 600" data-salamat='1')
+					style(type='text/css').
+						.boutique:hover .rect{fill:rgba(255, 128, 128, .45);cursor:pointer}
+						.boutique:hover .str_numb{fill:#FFFFFF}
+						.rect{fill:rgba(255, 255, 255, .1);stroke:#FF7F66;stroke-miterlimit:10;}
+						.str_numb{fill:#4F4F4F;font-family:'Roboto';font-size:14px;user-select:none;cursor:pointer;}
+						.st0{fill:#FAB4FC;}
+						.st1{fill:#FFFBB3;}
+						.st2{fill:#B2DBF7;}
+						.st3{fill:#CDF9E0;}
+						.st8{fill:none;stroke:#4F4F4F;stroke-miterlimit:10;}
+						.st9{fill:none;}
+						.st10{fill:none;stroke:#484848;stroke-width:2;stroke-miterlimit:10;}
+					rect.st0(x='618.8', y='131.2', width='43.6', height='24.9')
+					rect.st1(x='458.7', y='217.6', width='29.1', height='33')
+					rect.st2(x='543.7', y='256.1', width='45', height='34')
+					rect.st2(x='583.9', y='180.6', width='54.4', height='31')
+					rect.st0(x='152.4', y='92.8', width='20', height='28.2')
+					rect.st2(x='172.7', y='86', width='43.7', height='35')
+					polygon.st3(points='650.8,131.2 650.8,98.7 673.9,98.7 673.8,156 662.3,156.1 662.3,131.2 ')
+					g
+						rect#s63.rect(x='414.6', y='221.6', width='22', height='29')
+						text.str_numb(transform='matrix(1 0 0 1 418.9434 241.7035)') 63
+					g
+						rect#s43.rect(x='414.6', y='180.6', width='22', height='27.7')
+						text.str_numb(transform='matrix(1 0 0 1 418.9435 199.5898)') 43
+					g
+						line.st8(x1='717.6', y1='169.3', x2='684.8', y2='169.3')
+						line.st8(x1='693.4', y1='162.6', x2='684.8', y2='169.3')
+						line.st8(x1='684.8', y1='169.3', x2='693.4', y2='176')
+					g
+						rect#s61.rect(x='102.4', y='86', width='26.1', height='70')
+						text.str_numb(transform='matrix(1 0 0 1 112.7312 114.3806)') 61
+					g
+						rect#s8_x5F_1.rect(x='128.5', y='86', width='44.2', height='70')
+						text.str_numb(transform='matrix(1 0 0 1 150.1102 139.9959)') 8
+					g
+						rect#s9.rect(x='216.4', y='86', width='44.2', height='70')
+						text.str_numb(transform='matrix(1 0 0 1 238.5001 114.3804)') 9
+					g
+						rect#s8.rect(x='260.6', y='86', width='50.3', height='70')
+						text.str_numb(transform='matrix(1 0 0 1 283.1249 114.3808)') 8
+					g
+						rect#s7.rect(x='310.9', y='86', width='53.3', height='70')
+						text.str_numb(transform='matrix(1 0 0 1 334.9369 114.3805)') 7
+					g
+						rect#s6.rect(x='364.2', y='86', width='50.3', height='70')
+						text.str_numb(transform='matrix(1 0 0 1 384.7998 114.3805)') 6
+					g
+						rect#s5.rect(x='414.5', y='86', width='44.2', height='70')
+						text.str_numb(transform='matrix(1 0 0 1 433.5501 114.3804)') 5
+					g
+						rect#s4.rect(x='458.7', y='86', width='44.2', height='70')
+						text.str_numb(transform='matrix(1 0 0 1 477.8501 114.3804)') 4
+					g
+						rect#s3.rect(x='502.9', y='86', width='44.2', height='70')
+						text.str_numb(transform='matrix(1 0 0 1 521.9354 114.3804)') 3
+					g
+						rect#s2.rect(x='547.2', y='86', width='44.2', height='70')
+						text.str_numb(transform='matrix(1 0 0 1 566.3 114.3804)') 2
+					g
+						rect#s1.rect(x='591.4', y='86', width='82.4', height='70')
+						text.str_numb(transform='matrix(1 0 0 1 616.9651 114.3803)') 1
+					g
+						rect#s40.rect(x='673.9', y='102', width='25.9', height='38')
+						text.str_numb(transform='matrix(1 0 0 1 679.4716 124.7563)') 40
+					g
+						rect#s10.rect(x='183.9', y='180.6', width='59.3', height='70')
+						text.str_numb(transform='matrix(1 0 0 1 210.7114 215.9957)') 10
+					g
+						rect#s11.rect(x='243.2', y='180.6', width='59.3', height='70')
+						text.str_numb(transform='matrix(1 0 0 1 266.4848 215.9955)') 11
+					g
+						rect#s12.rect(x='302.5', y='180.6', width='112', height='70')
+						text.str_numb(transform='matrix(1 0 0 1 355.2303 215.9958)') 12
+					g
+						polygon#s13.rect(points='583.9,180.6 458.6,180.6 458.6,217.6 487.8,217.6 487.8,250.6 576.8,250.6 576.8,211.6 \
+						583.9,211.6 	')
+						text.str_numb(transform='matrix(1 0 0 1 532.6501 215.9955)') 13
+					g
+						rect#salon14.rect(x='577.1', y='211.6', width='61.1', height='39')
+						text.str_numb(transform='matrix(1 0 0 1 606.0001 234.0895)') 14
+					g
+						polygon#s15.rect(points='673.9,199.6 650.8,231.6 650.8,250.6 673.9,250.6 	')
+						text.str_numb(transform='matrix(1 0 0 1 655.1292 241.0782)') 15
+					g
+						rect.rect(id='s41а', x='673.9', y='199.6', width='25.9', height='30.3')
+						text.str_numb(transform='matrix(1 0 0 1 677.0345 219.756)') 41&acy;
+					g
+						polygon#s58.rect(points='102.4,250.6 202.1,250.6 202.1,295.6 133.3,295.6 	')
+						text.str_numb(transform='matrix(1 0 0 1 162.4036 277.6977)') 58
+					g
+						rect#s59.rect(x='202.4', y='250.6', width='100', height='45')
+						text.str_numb(transform='matrix(1 0 0 1 252.3998 277.6976)') 59
+					g
+						rect#s62.rect(x='414.6', y='250.6', width='44', height='45')
+						text.str_numb(transform='matrix(1 0 0 1 433.5499 277.6974)') 62
+					g
+						rect#s60.rect(x='302.4', y='250.6', width='112.1', height='45')
+						text.str_numb(transform='matrix(1 0 0 1 355.2301 277.6976)') 60
+					g
+						rect#s50.rect(x='458.7', y='250.6', width='38.3', height='45')
+						text.str_numb(transform='matrix(1 0 0 1 473.26 277.6976)') 50
+					g
+						rect#s46.rect(x='497', y='250.6', width='41.2', height='45')
+						text.str_numb(transform='matrix(1 0 0 1 514.2965 277.6973)') 46
+					g
+						rect#s65.rect(x='538.2', y='250.6', width='135.6', height='45')
+						text.str_numb(transform='matrix(1 0 0 1 625.876 277.6982)') 65
+					g
+						rect#s47.rect(x='505.7', y='295.6', width='32.5', height='69')
+						text.str_numb(transform='matrix(1 0 0 1 517.5995 333.3409)') 47
+					g
+						rect.rect(id='s42а', x='673.7', y='445.6', width='26.3', height='68.4')
+						text.str_numb(transform='matrix(1 0 0 1 676.824 481.3571)') 42&acy;
+					g
+						rect#s42.rect(x='673.7', y='390.9', width='26.3', height='54.7')
+						text.str_numb(transform='matrix(1 0 0 1 679.0348 421.9636)') 42
+					g
+						rect#s41.rect(x='673.7', y='328.8', width='26.3', height='61.8')
+						text.str_numb(transform='matrix(1 0 0 1 679.0343 364.5898)') 41
+					g
+						rect#s49.rect(x='505.7', y='402.8', width='32.5', height='38.3')
+						text.str_numb(transform='matrix(1 0 0 1 517.5994 423.8346)') 49
+					g
+						rect.rect(id='s44а', x='505.7', y='364.6', width='32.5', height='38.2')
+						text.str_numb(transform='matrix(1 0 0 1 511.2458 386.8528)') 44&acy;
+					g
+						rect#s46_1_.rect(x='538.2', y='295.6', width='135.6', height='192.7')
+						text.str_numb(transform='matrix(1 0 0 1 605.5995 391.9148)') 46
+					g
+						rect#salon44.rect(x='557.9', y='488.2', width='115.8', height='25.8')
+						text.str_numb(transform='matrix(1 0 0 1 611.0895 505.1219)') 44
+					g
+						polygon#s48.rect(points='538.2,457.1 505.7,457.1 505.7,514 557.9,514 557.9,488.2 538.2,488.2 	')
+						text.str_numb(transform='matrix(1 0 0 1 517.5994 494.8271)') 48
+					g
+						rect.rect(x='128.6', y='180.6', width='55.3', height='70')
+						rect.rect(x='102.4', y='180.6', width='26.2', height='70')
+						text.str_numb(transform='matrix(1 0 0 1 152.2497 215.9958)') 9
+						text.str_numb(transform='matrix(1 0 0 1 112.7312 215.9955)') 9
+					g
+						line.st8(x1='717.6', y1='271', x2='684.8', y2='271')
+						line.st8(x1='693.4', y1='264.3', x2='684.8', y2='271')
+						line.st8(x1='684.8', y1='271', x2='693.4', y2='277.7')
+					polygon.st10(points='673.8,86 102.4,86 102.4,250.6 538.2,250.6 538.2,488.2 673.8,488.2 ')
 block scripts
 	script(src='./js/findGroups.js')
 	script(src='./js/plan.js')
