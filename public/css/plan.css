@@ -21,6 +21,7 @@ margin-top: 40px;
 	margin: 0 auto;
 }
 .tooltip-block{
+	z-index: 1000 !important;
 	display: none;
 	position: absolute;
 	height: 150px;
