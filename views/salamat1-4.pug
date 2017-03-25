@@ -2,15 +2,30 @@ extends layout.pug
 block css
 	link(rel="stylesheet" href="./css/plan.css")
 block content
-	.floor-plan-header
-		h2.salamat-title Саламат 1
-		h3.floor-title четвертый этаж
-	.tooltip-block
-		h3.title
-		ul.tooltip-list
-			li.tooltip-list-item-salamat.tooltip-item
-			li.tooltip-list-item-boutique.tooltip-item
-		.tooltip-button.tooltip-item Перейти
+	.content-wrapper
+		.plan-container
+			.floor-plan-header
+				h2.salamat-title Саламат 1
+				h3.floor-title четвертый этаж
+			.tooltip-block
+				h3.title
+				ul.tooltip-list
+					li.tooltip-list-item-salamat.tooltip-item
+					li.tooltip-list-item-boutique.tooltip-item
+				.tooltip-button.tooltip-item Перейти
+			.plan-wrapper.clearfix
+				.plan-controller
+					.floor-selection-block
+						.floor-selection-header
+							h3.selet-floor-title Выберите этаж:
+						.floor-selection-content
+							ul.tc-selection
+								each tc in tcs
+									li.tc-item= tc.tcname
+										ul.floor-selection
+											each floor in tc.floors
+												li.floor-item
+													a.link.floor-item-link(href= floor.link)= floor.floor
 	svg.floor(version='1.1', xmlns='http://www.w3.org/2000/svg', width='800px', height='600px' data-salamat='1')
 		style(type='text/css').
 			.boutique:hover .rect{fill:rgba(255, 128, 128, .45);cursor:pointer}
