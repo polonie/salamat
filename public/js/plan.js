@@ -8,28 +8,29 @@ var currentBoutique,_salamat,_boutique;
 document.onclick = (e)=>{
 	if (e.target.matches('.st3')){
 		currentBoutique = e.target.parentElement;
-		_boutique = currentBoutique.getAttribute('data-boutique');
-		_salamat = plan.getAttribute('data-salamat');
-		console.log(`${_salamat}, ${_boutique}`);
-		fetch(`/getboutique?salamat=${_salamat}&boutique=${_boutique}`)
-			.then((response)=>{
-				return response.json();
-			})
-			.then((docs)=>{
-				console.log(docs);
-				var doc = docs[0];
-				tooltip.style.top = e.pageY + 'px';
-				tooltip.style.left = e.pageX + 'px';
-				tooltip.classList.add('tooltip-block-active');
-				title.innerText = doc.name;
-				salamat_field.innerText = `Саламат: ${doc.salamat}`;
-				boutique_field.innerText = `Салон: ${doc.salon}`;
-			});
-
-
+	}else if(e.target.matches('.st4')){
+		currentBoutique = e.target.parentElement.parentElement;
 	}else{
 		tooltip.classList.remove('tooltip-block-active');
-	};
+		return;
+	}
+	_boutique = currentBoutique.getAttribute('data-boutique');
+	_salamat = plan.getAttribute('data-salamat');
+	console.log(`${_salamat}, ${_boutique}`);
+	fetch(`/getboutique?salamat=${_salamat}&boutique=${_boutique}`)
+		.then((response)=>{
+			return response.json();
+		})
+		.then((docs)=>{
+			console.log(docs);
+			var doc = docs[0];
+			tooltip.style.top = e.pageY + 'px';
+			tooltip.style.left = e.pageX + 'px';
+			tooltip.classList.add('tooltip-block-active');
+			title.innerText = doc.name;
+			salamat_field.innerText = `Саламат: ${doc.salamat}`;
+			boutique_field.innerText = `Салон: ${doc.salon}`;
+		});
 };
 
 tooltip_button.onclick = (e)=>{
