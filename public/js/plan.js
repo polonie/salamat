@@ -34,7 +34,7 @@ document.onclick = (e)=>{
 };
 
 tooltip_button.onclick = (e)=>{
-	_boutique = currentBoutique.getAttribute('id').substr(1);
+	_boutique = currentBoutique.getAttribute('data-boutique');
 	_salamat = plan.getAttribute('data-salamat');
 	console.log(`${_salamat}, ${_boutique}`);
 	window.location.href = `/boutique?salamat=${_salamat}&boutique=${_boutique}`;
