@@ -7,7 +7,7 @@ var tooltip_button = document.querySelector('.tooltip-button');
 var currentBoutique,_salamat,_boutique;
 document.onclick = (e)=>{
 	if (e.target.matches('.st3')){
-		currentBoutique = e.target;
+		currentBoutique = e.target.parentElement;
 		_boutique = currentBoutique.getAttribute('data-boutique');
 		_salamat = plan.getAttribute('data-salamat');
 		console.log(`${_salamat}, ${_boutique}`);
