@@ -1,3 +1,10 @@
+.content-wrapper{
+	background: #fff;
+}
+.plan-container{
+	width: 1020px;
+	margin: 0 auto;
+}
 .floor-plan-header{
 margin-top: 40px;
 }
@@ -13,12 +20,19 @@ margin-top: 40px;
 		font-weight: 200;
 		text-align: center;
 	}
+.plan-controller{
+	float: left;
+	margin-right: 20px;
+	width: 200px;
+}
 .floor{
-	position: relative;
+	width: 800px;
+	float: left;
+/*	position: relative;
 	top: -70px;
 	margin-top: -40px;
 	display: block;
-	margin: 0 auto;
+	margin: 0 auto;*/
 }
 .tooltip-block{
 	z-index: 1000 !important;
