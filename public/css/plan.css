@@ -15,9 +15,9 @@ margin-top: 40px;
 		text-align: center;
 	}
 	.floor-title{
-		color: #666666;
+		color: #484848;
 		font-size: 20px;
-		font-weight: 200;
+		font-weight: 400;
 		text-align: center;
 	}
 .plan-wrapper{
@@ -41,7 +41,7 @@ margin-top: 40px;
 				color: #484848;
 			}
 		.floor-selection-content{
-
+			padding-left: 15px;
 		}
 			.tc-selection{
 
@@ -54,7 +54,7 @@ margin-top: 40px;
 						padding-left: 20px;
 					}
 						.floor-item{
-							padding: 5px 0;
+							padding: 7px 5px;
 						}
 							.floor-item-span{
 								cursor: pointer;
