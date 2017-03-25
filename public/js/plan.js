@@ -22,14 +22,23 @@ document.onclick = (e)=>{
 			return response.json();
 		})
 		.then((docs)=>{
-			console.log(docs);
-			var doc = docs[0];
-			tooltip.style.top = e.pageY + 'px';
-			tooltip.style.left = e.pageX + 'px';
-			tooltip.classList.add('tooltip-block-active');
-			title.innerText = doc.name;
-			salamat_field.innerText = `Саламат: ${doc.salamat}`;
-			boutique_field.innerText = `Салон: ${doc.salon}`;
+			if (docs){
+				var doc = docs[0];
+				tooltip.style.top = e.pageY + 'px';
+				tooltip.style.left = e.pageX + 'px';
+				tooltip.classList.add('tooltip-block-active');
+				title.innerText = doc.name;
+				salamat_field.innerText = `Саламат: ${doc.salamat}`;
+				boutique_field.innerText = `Салон: ${doc.salon}`;
+			}else{
+				tooltip.style.top = e.pageY + 'px';
+				tooltip.style.left = e.pageX + 'px';
+				tooltip.classList.add('tooltip-block-active');
+				title.innerText = 'нет информации';
+				salamat_field.innerText = 'нет информации';
+				boutique_field.innerText = 'нет информации';
+			}
+
 		});
 };
 
