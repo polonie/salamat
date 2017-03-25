@@ -51,7 +51,7 @@ margin-top: 40px;
 					font-weight: 200;
 				}
 					.floor-selection{
-						padding-left: 15px;
+						padding-left: 20px;
 					}
 						.floor-item{
 						}
@@ -61,7 +61,7 @@ margin-top: 40px;
 								color: #666666;
 							}
 							.floor-item-span:hover{
-								background: #whitesmoke;
+								background: #e0e0e0;
 							}
 
 .floor{
