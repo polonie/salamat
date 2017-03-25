@@ -9,9 +9,9 @@
 margin-top: 40px;
 }
 	.salamat-title{
-		color: #d2583d;
+		color: #f77c7c;
 		font-size: 35px;
-		font-weight: 700;
+		font-weight: 200;
 		text-align: center;
 	}
 	.floor-title{
@@ -54,12 +54,12 @@ margin-top: 40px;
 						padding-left: 20px;
 					}
 						.floor-item{
-							padding: 7px 5px;
+							padding: 5px;
 						}
 							.floor-item-span{
 								cursor: pointer;
 								border-radius: 3px;
-								padding: 2px 5px;
+								padding: 5px 7px;
 								font-weight: 200;
 								color: #666666;
 							}
