@@ -173,7 +173,7 @@ app.use('/:page?', (req, res, next)=>{
 		data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links: links};
 	}else if(page == 'categories'){
 		data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links: links};
-	}else if (page == 'salamat5-2'){
+	}else if (page == 'salamat5-3'){
 		data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links: links};
 	}else{
 		data = {links: links};
