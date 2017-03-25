@@ -6,7 +6,7 @@ var boutique_field = document.querySelector('.tooltip-list-item-boutique');
 var tooltip_button = document.querySelector('.tooltip-button');
 var currentBoutique,_salamat,_boutique;
 document.onclick = (e)=>{
-	if (e.target.matches('.rect')){
+	if (e.target.matches('.rect') && e.target.parentElement.matches('.boutique')){
 		currentBoutique = e.target.parentElement;
 	}else if(e.target.matches('.str_numb')){
 		currentBoutique = e.target.parentElement.parentElement;

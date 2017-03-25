@@ -1,0 +1,110 @@
+extends layout.pug
+block css
+	link(rel="stylesheet" href="./css/plan.css")
+block content
+	.floor-plan-header
+		h2.salamat-title Саламат 2
+		h3.floor-title первый этаж
+	.tooltip-block
+		h3.title
+		ul.tooltip-list
+			li.tooltip-list-item-salamat.tooltip-item
+			li.tooltip-list-item-boutique.tooltip-item
+		.tooltip-button.tooltip-item Перейти
+	svg.floor(version='1.1', xmlns='http://www.w3.org/2000/svg', width='800px', height='600px' data-salamat='2')
+		style(type='text/css').
+			.boutique:hover .rect{fill:rgba(255, 128, 128, .45);cursor:pointer}
+			.boutique:hover .str_numb{fill:#FFFFFF}
+			.rect{fill:rgba(255, 255, 255, .1);stroke:#FF7F66;stroke-miterlimit:10;}
+			.str_numb{font-family:'Roboto';user-select=none;cursor:pointer}
+			.st0{fill:#B2DBF7;}
+			.st1{fill:#E0C0FF;}
+			.st2{fill:none;stroke:#4F4F4F;stroke-miterlimit:10;}
+			.st4{fill:#4F4F4F;}
+			.st6{font-size:14px;}
+			.st7{fill:none;stroke:#4F4F4F;stroke-width:2;stroke-miterlimit:10;}
+		g
+			rect#s1.rect(x='682.5', y='180.5', width='62', height='214')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 713.1249 287.3808)') 1
+		g
+			rect#s6.rect(x='54.5', y='180.5', width='83', height='78')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 93.1249 221.3808)') 6
+		g
+			rect#s8.rect(x='54.5', y='336.5', width='83', height='57')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 93.1249 368.3808)') 8
+		g
+			rect#s7.rect(x='54.5', y='258.5', width='83', height='78')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 93.1249 297.3808)') 7
+		g
+			rect#s9.rect(x='207.5', y='299.5', width='83', height='94')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 249.1249 347.3808)') 9
+		g
+			rect#s10.rect(x='290.5', y='299.5', width='82', height='95')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 331.1249 347.3808)') 10
+		g
+			rect#s11.rect(x='372.5', y='299.5', width='89', height='94')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 411.1249 347.3808)') 11
+		g
+			rect#s12.rect(x='461.5', y='299.5', width='81', height='94')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 496.1249 347.3808)') 12
+		g
+			rect#s13.rect(x='542.5', y='299.5', width='65', height='94')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 570.1249 347.3808)') 13
+		g
+			rect#salon33.rect(x='607.5', y='353.5', width='24', height='40')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 612.1249 377.3808)') 33
+		g
+			rect#salon28.rect(x='607.5', y='299.5', width='24', height='54')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 612.1249 330.3808)') 28
+		g
+			rect#s5.rect(x='264.5', y='180.5', width='114', height='92')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 321.1249 226.3808)') 5
+		g
+			rect#s4.rect(x='378.5', y='180.5', width='74', height='92')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 417.1249 226.3808)') 4
+		g
+			rect#s3.rect(x='452.5', y='180.5', width='74', height='92')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 489.1249 226.3808)') 3
+		g
+			rect#s2.rect(x='526.5', y='180.5', width='74', height='92')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 561.1249 226.3808)') 2
+		g
+			rect#salon30.rect(x='662.5', y='299.5', width='20', height='38')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 665.1249 322.3808)') 30
+		g
+			rect#salon33_1_.rect(x='635.5', y='180.5', width='26', height='41')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 641.1249 205.3808)') 33
+		g
+			line.st2(x1='658.2', y1='446.5', x2='658.2', y2='413.6')
+			line.st2(x1='664.9', y1='422.2', x2='658.2', y2='413.6')
+			line.st2(x1='658.2', y1='413.6', x2='651.5', y2='422.2')
+		rect.rect(x='207.5', y='180.5', width='57', height='92')
+		line.rect(x1='207.5', y1='299.5', x2='207.5', y2='272.5')
+		rect.st7(x='54.5', y='180.5', width='690', height='213')
+		rect.st0(x='600.5', y='180.5', width='35', height='41')
+		rect.st0(x='218.5', y='180.5', width='35', height='41')
+		rect.st1(x='668.5', y='233.5', width='14', height='14')
+		g
+			line.st2(x1='173.2', y1='446.5', x2='173.2', y2='413.6')
+			line.st2(x1='179.9', y1='422.2', x2='173.2', y2='413.6')
+			line.st2(x1='173.2', y1='413.6', x2='166.5', y2='422.2')
+block scripts
+	script(src='./js/findGroups.js')
+	script(src='./js/plan.js')
