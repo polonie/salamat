@@ -1,0 +1,101 @@
+extends layout.pug
+block css
+	link(rel="stylesheet" href="./css/plan.css")
+block content
+	.floor-plan-header
+		h2.salamat-title Саламат 3
+		h3.floor-title третий этаж
+	.tooltip-block
+		h3.title
+		ul.tooltip-list
+			li.tooltip-list-item-salamat.tooltip-item
+			li.tooltip-list-item-boutique.tooltip-item
+		.tooltip-button.tooltip-item Перейти
+	svg.floor(version='1.1', xmlns='http://www.w3.org/2000/svg', width='800px', height='600px' data-salamat='3')
+		style(type='text/css').
+			.boutique:hover .rect{fill:rgba(255, 128, 128, .45);cursor:pointer}
+			.boutique:hover .str_numb{fill:#FFFFFF}
+			.rect{fill:rgba(255, 255, 255, .1);stroke:#FF7F66;stroke-miterlimit:10;}
+			.str_numb{fill:#4F4F4F;font-family:'Roboto';font-size:14px;user-select:none;cursor:pointer;}
+			.st0{fill:#B2DBF7;}
+			.st1{fill:#CDF9E0;}
+			.st6{fill:none;stroke:#484848;stroke-width:2;stroke-miterlimit:10;}
+		rect.st0(x='420.1', y='220.5', width='22.6', height='44.2')
+		rect.st1(x='347', y='290.2', width='64.7', height='78.3')
+		g
+			path#s1.rect(d='M654.6 247.7c-.4 0-.7 0-1.1 0-.3 0-.5 0-.8 0-.3 0-.5 0-.8.1-.2 0-.5 0-.7.1-.3 0-.6.1-.9.1-.2 0-.5.1-.7.1-.3 0-.6.1-.9.1-.2 0-.4.1-.6.1-.3 0-.5.1-.8.2-.3.1-.5.1-.8.2-.2 0-.4.1-.6.1-.3.1-.5.1-.8.2-.3.1-.7.2-1 .3-.4.1-.7.2-1.1.4-.3.1-.5.2-.7.3-.3.1-.5.2-.8.3-.3.1-.5.2-.8.3-.4.2-.8.4-1.2.6-.3.2-.6.3-1 .5-.4.2-.8.5-1.2.8-.5.3-.9.6-1.3.9-.3.3-.7.5-1 .8-.4.3-.7.6-1 .9-.4.4-.7.7-1 1.1-.4.5-.8 1-1.1 1.5-.3.5-.6 1-.9 1.5-.3.7-.6 1.3-.8 2-.3 1.1-.5 2.3-.5 3.5h-4.3v-44.2h67.1v27.1H654.6z')
+			text.str_numb(transform='matrix(0.9002 0 0 1 653.6696 238.5379)') 1
+		g
+			rect#s16.rect(x='309.6', y='220.5', width='60.9', height='44.2')
+			text.str_numb(transform='matrix(0.9002 0 0 1 335.1071 245.3487)') 16
+		g
+			rect#s7.rect(x='515.6', y='290.2', width='34.6', height='78.3')
+			text.str_numb(transform='matrix(0.9002 0 0 1 531.4995 340.0046)') 7
+		g
+			rect#s9.rect(x='482.9', y='290.2', width='32.7', height='78.3')
+			text.str_numb(transform='matrix(0.9002 0 0 1 499.2962 340.0059)') 9
+		g
+			polygon#s12.rect(points='465.1,290.2 465.1,311.5 449,311.5 449,368.5 482.9,368.5 482.9,290.2 	')
+			text.str_numb(transform='matrix(0.9002 0 0 1 460.1511 340.0062)') 12
+		g
+			rect#s14.rect(x='411.7', y='311.5', width='37.3', height='57.1')
+			text.str_numb(transform='matrix(0.9002 0 0 1 425.3098 340.0065)') 14
+		g
+			rect#s17.rect(x='269.1', y='290.2', width='78.3', height='78.3')
+			text.str_numb(transform='matrix(0.9002 0 0 1 301.7062 333.3117)') 17
+		g
+			rect#s19.rect(x='200.9', y='290.2', width='68.5', height='78.3')
+			text.str_numb(transform='matrix(0.9002 0 0 1 229.287 333.3116)') 19
+		g
+			rect#s21.rect(x='141.3', y='290.2', width='59.3', height='78.3')
+			text.str_numb(transform='matrix(0.9002 0 0 1 166.5237 333.3116)') 21
+		g
+			rect#s23.rect(x='90.3', y='290.2', width='50.8', height='78.3')
+			text.str_numb(transform='matrix(0.9002 0 0 1 110.3439 333.3115)') 23
+		g
+			rect#s25.rect(x='35.3', y='290.2', width='55', height='78.3')
+			text.str_numb(transform='matrix(0.9002 0 0 1 57.6753 333.3115)') 25
+		g
+			rect#s24.rect(x='35.3', y='220.5', width='97.3', height='44.2')
+			text.str_numb(transform='matrix(0.9002 0 0 1 78.3039 245.3492)') 24
+		g
+			rect#s22.rect(x='132.6', y='220.5', width='57.7', height='44.2')
+			text.str_numb(transform='matrix(0.9002 0 0 1 157.7234 245.3491)') 22
+		g
+			rect#s20.rect(x='190.3', y='220.5', width='65.4', height='44.2')
+			text.str_numb(transform='matrix(0.9002 0 0 1 219.2016 245.3489)') 20
+		g
+			rect#s18.rect(x='255.7', y='220.5', width='53.8', height='44.2')
+			text.str_numb(transform='matrix(0.9002 0 0 1 276.5906 245.3484)') 18
+		g
+			rect#s13.rect(x='370.4', y='220.5', width='49.6', height='44.2')
+			text.str_numb(transform='matrix(0.9002 0 0 1 389.4211 245.3488)') 13
+		g
+			rect#s3.rect(x='692.6', y='304.4', width='71.7', height='64.1')
+			text.str_numb(transform='matrix(0.9002 0 0 1 725.8202 340.0065)') 3
+		g
+			path#s4.rect(d='M633.6 297.3c5.1 4.2 14.5 7.1 25.4 7.1h33.6v64.1h-58.9V297.3z')
+			text.str_numb(transform='matrix(0.9002 0 0 1 661.0967 340.0055)') 4
+		g
+			path.rect(id='s5а', d='M633.6 297.3c-2.5-2.1-3.9-4.5-3.9-7.1h-51.5v78.3h55.5V297.3z')
+			text.str_numb(transform='matrix(0.9002 0 0 1 601.1003 340.0051)') 5a
+		g
+			rect#s5.rect(x='550.3', y='290.2', width='27.9', height='78.3')
+			text.str_numb(transform='matrix(0.9002 0 0 1 562.3309 340.0042)') 5
+		g
+			rect#s2.rect(x='692.6', y='264.7', width='71.7', height='39.7')
+			text.str_numb(transform='matrix(0.9002 0 0 1 725.8206 288.1487)') 2
+		g
+			rect#s6-7-8.rect(x='442.7', y='220.5', width='182.7', height='44.2')
+			text.str_numb(transform='matrix(0.9002 0 0 1 494.959 245.349)') 6
+			text.str_numb(transform='matrix(0.9002 0 0 1 531.4994 245.349)') 7
+			text.str_numb(transform='matrix(0.9002 0 0 1 567.6218 245.3485)') 8
+		g
+			rect.rect(id='s1а', x='692.6', y='220.5', width='71.7', height='44.2')
+			text.str_numb(transform='matrix(0.9002 0 0 1 722.6365 245.3487)') 1a
+			g
+				text.str_numb(transform='matrix(0.9002 0 0 1 712.1174 258.1166)') &pcy;&ucy;&scy;&tcy;&ucy;&iecy;&tcy;
+		rect.st6(x='35.3', y='220.5', width='729', height='148')
+block scripts
+	script(src='./js/findGroups.js')
+	script(src='./js/plan.js')
