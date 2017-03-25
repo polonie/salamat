@@ -1,0 +1,96 @@
+extends layout.pug
+block css
+	link(rel="stylesheet" href="./css/plan.css")
+block content
+	.floor-plan-header
+		h2.salamat-title Саламат 2
+		h3.floor-title второй этаж
+	.tooltip-block
+		h3.title
+		ul.tooltip-list
+			li.tooltip-list-item-salamat.tooltip-item
+			li.tooltip-list-item-boutique.tooltip-item
+		.tooltip-button.tooltip-item Перейти
+	svg.floor(version='1.1', xmlns='http://www.w3.org/2000/svg', width='800px', height='600px' data-salamat='2')
+		style(type='text/css').
+			.boutique:hover .rect{fill:rgba(255, 128, 128, .45);cursor:pointer}
+			.boutique:hover .str_numb{fill:#FFFFFF}
+			.rect{fill:rgba(255, 255, 255, .1);stroke:#FF7F66;stroke-miterlimit:10;}
+			.str_numb{fill:#4F4F4F;font-family:'Roboto';font-size:14px;user-select=none;cursor:pointer}
+			.st0{fill:#B2DBF7;}
+			.st5{fill:none;stroke:#484848;stroke-width:2;stroke-miterlimit:10;}
+		g
+			rect#s25.rect(x='543.5', y='300.5', width='59', height='92')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 569.1249 349.3808)') 25
+		g
+			rect#s24.rect(x='462.5', y='300.5', width='81', height='92')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 498.1249 349.3808)') 24
+		g
+			rect#s22.rect(x='292.5', y='300.5', width='89', height='92')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 331.1249 349.3808)') 22
+		g
+			rect#s21.rect(x='210.5', y='300.5', width='82', height='93')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 245.1249 349.3808)') 21
+		g
+			rect#s20.rect(x='127.5', y='300.5', width='83', height='92')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 162.1249 349.3808)') 20
+		g
+			rect#s19.rect(x='55.5', y='179.5', width='72', height='213')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 86.1249 286.3808)') 19
+		g
+			rect#s18.rect(x='127.5', y='179.5', width='81', height='86')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 162.1249 226.3808)') 18
+		g
+			rect#s29.rect(x='245.5', y='231.5', width='20', height='34')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 249.1249 252.3808)') 29
+		g
+			rect#s17.rect(x='265.5', y='179.5', width='114', height='86')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 314.1249 226.3808)') 17
+		g
+			rect#s16.rect(x='379.5', y='179.5', width='74', height='86')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 411.1249 226.3808)') 16
+		g
+			rect#s15.rect(x='453.5', y='179.5', width='74', height='86')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 484.1249 226.3808)') 15
+		g
+			rect#s14.rect(x='527.5', y='179.5', width='74', height='86')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 559.1249 226.3808)') 14
+		g
+			rect#s31.rect(x='601.5', y='220.5', width='20', height='32')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 605.1249 241.3808)') 31
+		g
+			rect#s26.rect(x='602.5', y='300.5', width='81', height='92')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 636.1249 349.3808)') 26
+		g
+			rect#s23.rect(x='381.5', y='300.5', width='81', height='92')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 416.1249 349.3808)') 23
+			g
+				text.str_numb(transform='matrix(1 0 0 1 401.9316 368.3477)') &pcy;&ucy;&scy;&tcy;&ucy;&iecy;&tcy;
+		g
+			rect#s27.rect(x='683.5', y='179.5', width='62', height='213')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 709.1249 286.3808)') 27
+			g
+				text.str_numb(transform='matrix(1 0 0 1 691.9316 305.3477)') &pcy;&ucy;&scy;&tcy;&ucy;&iecy;&tcy;
+		rect.st0(x='601.5', y='179.5', width='35', height='41')
+		rect.st0(x='219.5', y='179.5', width='35', height='41')
+		rect.rect(x='208.5', y='179.5', width='57', height='86')
+		rect.st5(x='55.5', y='179.5', width='690', height='213')
+block scripts
+	script(src='./js/findGroups.js')
+	script(src='./js/plan.js')
