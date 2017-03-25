@@ -14,6 +14,11 @@ app.set('view engine', 'pug');
 app.use(express.static('public'));
 
 
+
+app.get('testplan', (req,res)=>{
+	res.render('testplan');
+});
+
 app.get('/boutiques', (req, res)=>{
 	if (!req.query.name && !req.query.salamat && !req.query.salon && !req.query.phone && !req.query.total && !req.query.about && !req.query.logo && !req.query.picts){
 		Boutique.find().then(
