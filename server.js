@@ -53,7 +53,7 @@ var floors = [
 ];
 
 
-var _data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links: links};
+// var _data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links: links};
 
 
 app.set('view engine', 'pug');
