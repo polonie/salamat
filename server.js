@@ -88,33 +88,70 @@ app.use('/category', (req, res)=>{
 	category = req.query.dataid;
 	Category.find({id: category}, (err, doc)=>{
 		var categoryname = doc[0].name;
-		Category.find({id: doc[0].idparent}, (err, parent)=>{
-			var parentname = parent[0].name;
-			Category.find({id: parent[0].idparent}, (err, grand)=>{
-				var grandname = grand[0].name;
-				Boutique.count({total: new RegExp(category, "i")}, (err, numb)=>{
-					var numbofpages = (numb % 10)==0 ? (numb/10) : (Math.floor(numb/10)+1); 
-					if (numbofpages == 1){
-						numbofpages = false;
-					};
-					Boutique
-					.find({total: new RegExp(category, "i")})
-					.limit(10)
-					.exec((err, docs)=>{
-						var data = _data;
-						data.docs = docs;
-						data.pages = numbofpages;
-						data.parent = parentname;
-						data.grand = grandname;
-						data.category = categoryname;
-						res.render('boutiques', data);
+		if (doc[0].idparent != '@'){
+			Category.find({id: doc[0].idparent}, (err, parent)=>{
+				var parentname = parent[0].name;
+				if (parent[0].idparent != '@'){
+					Category.find({id: parent[0].idparent}, (err, grand)=>{
+						var grandname = grand[0].name;
+						Boutique.count({total: new RegExp(category, "i")}, (err, numb)=>{
+							var numbofpages = (numb % 10)==0 ? (numb/10) : (Math.floor(numb/10)+1); 
+							if (numbofpages == 1){
+								numbofpages = false;
+							};
+							Boutique
+							.find({total: new RegExp(category, "i")})
+							.limit(10)
+							.exec((err, docs)=>{
+								var data = _data;
+								data.docs = docs;
+								data.pages = numbofpages;
+								data.parent = parentname;
+								data.grand = grandname;
+								data.category = categoryname;
+								res.render('boutiques', data);
+							});
+						});
+					})
+				}else{
+					Boutique.count({total: new RegExp(category, "i")}, (err, numb)=>{
+						var numbofpages = (numb % 10)==0 ? (numb/10) : (Math.floor(numb/10)+1); 
+						if (numbofpages == 1){
+							numbofpages = false;
+						};
+						Boutique
+						.find({total: new RegExp(category, "i")})
+						.limit(10)
+						.exec((err, docs)=>{
+							var data = _data;
+							data.docs = docs;
+							data.pages = numbofpages;
+							data.parent = parentname;
+							data.category = categoryname;
+							res.render('boutiques', data);
+						});
 					});
-				});
+				}
 			})
-		})
-
+		}else{
+			Boutique.count({total: new RegExp(category, "i")}, (err, numb)=>{
+				var numbofpages = (numb % 10)==0 ? (numb/10) : (Math.floor(numb/10)+1); 
+				if (numbofpages == 1){
+					numbofpages = false;
+				};
+				Boutique
+				.find({total: new RegExp(category, "i")})
+				.limit(10)
+				.exec((err, docs)=>{
+					var data = _data;
+					data.docs = docs;
+					data.pages = numbofpages;
+					data.category = categoryname;
+					res.render('boutiques', data);
+				});
+			});
+		}
 	});
-
 });
 
 

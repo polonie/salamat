@@ -14,12 +14,14 @@ block content
 								span.clean-filter Сбросить
 						.filter-block-body
 							ul.filtered-items
-								li.grand.filtered-item
-									i.fa.fa-level-down(aria-hidden="true")
-									span.filtered-item-title= grand
-								li.parent.filtered-item
-									i.fa.fa-level-down(aria-hidden="true")
-									span.filtered-item-title= parent
+								if grand
+									li.grand.filtered-item
+										i.fa.fa-level-down(aria-hidden="true")
+										span.filtered-item-title= grand
+								if parent
+									li.parent.filtered-item
+										i.fa.fa-level-down(aria-hidden="true")
+										span.filtered-item-title= parent
 								li.category.filtered-item
 									span.filtered-item-title= category
 				.boutiques-content
