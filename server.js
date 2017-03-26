@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
-// var mongoose = require('./db/mongoose');
-var {Category} = require('./models/Category');
-// var Category = require('./db/mongoose').Category;
+var mongoose = require('./db/mongoose');
+// var {Category} = require('./models/Category');
+var Category = require('./db/mongoose').Category;
 var {Boutique} = require('./models/Boutique');
 const port = process.env.PORT || 3000;
 var category;
@@ -53,7 +53,7 @@ var floors = [
 ];
 
 
-// var _data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links: links};
+var _data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links: links};
 
 
 app.set('view engine', 'pug');
