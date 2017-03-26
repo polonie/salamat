@@ -35,7 +35,8 @@
 					padding: 20px;
 				}
 					.boutique-content-header{
-
+						padding-bottom: 10px;
+						border-bottom: 1px solid #e0e0e0; 
 					}
 						.boutique-name{
 				
@@ -46,7 +47,7 @@
 								color: #333;
 							}
 					.boutique-content-body{
-						margin-top: 40px;
+						margin-top: 20px;
 					}
 						.boutique-content-list{
 
@@ -63,20 +64,23 @@
 									}
 									.boutique-info-label-span{
 										color: #484848;
+										font-weight: 400;
 									}
 									.boutique-info-value-span{
 										color: #666666;
+										margin-left: 10px;
 									}
 					.boutique-content-decription{
 						margin-top: 20px;
 					}
 						.boutique-decription-title{
-							font-size: 20px;
+							font-size: 10px;
 							padding-bottom: 15px;
 							font-weight: 200;
 							border-bottom: 1px solid #e0e0e0;
 						}
 						.boutique-description-text{
+							margin-top: 15px;
 							font-size: 14px;
 							color: #666666;
 						}
@@ -97,6 +101,10 @@
 						}
 							.boutique-photos-item{
 								float: left;
+								margin-right: 20px;
+							}
+							.boutique-photos-item:nth-last-child(1){
+								margin-right: 0;
 							}
 								.boutique-photo-img{
 									width: 128px;
