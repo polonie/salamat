@@ -62,7 +62,11 @@ min-height: 100%;
 
 				}
 					.rent-list{
-						margin-top: 15px;
+						padding: 10px 0;
+						border-radius: 4px;
+					}
+					.rent-list:hover{
+						background: #f9f9f9;
 					}
 					.rent-list:nth-child(1){
 						margin-top: 0;
@@ -80,6 +84,7 @@ min-height: 100%;
 							font-weight: 200;
 						}
 						.map-link{
+							color: #4da2d8;
 							float: right;
 							color: blue;
 							font-weight: 200;
