@@ -35,8 +35,7 @@
 					padding: 20px;
 				}
 					.boutique-content-header{
-						padding-bottom: 10px;
-						border-bottom: 1px solid #e0e0e0; 
+
 					}
 						.boutique-name{
 				
@@ -47,7 +46,7 @@
 								color: #333;
 							}
 					.boutique-content-body{
-						margin-top: 20px;
+						margin-top: 30px;
 					}
 						.boutique-content-list{
 
@@ -71,10 +70,10 @@
 										margin-left: 10px;
 									}
 					.boutique-content-decription{
-						margin-top: 20px;
+						margin-top: 30px;
 					}
 						.boutique-decription-title{
-							font-size: 10px;
+							font-size: 20px;
 							padding-bottom: 15px;
 							font-weight: 200;
 							border-bottom: 1px solid #e0e0e0;
@@ -85,7 +84,7 @@
 							color: #666666;
 						}
 					.boutique-content-photos{
-						margin-top: 20px;
+						margin-top: 30px;
 					}
 						.boutique-photos-header{
 
