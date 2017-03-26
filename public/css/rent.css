@@ -53,7 +53,7 @@ min-height: 100%;
 					font-weight: 200;
 				}
 			.for-rent-content{
-				margin-top: 20px 0;
+				margin-top: 20px;
 				padding: 25px;
 				border: 1px solid #e0e0e0;
 				border-radius: 4px;
@@ -88,4 +88,7 @@ min-height: 100%;
 							color: #4da2d8;
 							float: right;
 							font-weight: 200;
+						}
+						.map-link:hover{
+							color: #78c8fb;
 						}
