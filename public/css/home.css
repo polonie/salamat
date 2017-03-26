@@ -28,21 +28,22 @@ transition: opacity 2.5s ease;
 .slide-about{
 position: absolute;
 top: 40%;
-left: 10px;
+left: 200px;
 padding: 10px;
 }
 .slide-about-heading{
 font-weight: 700;
-font-size: 25px;
+font-size: 40px;
 color: #fff;
 }
 .slide-about-text{
 margin-top: 10px;
-width: 250px;
-color: #fff;
+font-size: 20px;
+font-weight: 200;
+color: #333;
 }
 .more-button{
-font-size: 12px;
+font-size: 14px;
 background: #d64242;
 background-image: linear-gradient(to left top, rgba(243, 122, 101, 0) 0, #f37a65);
 border-radius: 3px;
