@@ -1,0 +1,55 @@
+.rent-page-content{
+padding-top: 50px;
+}
+	.rent-page-container{
+		width: 1000px;
+		margin: 0 auto;
+	}
+		.trade-area-imgs{
+
+		}
+			.trade-area-header{
+				padding-bottom: 15px;
+				border-bottom: 1px solid #e0e0e0;
+			}
+				.trade-area-title{
+					font-size: 25px;
+					color: #484848;
+					font-weight: 500;
+				}
+			.trade-area-content{
+				margin-top: 30px;
+			}
+				.trade-area-items{
+
+				}
+					.trade-area-item{
+						float: left;
+						margin-right: 20px;
+						width: calc(100% - 80px) / 5;
+					}
+						.trade-area-img-item{
+							width: 100%;
+							height: auto;
+						}
+		.for-rent-block{
+
+		}
+			.for-rent-header{
+
+			}
+				.for-rent-title{
+
+				}
+			.for-rent-content{
+
+			}
+				.for-rent-list{
+
+				}
+					.rent-list{
+
+					}
+						.rent-list-item{
+
+						}

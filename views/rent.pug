@@ -1,0 +1,23 @@
+extends layout.pug
+block css
+	link(rel="stylesheet" href="./css/rent.css")
+block content
+	.rent-page-content
+		.rent-page-container
+			.trade-area-imgs
+				.trade-area-header
+					h2.trade-area-title
+				.trade-area-content
+					.trade-area-items.clearfix
+						each item in rent_imgs
+							.trade-area-item
+								- var url = '/img/rent/' + item
+								img.trade-area-img-item(src= url)
+			.for-rent-block
+				.for-rent-header
+					h2.for-rent-title
+				.for-rent-content
+					.for-rent-list
+						ul.rent-list
+							li.rent-list-item
+
