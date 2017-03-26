@@ -51,11 +51,15 @@
 				.tc-item{
 					position: relative;
 					color: #f77c7c;
-					font-weight: 200;
+					font-weight: 400;
 					cursor: pointer;
+					margin-top: 10px;
 				}
 				.tc-item:hover .floor-selection{
 					display: block;
+				}
+				.tc-item:hover .fa{
+					transform: rotate(-45deg);
 				}
 					.floor-selection{
 						z-index: 1000 !important;
@@ -100,7 +104,7 @@
 				
 				}
 					.label-rect{
-						border: 1px solid #e0e0e0;
+						height: 20px;
 						float: left;
 						width: 30%;
 						clear: right;
@@ -120,6 +124,9 @@
 					}
 					.utility-rect{
 						background: #CDF9E0;
+					}
+					.label-item-span{
+						line-height: 20px;
 					}
 .floor{
 	width: 800px;

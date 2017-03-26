@@ -22,6 +22,7 @@ block content
 							ul.tc-selection
 								each tc in tcs
 									li.tc-item= tc.tcname
+										i.fa.fa-angle-down(aria-hidden="true")
 										ul.floor-selection
 											each floor in tc.floors
 												li.floor-item
