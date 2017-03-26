@@ -8,6 +8,6 @@ boutiqueShow.onclick = (e)=>{
 	if (data_salon){
 		window.location.href = `/findboutique?data_salon=${data_salon}`;
 	}else{
-		console.log(data_salamat, data_salon);
+		console.log(data_salon);
 	}
 };
