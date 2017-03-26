@@ -81,6 +81,7 @@
 						.boutique-description-text{
 							margin-top: 15px;
 							font-size: 14px;
+							font-weight: 200;
 							color: #666666;
 						}
 					.boutique-content-photos{
@@ -101,10 +102,10 @@
 							.boutique-photos-item{
 								float: left;
 								margin-right: 20px;
+								margin-top: 15px;
 							}
 							.boutique-photos-item:nth-last-child(1){
 								margin-right: 0;
-								margin-top: 15px;
 							}
 								.boutique-photo-img{
 									width: 128px;
