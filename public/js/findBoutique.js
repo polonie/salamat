@@ -6,6 +6,7 @@ boutiqueShow.onclick = (e)=>{
 	while(item != boutiqueShow){
 		item = item.parentElement;
 	};
+	console.log(item);
 	var data_salamat = item.getAttribute('data-salamat');
 	var data_salon = item.getAttribute('data-salon');
 	if (data_salon && data_salamat){
