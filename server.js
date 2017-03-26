@@ -136,7 +136,7 @@ app.use('/:page?', (req, res, next)=>{
 	}else if (page.substr(0, 7) == 'salamat'){
 		data.tcs = floors;
 	}else if(page == 'rent'){
-		data.rent_imgs = ['rent1', 'rent2', 'rent3', 'rent4', 'rent5',]
+		data.rent_imgs = ['rent1.jpg', 'rent2.jpg', 'rent3.jpg', 'rent4.jpg', 'rent5.jpg']
 	}
 	res.render(page, data);
 });
