@@ -62,8 +62,8 @@
 					transform: rotate(-90deg);
 				}
 					.floor-arrow{
-						margin-right: 5px;
-						transition: transform .3s ease;
+						margin-left: 5px;
+						transition: transform .15s ease;
 					}
 					.floor-selection{
 						z-index: 1000 !important;
@@ -73,10 +73,16 @@
 						left: 100%;
 						top: 0;
 						width: 100%;
-						padding: 0 7px;
 						border: 1px solid #e0e0e0;
 						border-radius: 3px;
 					}
+						.floor-item{
+							margin-top: 10px;
+							padding-left: 10px;
+						}
+						.floor-item:nth-child(1){
+							margin-top: 0;
+						}
 						.floor-item:hover{
 							background: #f9f9f9;
 						}
@@ -131,6 +137,7 @@
 					}
 					.label-item-span{
 						line-height: 20px;
+						margin-left: 15px;
 					}
 .floor{
 	width: 800px;
