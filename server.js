@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
-var mongoose = require('./db/mongoose');
-// var {Category} = require('./models/Category');
-var Category = require('./db/mongoose').Category;
+// var mongoose = require('./db/mongoose');
+var {Category} = require('./models/Category');
+// var Category = require('./db/mongoose').Category;
 var {Boutique} = require('./models/Boutique');
 const port = process.env.PORT || 3000;
 var category;
@@ -98,8 +98,50 @@ app.get('/rw-boutiques', (req, res)=>{
 		}
 	);
 });
+
+
+app.get('/rw-categories', (req, res)=>{
+	if (!req.query.index && !req.query.id && !req.query.idparent && !req.query.name && !req.query.count && !req.query.idgrand){
+		Category.find().then(
+			(categories)=>{
+				res.send({
+					categories
+				})
+			},
+			(err)=>{
+				res.status(400).send(err)
+			}
+		);
+		return;
+	};
+	var category = new Category({
+		index: req.query.index,
+		id: req.query.id,
+		idparent: req.query.idparent,
+		name: req.query.name,
+		count: req.query.count,
+		idgrand: req.query.idgrand
+	});
+	category.save().then(
+		(doc)=>{
+			res.send('document has been saved');
+		},
+		(err)=>{
+			res.status(400).send(err);
+		}
+	);
+});
+
+
+
 app.get('/delbot', (req, res)=>{
 	Boutique.remove({}).then((result)=>{
+	res.send('Все удалено!')
+	});
+});
+
+app.get('/delcat', (req, res)=>{
+	Category.remove({}).then((result)=>{
 	res.send('Все удалено!')
 	});
 });
