@@ -65,6 +65,8 @@ app.get('/search', (req, res)=>{
 	res.send(mongoose.lvl3);
 });
 
+
+// *************************************************  MAP QUERIES  ********************************************
 app.get('/getboutique', (req, res)=>{
 	var boutique = req.query.boutique;
 	var salamat = req.query.salamat;
@@ -73,7 +75,6 @@ app.get('/getboutique', (req, res)=>{
 		res.send(docs);
 	})
 });
-
 app.get('/boutique', (req, res)=>{
 	var boutique = req.query.boutique;
 	var salamat = req.query.salamat;
@@ -83,6 +84,7 @@ app.get('/boutique', (req, res)=>{
 		res.render('boutiques', data);
 	});
 });
+// *************************************************  MAP QUERIES  ********************************************
 
 app.use('/category', (req, res)=>{
 	category = req.query.dataid;
@@ -164,6 +166,15 @@ app.use('/boutiques', (req, res)=>{
 		.exec((err, docs)=>{
 			res.send(docs);
 		});
+});
+
+app.use('/findboutique', (req, res)=>{
+	Boutique.find({salamat: req.query.data_salamat, salon: req.query.data_salon}, (err, docs)=>{
+		var boutique = docs[0];
+		var data = _data;
+		data.boutique = boutique;
+		res.render('boutique', data);
+	});
 });
 
 app.use('/:page?', (req, res, next)=>{

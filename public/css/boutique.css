@@ -1,27 +1,41 @@
-.side-block{
-float: left;
-width: 20%;
-margin-right: 15px;
-}
-	.boutique-profile-block{
-		padding: 20px;
+	.page-boutique-wrap{
+		background: #fff;
+		padding-top: 50px;
 	}
-		.profile-logo{
-			margin: 20px 0;
-			width: 100%;
-			position: relative;
+		.page-boutique-container{
+			width: 960px;
+			margin: 0 auto;
+			padding: 0 30px;
 		}
-			.profile-logo-img{
-				display: block;
-				margin: 0 auto;
+			.boutique-page-block{
+				
 			}
-.main-block{
-width: calc(80% - 15px);
-width: -ms-calc(80% - 15px);
-width: -moz-calc(80% - 15px);
-width: -webkit-calc(80% - 15px);
-float: left;
-}
-.boutique-block{
-	padding: 20px;
-}
+				.boutique-profile-block{
+					width: 20%;
+					float: left;
+					margin-right: 20px;
+					border: 1px solid #e0e0e0;
+					border-radius: 4px;
+				}
+					.profile-logo-block{
+						padding: 10px;
+						border: 1px solid #e0e0e0;
+					}
+						.profile-logo-img{
+							width: 100%;
+							height: auto;
+						}
+					.profile-tags-block{
+
+					}
+				.boutique-content-block{
+					width: calc(80% - 20px);
+					float: left;
+					border: 1px solid #e0e0e0;
+				}
+					.boutique-content-header{
+
+					}
+					.boutique-content-body{
+
+					}

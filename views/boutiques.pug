@@ -2,7 +2,7 @@ extends layout.pug
 block css
 	link(rel="stylesheet" href="./css/boutiques.css")
 block content
-	.page-content-wrap
+	.page-boutiques-wrap
 		.page-boutiques-container
 			.boutiques-page-block.clearfix
 				.sidebar
@@ -36,7 +36,7 @@ block content
 										.boutiques-content-header.clearfix
 											.boutique-name
 												h3.boutique-title= boutique.name
-											.boutique-show
+											.boutique-show(data-salamat= boutique.salamat, data-salon= boutique.salon)
 												span.boutique-show-span перейти к компании
 												i.link-boutique-arrow.fa.fa-angle-right(aria-hidden="true")
 										.boutiques-content-body
@@ -61,5 +61,5 @@ block content
 									while i < pages
 										div.page-item(data-page= ++i)= i
 block scripts
-	script(src='./js/side-menu.js')
+	script(src='./js/findBoutique.js')
 	script(src='./js/pagination.js')

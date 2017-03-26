@@ -1,20 +1,28 @@
 extends layout.pug
 block css
-	link(rel="stylesheet" href="./css/boutique.css")
+	link(rel="stylesheet" href="./css/boutiques.css")
 block content
-	.side-block
-		.boutique-profile-block.page-block
-			.profile-logo
-				img.profile-logo-img(src='./img/boutiques/nologo.png')
-			.profile-categories Категории
-				ul.list Categories
-					li.list-item Сантехника
-					li.list-item Стройматериалы
-			.profile-services
-				ul.services
-	.main-block
-		.boutique-block.page-block
-			.boutique-header-block
-				h3.boutique-title
-			.boutique-body-block
+	.page-boutique-wrap
+		.page-boutique-container
+			.boutique-page-block.clearfix
+				.boutique-profile-block
+					.profile-logo-block
+						- var url = './img/boutiques/' + boutique.logo
+						img.profile-logo-img(src= url)
+					.profile-tags-block
+				.boutique-content-block
+					.boutique-content-header
+						.boutique-name
+							h2.boutique-name-title boutique.name
+					.boutique-content-body
+						.boutique-content-list
+							.boutique-info-list
+						.boutique-content-photos
+							.boutique-photos-header
+								h3.photos-header-title Товары/Услуги
+							.boutique-photos-items
+								.boutique-photos-item
+									img.boutique-photo-img
+
+
 
