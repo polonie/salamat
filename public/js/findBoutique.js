@@ -3,6 +3,7 @@ var boutiqueShow = document.querySelector('.boutique-show');
 
 boutiqueShow.onclick = (e)=>{
 	var item = e.target;
+	console.log('salem');
 	while(item != boutiqueShow){
 		item = item.parentElement;
 	};
