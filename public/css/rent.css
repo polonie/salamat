@@ -53,7 +53,8 @@ min-height: 100%;
 					font-weight: 200;
 				}
 			.for-rent-content{
-
+				padding: 25px;
+				border: 1px solid #e0e0e0;
 			}
 				.for-rent-list{
 
@@ -61,14 +62,13 @@ min-height: 100%;
 					.rent-list{
 						
 					}
-					.rent-list:first-child{
-						margin-left: 0;
-					}
 						.rent-list-item{
 							float: left;
-							min-width: 150px;
-							margin-left: 15px;
+							min-width: 100px;
 							margin-top: 15px;
 							color: #484848;
 							font-weight: 200;
+						}
+						.rent-list-value{
+							padding: 15px;
 						}
