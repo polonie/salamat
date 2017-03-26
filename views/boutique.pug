@@ -16,13 +16,33 @@ block content
 							h2.boutique-name-title= boutique.name
 					.boutique-content-body
 						.boutique-content-list
-							.boutique-info-list
+							ul.boutique-info-list
+								li.boutique-info-list-item
+									span.boutique-info-label-span.field-span Саламат:
+									span.boutique-info-value-span.field-span= boutique.salamat
+								li.boutique-info-list-item
+									span.boutique-info-label-span.field-span Салон:
+									span.boutique-info-value-span.field-span= boutique.salon
+								li.boutique-info-list-item
+									span.boutique-info-label-span.field-span Телефон:
+									span.boutique-info-value-span.field-span= boutique.phone
+								li.boutique-info-list-item
+									span.boutique-info-label-span.field-span Эл.адрес:
+									span.boutique-info-value-span.field-span
+								li.boutique-info-list-item
+									span.boutique-info-label-span.field-span
+									span.boutique-info-value-span.field-span
+						.boutique-content-decription
+							h3.boutique-decription-title Описание
+							p.boutique-description-text= boutique.about
 						.boutique-content-photos
 							.boutique-photos-header
 								h3.photos-header-title Товары/Услуги
-							.boutique-photos-items
-								.boutique-photos-item
-									img.boutique-photo-img
+							.boutique-photos-items.clearfix
+								each pic in picts
+									.boutique-photos-item
+										- var url = './img/boutiques/' + pic
+										img.boutique-photo-img(src= url)
 
 
 

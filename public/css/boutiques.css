@@ -104,16 +104,25 @@
 							}
 						.boutique-show{
 							float: right;
+							color: #666666;
+							cursor: pointer;
+							font-size: 12px;
+							font-weight: 200;
+						}
+						.boutique-show:hover{
+							color: #ccc;
 						}
 							.boutique-show-span{
-								font-size: 12px;
-								font-weight: 200;
-								color: #666666;
+								user-select: none;
+								color: inherit;
+								font-size: inherit;
+								font-weight: inherit;
 							}
 							.link-boutique-arrow{
-								margin-left: 5px;
-								font-size: 12px;
-								color: #666666;
+								user-select:none;
+								color: inherit;
+								font-size: inherit;
+								font-weight: inherit;
 							}
 					.boutiques-content-body{
 						padding-top: 20px;

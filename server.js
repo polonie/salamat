@@ -170,10 +170,19 @@ app.use('/boutiques', (req, res)=>{
 
 app.use('/findboutique', (req, res)=>{
 	Boutique.find({salamat: req.query.data_salamat, salon: req.query.data_salon}, (err, docs)=>{
-		var boutique = docs[0];
-		console.log(boutique);
-		var data = _data;
+		var boutique = docs[0], picts, data;
+		var pictsjpg = [];
+		if (boutique.picts != 'noimage'){
+			pictsjpg = boutique.picts.split(',');
+		}else{
+			picts = boutique.son.split(',');
+			for (i=0; i<picts.length; i++){
+				pictsjpg[i] = picts[i] + '.jpg';
+			};
+		};
+		data = _data;
 		data.boutique = boutique;
+		data.picts = pictsjpg;
 		res.render('boutique', data);
 	});
 });
