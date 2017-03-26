@@ -28,10 +28,10 @@ var floors = [
 		{
 			tcname: 'Саламат 3',
 			floors: [
+				{floor: '0 этаж', link: 'salamat3-0'},
 				{floor: '1 этаж', link: 'salamat3-1'},
 				{floor: '2 этаж', link: 'salamat3-2'},
-				{floor: '3 этаж', link: 'salamat3-3'},
-				{floor: '4 этаж', link: 'salamat3-4'}
+				{floor: '3 этаж', link: 'salamat3-3'}
 			]
 		},
 		{
@@ -44,10 +44,10 @@ var floors = [
 		{
 			tcname: 'Саламат 5',
 			floors: [
+				{floor: '0 этаж', link: 'salamat5-0'},
 				{floor: '1 этаж', link: 'salamat5-1'},
 				{floor: '2 этаж', link: 'salamat5-2'},
-				{floor: '3 этаж', link: 'salamat5-3'},
-				{floor: '4 этаж', link: 'salamat5-4'}
+				{floor: '3 этаж', link: 'salamat5-3'}
 			]
 		}
 ]
