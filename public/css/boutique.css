@@ -31,10 +31,76 @@
 					width: calc(80% - 20px);
 					float: left;
 					border: 1px solid #e0e0e0;
+					border-radius: 4px;
+					padding: 20px;
 				}
 					.boutique-content-header{
 
 					}
+						.boutique-name{
+				
+						}
+							.boutique-name-title{
+								font-size: 25px;
+								font-weight: 200;
+								color: #333;
+							}
 					.boutique-content-body{
-
+						margin-top: 40px;
 					}
+						.boutique-content-list{
+
+						}
+							.boutique-info-list{
+
+							}
+								.boutique-info-list-item{
+									padding: 10px 0;
+								}
+									.field-span{
+										font-weight: 200;
+										font-size: 14;
+									}
+									.boutique-info-label-span{
+										color: #484848;
+									}
+									.boutique-info-value-span{
+										color: #666666;
+									}
+					.boutique-content-decription{
+						margin-top: 20px;
+					}
+						.boutique-decription-title{
+							font-size: 20px;
+							padding-bottom: 15px;
+							font-weight: 200;
+							border-bottom: 1px solid #e0e0e0;
+						}
+						.boutique-description-text{
+							font-size: 14px;
+							color: #666666;
+						}
+					.boutique-content-photos{
+						margin-top: 20px;
+					}
+						.boutique-photos-header{
+
+						}
+							.photos-header-title{
+								font-size: 20px;
+								padding-bottom: 15px;
+								font-weight: 200;
+								border-bottom: 1px solid #e0e0e0;
+							}
+						.boutique-photos-items{
+							margin-top: 15px;
+						}
+							.boutique-photos-item{
+								float: left;
+							}
+								.boutique-photo-img{
+									width: 128px;
+									height: auto;
+								}
+
+

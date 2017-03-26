@@ -17,5 +17,5 @@ var ready = ()=>{
 	};
 }
 
-document.addEventListener("DOMContentLoaded", ready)
+document.addEventListener("DOMContentLoaded", ready);
 
