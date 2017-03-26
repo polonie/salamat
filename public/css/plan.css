@@ -59,8 +59,11 @@
 					display: block;
 				}
 				.tc-item:hover .fa{
-					transform: rotate(-45deg);
+					transform: rotate(-90deg);
 				}
+					.floor-arrow{
+						transition: transform .3s ease;
+					}
 					.floor-selection{
 						z-index: 1000 !important;
 						background: #fff;
