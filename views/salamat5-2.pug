@@ -5,8 +5,8 @@ block content
 	.content-wrapper
 		.plan-container
 			.floor-plan-header
-				h2.salamat-title Саламат 5
-				h3.floor-title второй этаж
+				h2.salamat-title Саламат 1
+				h3.floor-title первый этаж
 			.tooltip-block
 				h3.title
 				ul.tooltip-list
@@ -22,10 +22,29 @@ block content
 							ul.tc-selection
 								each tc in tcs
 									li.tc-item= tc.tcname
+										i.floor-arrow.fa.fa-angle-down(aria-hidden="true")
 										ul.floor-selection
 											each floor in tc.floors
 												li.floor-item
 													a.link.floor-item-link(href= floor.link)= floor.floor
+					.floor-labels-block
+						.floor-labels-header
+							h3.floor-labels-header-title Обозначения
+						.boutiques-label.item-label
+							.boutiques-rect.label-rect
+							span.label-item-span Бутики
+						.stairs-label.item-label
+							.stairs-rect.label-rect
+							span.label-item-span Лестница
+						.elevator-label.item-label
+							.elevator-rect.label-rect
+							span.label-item-span Лифт
+						.wc-label.item-label
+							.wc-rect.label-rect
+							span.label-item-span Туалет
+						.utility-room-label.item-label
+							.utility-rect.label-rect
+							span.label-item-span Тех. помещение
 				svg.floor(version='1.1', xmlns='http://www.w3.org/2000/svg', width='800px', height='600px' x="0px" y="0px" viewBox="0 0 800 600" data-salamat='5')
 					style(type='text/css').
 						.boutique:hover .rect{fill:rgba(255, 128, 128, .45);cursor:pointer}
