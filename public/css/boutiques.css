@@ -78,6 +78,7 @@
 				.boutiques-item-content-logo{
 					width: 15%;
 					margin-right: 15px;
+					float: left;
 				}
 					.boutique-img-logo{
 						width: 100%;
@@ -85,6 +86,7 @@
 					}
 				.boutiques-item-content-body{
 					width: calc(85% - 15px);
+					float: left;
 				}
 					.boutiques-content-header{
 

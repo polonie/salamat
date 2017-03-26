@@ -26,27 +26,27 @@ block content
 					.boutiques-block-items
 						each boutique in docs
 							.boutiques-block-item
-								.boutiques-item-content
+								.boutiques-item-content.clearfix
 									.boutiques-item-content-logo
 										- var url = './img/boutiques/' + boutique.logo
 										img.boutique-img-logo(src= url)
 									.boutiques-item-content-body
 										.boutiques-content-header.clearfix
 											.boutique-name
-												h3.boutique-title boutique.name
+												h3.boutique-title= boutique.name
 											.boutique-show
 												span.boutique-show перейти к компании
 										.boutiques-content-body
 											.boutique-description
 												h3.boutique-about-title Описание компании
-												p.boutique-about-text boutique.about
+												p.boutique-about-text= boutique.about
 								.boutiques-item-foooter.clearfix
 									.boutiques-item-foooter-icons
 									.boutiques-item-foooter-body.clearfix
 										.boutique-item-search-path
 										.boutique-item-location
-											span.bot-item-span.boutique-item-salamat boutique.salamat
-											span.bot-item-span.boutique-item-salon boutique.salon
+											span.bot-item-span.boutique-item-salamat= boutique.salamat
+											span.bot-item-span.boutique-item-salon= boutique.salon
 											span.bot-item-span.boutique-item-map-link показать на карте
 					.boutiques-block-pages
 						- var i = 0
