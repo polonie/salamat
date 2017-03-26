@@ -3,6 +3,7 @@
 }
 .page-boutiques-container{
 	width: 960px;
+	margin: 0 auto;
 }
 .boutiques-page-block{
 	margin-top: 40px;
@@ -72,8 +73,7 @@
 			background: #fff;
 		}
 			.boutiques-item-content{
-		}
-/*				height: 100px;*/
+
 			}
 				.boutiques-item-content-logo{
 					width: 15%;
