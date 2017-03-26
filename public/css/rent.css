@@ -1,10 +1,12 @@
 .rent-page-content{
 padding-top: 50px;
+background: #fff;
 }
 	.rent-page-container{
 		width: 850px;
 		margin: 0 auto;
 	}
+
 		.trade-area-imgs{
 
 		}
@@ -36,6 +38,7 @@ padding-top: 50px;
 							height: auto;
 						}
 		.for-rent-block{
+			margin: 0 auto;
 			margin-top: 40px;
 		}
 			.for-rent-header{
@@ -53,11 +56,16 @@ padding-top: 50px;
 
 				}
 					.rent-list{
-
+					
 					}
 						.rent-list-item{
-
+							min-width: 150px;
+							margin-top: 15px;
+							color: #484848;
+							font-weight: 200;
 						}
 							.rent-list-item-span{
 								margin-left: 20px;
+								color: #666666;
+								font-weight: 200;
 							}
