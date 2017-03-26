@@ -8,7 +8,10 @@ var Boutique = mongoose.model('Boutique', {
 	total: String,
 	about: String,
 	logo: String,
-	picts: String
+	picts: String,
+	son: String,
+	email: String,
+	site: String
 });
 
 module.exports = {Boutique};

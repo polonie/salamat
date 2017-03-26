@@ -31,7 +31,7 @@ app.get('/rw-categories', (req, res)=>{
 });
 
 app.get('/rw-boutiques', (req, res)=>{
-	if (!req.query.name && !req.query.salamat && !req.query.salon && !req.query.phone && !req.query.total && !req.query.about && !req.query.logo && !req.query.picts){
+	if (!req.query.name && !req.query.salamat && !req.query.salon && !req.query.phone && !req.query.total && !req.query.about && !req.query.logo && !req.query.picts && !req.query.site && !req.query.email && !req.query.son){
 		Boutique.find().then(
 			(boutiques)=>{
 				res.send({
@@ -52,7 +52,10 @@ app.get('/rw-boutiques', (req, res)=>{
 		total: req.query.total,
 		about: req.query.about,
 		logo: req.query.logo,
-		picts: req.query.picts
+		picts: req.query.picts,
+		son: req.query.son,
+		email: req.query.email,
+		site: req.query.site
 	});
 	boutique.save().then(
 		(bot)=>{

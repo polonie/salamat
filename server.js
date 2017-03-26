@@ -60,6 +60,55 @@ app.set('view engine', 'pug');
 app.use(express.static('public'));
 
 
+
+// ****************************************     WRITE/READ DATA     ***********************************
+app.get('/rw-boutiques', (req, res)=>{
+	if (!req.query.name && !req.query.salamat && !req.query.salon && !req.query.phone && !req.query.total && !req.query.about && !req.query.logo && !req.query.picts && !req.query.site && !req.query.email && !req.query.son){
+		Boutique.find().then(
+			(boutiques)=>{
+				res.send({
+					boutiques
+				})
+			},
+			(err)=>{
+				res.status(400).send(err)
+			}
+		);
+		return;
+	}
+	var boutique = new Boutique({
+		name: req.query.name,
+		salamat: req.query.salamat,
+		salon: req.query.salon,
+		phone: req.query.phone,
+		total: req.query.total,
+		about: req.query.about,
+		logo: req.query.logo,
+		picts: req.query.picts,
+		son: req.query.son,
+		email: req.query.email,
+		site: req.query.site
+	});
+	boutique.save().then(
+		(bot)=>{
+			res.send('document has been saved');
+		},
+		(err)=>{
+			res.status(400).send(err);
+		}
+	);
+});
+app.get('/delbot', (req, res)=>{
+	Boutique.remove({}).then((result)=>{
+	res.send('Все удалено!')
+	});
+});
+// ****************************************     WRITE/READ DATA     ***********************************
+
+
+
+
+
 // *************************************************************   R   O    U    T    E    S   ************************************************************
 app.get('/search', (req, res)=>{
 	res.send(mongoose.lvl3);
