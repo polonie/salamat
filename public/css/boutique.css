@@ -96,7 +96,7 @@
 								border-bottom: 1px solid #e0e0e0;
 							}
 						.boutique-photos-items{
-							margin-top: 15px;
+
 						}
 							.boutique-photos-item{
 								float: left;
@@ -104,6 +104,7 @@
 							}
 							.boutique-photos-item:nth-last-child(1){
 								margin-right: 0;
+								margin-top: 15px;
 							}
 								.boutique-photo-img{
 									width: 128px;
