@@ -62,13 +62,14 @@ min-height: 100%;
 					
 					}
 						.rent-list-item{
+							border: 1px solid #e0e0e0;
 							min-width: 150px;
 							margin-top: 15px;
 							color: #484848;
 							font-weight: 200;
 						}
 							.rent-list-item-span{
-								margin-left: 20px;
+								border: 1px solid #e0e0e0;
 								color: #666666;
 								font-weight: 200;
 							}
