@@ -38,7 +38,6 @@
 
 		}
 			.selet-floor-title{
-				font-weight: 400;
 				color: #484848;
 			}
 		.floor-selection-content{
@@ -77,7 +76,7 @@
 						border-radius: 3px;
 					}
 						.floor-item{
-							margin-top: 10px;
+							padding: 7px;
 							padding-left: 10px;
 						}
 						.floor-item:nth-child(1){
@@ -137,11 +136,14 @@
 					}
 					.label-item-span{
 						line-height: 20px;
-						margin-left: 15px;
+						margin-left: 10px;
+						font-weight: 12px;
 					}
 .floor{
 	width: 800px;
 	float: left;
+	border: 1px solid #e0e0e0;
+	border-radius: 5px;
 }
 .tooltip-block{
 	z-index: 1000 !important;
