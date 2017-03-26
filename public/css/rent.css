@@ -62,7 +62,7 @@ min-height: 100%;
 
 				}
 					.rent-list{
-						padding: 10px 20;
+						padding: 10px 20px;
 						border-radius: 4px;
 					}
 					.rent-list:hover{
@@ -84,6 +84,7 @@ min-height: 100%;
 							font-weight: 200;
 						}
 						.map-link{
+							cursor: pointer;
 							color: #4da2d8;
 							float: right;
 							font-weight: 200;
