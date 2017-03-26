@@ -62,7 +62,7 @@
 				}
 					.floor-arrow{
 						margin-left: 5px;
-						transition: transform .15s ease;
+						transition: transform .05 ease;
 					}
 					.floor-selection{
 						z-index: 1000 !important;
@@ -80,7 +80,7 @@
 							padding-left: 10px;
 						}
 						.floor-item:nth-child(1){
-							margin-top: 0;
+							padding-top: 0;
 						}
 						.floor-item:hover{
 							background: #f9f9f9;
@@ -137,7 +137,7 @@
 					.label-item-span{
 						line-height: 20px;
 						margin-left: 10px;
-						font-weight: 12px;
+						font-size: 12px;
 					}
 .floor{
 	width: 800px;
