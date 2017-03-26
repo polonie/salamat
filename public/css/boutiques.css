@@ -88,7 +88,7 @@
 						height: auto;
 					}
 				.boutiques-item-content-body{
-					width: calc(85% - 15px);
+					width: calc(85% - 115px);
 					float: left;
 				}
 					.boutiques-content-header{
@@ -100,7 +100,7 @@
 							.boutique-title{
 								font-size: 16px;
 								font-weight: 500;
-								color: #484848;
+								color: #333;
 							}
 						.boutique-show{
 							float: right;
@@ -116,6 +116,11 @@
 						.boutique-description{
 
 						}
+							.boutique-about-title{
+								font-weight: 200;
+								font-size: 14px;
+								color: #484848;
+							}
 			.boutiques-item-foooter{
 			
 			}
@@ -147,6 +152,7 @@
 						.boutique-item-map-link{
 							margin-right: 0;
 							color: #4da2d8;
+							cursor: pointer;
 						}
 						.boutique-item-map-link:hover{
 							color: #78c8fb;
