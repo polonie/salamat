@@ -107,6 +107,7 @@
 			.page-header-search{
 				flex: 1;
 				height: 40px;
+				min-height: 250px;
 			}
 				.search-block{
 					width: 100%;
