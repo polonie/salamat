@@ -171,6 +171,7 @@ app.use('/boutiques', (req, res)=>{
 app.use('/findboutique', (req, res)=>{
 	Boutique.find({salamat: req.query.data_salamat, salon: req.query.data_salon}, (err, docs)=>{
 		var boutique = docs[0];
+		console.log(boutique);
 		var data = _data;
 		data.boutique = boutique;
 		res.render('boutique', data);
