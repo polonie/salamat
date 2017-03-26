@@ -62,6 +62,7 @@
 					transform: rotate(-90deg);
 				}
 					.floor-arrow{
+						margin-right: 5px;
 						transition: transform .3s ease;
 					}
 					.floor-selection{
