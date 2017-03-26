@@ -83,6 +83,9 @@ min-height: 100%;
 							color: #666666;
 							font-weight: 200;
 						}
+						.map-link-block{
+							float: right;
+						}
 						.map-link{
 							cursor: pointer;
 							color: #4da2d8;
