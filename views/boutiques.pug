@@ -3,7 +3,7 @@ block css
 	link(rel="stylesheet" href="./css/boutiques.css")
 block content
 	.page-content-wrap
-		.page-min-container
+		.page-boutiques-container
 			.boutiques-page-block.clearfix
 				.sidebar
 					.filter-block
@@ -26,29 +26,28 @@ block content
 					.boutiques-block-items
 						each boutique in docs
 							.boutiques-block-item
-								.boutiques-block-header
-									h3.boutique-name= boutique.name
-								.boutiques-block-body.clearfix
-									.boutiques-block-left
-										.profile-block
-											- var url = './img/boutiques/' + boutique.logo
-											image.profile-img(src= url)
-									.boutiques-block-right
-										.more-arrow
-											i.fa.fa-2x.fa-angle-right.more-icon(aria-hidden="true")
-										ul.list.boutique-list-items
-											li.boutique-list-item
-												span.bord Саламат: 
-												span= boutique.salamat
-											li.boutique-list-item
-												span.bord Салон: 
-												span= boutique.salon
-											li.boutique-list-item
-												span.bord Телефон: 
-												span= boutique.phone
-										.boutiques-description-block
-											h3 Описание:
-											p.boutiques-description= boutique.about
+								.boutiques-item-content
+									.boutiques-item-content-logo
+										- var url = './img/boutiques/' + boutique.logo
+										img.boutique-img-logo(src= url)
+									.boutiques-item-content-body
+										.boutiques-content-header.clearfix
+											.boutique-name
+												h3.boutique-title boutique.name
+											.boutique-show
+												span.boutique-show перейти к компании
+										.boutiques-content-body
+											.boutique-description
+												h3.boutique-about-title Описание компании
+												p.boutique-about-text boutique.about
+								.boutiques-item-foooter.clearfix
+									.boutiques-item-foooter-icons
+									.boutiques-item-foooter-body.clearfix
+										.boutique-item-search-path
+										.boutique-item-location
+											span.bot-item-span.boutique-item-salamat boutique.salamat
+											span.bot-item-span.boutique-item-salon boutique.salon
+											span.bot-item-span.boutique-item-map-link показать на карте
 					.boutiques-block-pages
 						- var i = 0
 						if pages

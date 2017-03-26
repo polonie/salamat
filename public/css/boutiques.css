@@ -1,6 +1,9 @@
 .page-content-wrap{
 	background: #fff;
 }
+.page-boutiques-container{
+	width: 960px;
+}
 .boutiques-page-block{
 	margin-top: 40px;
 }
@@ -65,66 +68,66 @@
 			padding: 20px;
 			border-bottom: 1px solid #f1f1f1;
 		}
-			.more-arrow{
-				position: absolute;
-				width: 10%;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				text-align: center;
-			}
-				.more-icon{
-					cursor: pointer;
-					position: relative;
-					color: #aaa;
-					top: 50%;
-					transform: translateY(-50%);
-				}
-				.more-icon{
-					color: #484848;
-				}
 		.boutiques-block-item:hover{
 			background: #fff;
 		}
-			.boutiques-block-header{
-				width: 30%;
-				text-align: center;
+			.boutiques-item-content{
+		}
+/*				height: 100px;*/
 			}
-				.boutique-name{
-					font-size: 20px;
-					font-weight: 500;
-					color: #f77c7c;
+				.boutiques-item-content-logo{
+					width: 15%;
+					margin-right: 15px;
 				}
-			.boutiques-block-body{
-				width: 100%;
-			}
-				.boutiques-block-left{
-					float: left;
-					width: 30%;
-				}
-					.profile-block{
-						padding-top: 20px;
+					.boutique-img-logo{
 						width: 100%;
-						text-align: center;
+						height: auto;
 					}
-						.profile-img{
-							margin: 0 auto;
-							width: 50%;
-							height: auto;
-						}
-				.boutiques-block-right{
-					float: left;
-					width: 70%;
+				.boutiques-item-content-body{
+					width: calc(85% - 15px);
 				}
-					.boutique-list-items{
-						padding-top: 20px;
+					.boutiques-content-header{
+
 					}
-						.boutique-list-item{
-							padding: 5px 0;
+						.boutique-name{
+							float: left;
 						}
-							.bord{
-								font-weight: 700;
-							}
+						.boutique-show{
+							float: right;
+						}
+					.boutiques-content-body{
+
+					}
+						.boutique-description{
+
+						}
+			.boutiques-item-foooter{
+			
+			}
+				.boutiques-item-foooter-icons{
+					float: left;
+					margin-right: 15px;
+				}
+				.boutiques-item-foooter-body{
+					
+				}
+					.boutique-item-search-path{
+						float: left;
+					}
+					.boutique-item-location{
+						float: right;
+					}
+						.bot-item-span.boutique-item-salamat{
+
+						}
+						.bot-item-span.boutique-item-salon{
+
+						}
+						.bot-item-span.boutique-item-map-link{
+
+						}
+
+
 	.boutiques-block-pages{
 		margin-top: 20px;
 		padding: 20px;
