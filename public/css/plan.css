@@ -81,7 +81,46 @@
 							.floor-item-link{
 
 							}
+	.floor-labels-block{
+		margin-top: 20px;
+		border: 1px solid #e0e0e0;
+		padding: 20px;
+		border-radius: 4px;
+	}
+		.floor-labels-header{
 
+		}
+			.floor-labels-header-title{
+
+			}
+				.item-label{
+					margin-top: 15px;
+				}
+				.boutiques-label{
+				
+				}
+					.label-rect{
+						border: 1px solid #e0e0e0;
+						float: left;
+						width: 30%;
+						clear: right;
+					}
+					.boutiques-rect{
+						background: transparent;
+						border: 1px solid #FF7F66;
+					}
+					.stairs-rect{
+						background: #B2DBF7;
+					}
+					.elevator-rect{
+						background: #FAB4FC;
+					}
+					.wc-rect{
+						background: #FFFBB3;
+					}
+					.utility-rect{
+						background: #CDF9E0;
+					}
 .floor{
 	width: 800px;
 	float: left;
