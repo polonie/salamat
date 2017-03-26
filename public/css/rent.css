@@ -70,6 +70,8 @@ min-height: 100%;
 							font-weight: 200;
 						}
 						.rent-list-value{
-							padding: 15px;
-							min-width: auto;
+							padding-left: 15px;
+							width: auto;
+							color: #666666;
+							font-weight: 200;
 						}
