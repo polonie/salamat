@@ -10,7 +10,7 @@ buttonSearch.onclick = (e)=>{
 	if (inputSearch.getAttribute('data-id')){
 		window.location.href = `/category?dataid=${inputSearch.getAttribute('data-id')}`;
 	}else{
-		return;	
+		return;
 	}
 };
 
