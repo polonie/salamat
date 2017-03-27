@@ -1,0 +1,137 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		title Саламат - центр строительных материалов
+		link(href='https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i,700,900' rel='stylesheet')
+		link(rel="stylesheet" href="./css/main.css")
+		link(rel="stylesheet" href="./css/layout.css")
+		link(rel="stylesheet" href="./css/plan.css")
+		script(src="https://use.fontawesome.com/335720a3b2.js")
+	body.page
+		.page-top-line
+			.page-top-line-wrap.clearfix
+				.nav-log-link
+					.nav-link.nav-log(style='padding: 0')
+						i.fa.fa-lg.fa-sign-in.icon(aria-hidden="true" style='margin-right:3px')
+						span.nav-span Войти 
+						span(style='color: #999;font-size: 12px;font-weight: 200') или 
+						span.nav-span Зарегистрироваться
+				.nav-links.clearfix
+					.nav-link.nav-brands
+						span.nav-span Бренды
+					.nav-link.nav-nav-contacts
+						span.nav-span Наши контакты
+					.nav-link.nav-subsribe
+						span.nav-span Подпишитесь
+					.nav-link.nav-write
+						span.nav-span Напишите нам
+					.nav-link.nav-social
+						span.nav-span Мы в соц. сетях
+						i.fa.fa-lg.fa-facebook(aria-hidden="true").social-icon
+						i.fa.fa-lg.fa-instagram(aria-hidden="true").social-icon
+						i.fa.fa-lg.fa-vk(aria-hidden="true").social-icon
+		.page-header
+			.page-header-main
+				.page-header-main-wrap
+					.page-header-logo
+						a(href='home').logo-link.link
+					.page-header-co.clearfix
+						.renters.link-item
+							i.fa.fa-address-book(aria-hidden="true" style='font-size:1.2em').link-icon
+							span.co-link-title Арендаторы
+						.producers.link-item
+							i.fa.fa-truck(aria-hidden="true" style='font-size:1.2em').link-icon
+							span.co-link-title Производители
+						.partners.link-item
+							i.fa.fa-handshake-o(aria-hidden="true" style='font-size:1.2em').link-icon
+							span.co-link-title Партнеры
+					.page-header-search
+						.search-block
+							.search-box-input
+								input(placeholder='поиск...').input-search
+								.search-box-results
+							.search-box-button
+								i.fa.fa-search.button-search(aria-hidden="true" style='font-size: 1.2em; display: block')
+			.page-header-nav
+				.page-header-nav-wrap.clearfix
+					.header-nav-category
+						span.nav-category-title Категории
+						i.fa.fa-angle-down.category-arrow(style='font-size:1.5em')
+						.side-menu-block.page-block
+							ul.menu-list.list
+								each item1, index in lvl1
+									li(data-id= item1.id).menu-item= item1.name
+										.submenu-block.page-block
+											.submenu-img-block(style='background: url(./img/categories_1/= ${)')
+											-var newLn = 0;
+											each item2 in lvl2
+												if newLn == 3
+													- newLn = 0
+													.newLine.clearfix
+												if item2.idparent == item1.id
+													- newLn++
+													.submenu-block-list
+														ul.submenu-list.list
+															span.submenu-list-span(data-id= item2.id)= item2.name
+															- var n = 0;
+															each item3 in lvl3
+																if n < 5 && item3.idparent == item2.id
+																	li.submenu-item
+																		- var name = item3.name
+																		if name.indexOf("(") > -1
+																			- name = name.substring(0, name.indexOf("("))
+																		span.submenu-item-span(data-id= item3.id)= name
+																	- n++
+					.header-nav-menu.clearfix
+						each link in links
+							a.nav-menu-link.link(href= link.link)= link.linktitle
+		.page-content
+			.content-wrapper
+				.plan-container
+					.floor-plan-header
+						h2.salamat-title Саламат 1
+						h3.floor-title первый этаж
+					.tooltip-block
+						h3.title
+						ul.tooltip-list
+							li.tooltip-list-item-salamat.tooltip-item
+							li.tooltip-list-item-boutique.tooltip-item
+						.tooltip-button.tooltip-item Перейти
+					.plan-wrapper.clearfix
+						.plan-controller
+							.floor-selection-block
+								.floor-selection-header
+									h3.selet-floor-title Выберите этаж:
+								.floor-selection-content
+									ul.tc-selection
+										each tc in tcs
+											li.tc-item= tc.tcname
+												i.floor-arrow.fa.fa-angle-down(aria-hidden="true")
+												ul.floor-selection
+													each floor in tc.floors
+														li.floor-item
+															a.link.floor-item-link(href= floor.link)= floor.floor
+							.floor-labels-block
+								.floor-labels-header
+									h3.floor-labels-header-title Обозначения
+								.boutiques-label.item-label
+									.boutiques-rect.label-rect
+									span.label-item-span Салоны
+								.stairs-label.item-label
+									.stairs-rect.label-rect
+									span.label-item-span Лестница
+								.elevator-label.item-label
+									.elevator-rect.label-rect
+									span.label-item-span Лифт
+								.wc-label.item-label
+									.wc-rect.label-rect
+									span.label-item-span Туалет
+								.utility-room-label.item-label
+									.utility-rect.label-rect
+									span.label-item-span Тех. помещение
+						block content
+		script(src='./js/searchbox.js')
+		script(src='./js/side-menu.js')
+		script(src='./js/findGroups.js')
+		script(src='./js/plan.js')

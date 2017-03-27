@@ -1,128 +1,80 @@
-extends layout.pug
-block css
-	link(rel="stylesheet" href="./css/plan.css")
+extends plan.pug
 block content
-	.content-wrapper
-		.plan-container
-			.floor-plan-header
-				h2.salamat-title Саламат 1
-				h3.floor-title третий этаж
-			.tooltip-block
-				h3.title
-				ul.tooltip-list
-					li.tooltip-list-item-salamat.tooltip-item
-					li.tooltip-list-item-boutique.tooltip-item
-				.tooltip-button.tooltip-item Перейти
-			.plan-wrapper.clearfix
-				.plan-controller
-					.floor-selection-block
-						.floor-selection-header
-							h3.selet-floor-title Выберите этаж:
-						.floor-selection-content
-							ul.tc-selection
-								each tc in tcs
-									li.tc-item= tc.tcname
-										i.floor-arrow.fa.fa-angle-down(aria-hidden="true")
-										ul.floor-selection
-											each floor in tc.floors
-												li.floor-item
-													a.link.floor-item-link(href= floor.link)= floor.floor
-					.floor-labels-block
-						.floor-labels-header
-							h3.floor-labels-header-title Обозначения
-						.boutiques-label.item-label
-							.boutiques-rect.label-rect
-							span.label-item-span Бутики
-						.stairs-label.item-label
-							.stairs-rect.label-rect
-							span.label-item-span Лестница
-						.elevator-label.item-label
-							.elevator-rect.label-rect
-							span.label-item-span Лифт
-						.wc-label.item-label
-							.wc-rect.label-rect
-							span.label-item-span Туалет
-						.utility-room-label.item-label
-							.utility-rect.label-rect
-							span.label-item-span Тех. помещение
-				svg.floor(version='1.1', xmlns='http://www.w3.org/2000/svg', width='800px', height='600px' x="0px" y="0px" viewBox="0 0 800 600" data-salamat='1')
-					style(type='text/css').
-						.boutique:hover .rect{fill:rgba(255, 128, 128, .45);cursor:pointer}
-						.boutique:hover .str_numb{fill:#FFFFFF}
-						.rect{fill:rgba(255, 255, 255, .1);stroke:#FF7F66;stroke-miterlimit:10;}
-						.str_numb{fill:#4F4F4F;font-family:'Roboto';font-size:14px;user-select:none;cursor:pointer;}
-						.st0{fill:#B2DBF7;}
-						.st1{fill:#FFFBB3;}
-						.st2{fill:#FAB4FC;}
-						.st3{fill:#CDF9E0;}
-						.st8{font-size:9px;}
-						.st9{fill:#D2FFEC;stroke:#FFFFFF;stroke-miterlimit:10;}
-						.st10{fill:#484848;}
-						.st11{font-size:12px;}
-						.st12{fill:none;stroke:#484848;stroke-width:2;stroke-miterlimit:10;}
-					g
-						rect#s37.rect(x='181.4', y='193.5', width='296.4', height='70')
-						g
-							text.str_numb(transform='matrix(1 0 0 1 325.5179 232.7822)') 37
-					g
-						rect#s30.rect(x='532.5', y='98.9', width='67.9', height='70')
-						g
-							text.str_numb(transform='matrix(1 0 0 1 559.6766 133.8783)') 30
-					g
-						rect#s31.rect(x='470.6', y='98.9', width='61.9', height='70')
-						g
-							text.str_numb(transform='matrix(1 0 0 1 496.3239 133.8781)') 31
-					g
-						rect#s32.rect(x='426.8', y='98.9', width='43.8', height='70')
-						g
-							text.str_numb(transform='matrix(1 0 0 1 443.0268 133.8783)') 32
-					g
-						rect#s32a.rect(x='382.6', y='98.9', width='44.2', height='70')
-						g
-							text.str_numb(transform='matrix(1 0 0 1 395.6585 133.8783)') 32&acy;
-					g
-						rect#s33.rect(x='320.7', y='98.9', width='61.9', height='70')
-						g
-							text.str_numb(transform='matrix(1 0 0 1 348.0014 133.8781)') 33
-					g
-						rect#s36.rect(x='117.2', y='98.9', width='64.2', height='164.6')
-						g
-							text.str_numb(transform='matrix(1 0 0 1 144.6345 186.4859)') 36
-					g
-						rect#s34.rect(x='225.4', y='98.9', width='95.3', height='70')
-						g
-							text.str_numb(transform='matrix(1 0 0 1 269.475 133.8783)') 34
-					g
-						rect#s38.rect(x='526.5', y='193.5', width='73.9', height='70')
-						g
-							text.str_numb(transform='matrix(1 0 0 1 559.6768 232.7822)') 38
-					g
-						rect#s39.rect(x='600.4', y='224.5', width='82.4', height='39')
-						g
-							text.str_numb(transform='matrix(1 0 0 1 634.4006 249.0656)') 39
-					g
-						rect#s35.rect(x='190.4', y='133.9', width='35', height='35')
-						g
-							text.str_numb(transform='matrix(1 0 0 1 200.3019 151.3779)') 35
-						g
-							text.st5.str_numb.st8(transform='matrix(1 0 0 1 193.2856 161.6885)') &pcy;&ucy;&scy;&tcy;&ucy;&iecy;&tcy;
-					g
-						rect.st9(x='547.2', y='308.5', width='135.6', height='192.7')
-						text(transform='matrix(1 0 0 1 601.0037 396.9229)')
-							tspan.st10.str_numb.st11(x='0', y='0') &Ocy;&fcy;&icy;&scy;
-							tspan.st10.str_numb.st11(x='-27.7', y='14.4') &Acy;&dcy;&mcy;&icy;&ncy;&icy;&scy;&tcy;&rcy;&acy;&tscy;&icy;&yacy;
-					g
-						polygon.rect(points='600.4,98.9 682.8,98.9 682.8,113.3 660.7,113.3 660.7,142.5 627.8,142.5 627.8,169 600.4,168.9 	')
-						g
-							text.str_numb(transform='matrix(1 0 0 1 627.7961 133.8781)') 29
-					polygon.st12(points='117.2,98.9 682.8,98.9 682.8,501.1 547.2,501.1 547.2,263.5 117.2,263.5 ')
-					rect.st0(x='181.4', y='98.9', width='44', height='34.6')
-					rect.st1(x='477.8', y='193.5', width='48.7', height='70')
-					rect.st0(x='600.4', y='193.5', width='46.9', height='31')
-					rect.st0(x='552.7', y='269', width='45', height='34')
-					rect.st2(x='627.8', y='142.5', width='43.9', height='26.4')
-					rect.st2(x='161.4', y='105.6', width='20', height='28.2')
-					polygon.st3(points='671.7,142.5 660.7,142.5 660.7,113.3 682.8,113.3 682.8,168.9 671.7,169 ')
-block scripts
-	script(src='./js/findGroups.js')
-	script(src='./js/plan.js')
+	svg.floor(version='1.1', xmlns='http://www.w3.org/2000/svg', width='800px', height='600px' x="0px" y="0px" viewBox="0 0 800 600" data-salamat='1')
+		style(type='text/css').
+			.boutique:hover .rect{fill:rgba(255, 128, 128, .45);cursor:pointer}
+			.boutique:hover .str_numb{fill:#FFFFFF}
+			.rect{fill:rgba(255, 255, 255, .1);stroke:#FF7F66;stroke-miterlimit:10;}
+			.str_numb{fill:#4F4F4F;font-family:'Roboto';font-size:14px;user-select:none;cursor:pointer;}
+			.st0{fill:#B2DBF7;}
+			.st1{fill:#FFFBB3;}
+			.st2{fill:#FAB4FC;}
+			.st3{fill:#CDF9E0;}
+			.st8{font-size:9px;}
+			.st9{fill:#D2FFEC;stroke:#FFFFFF;stroke-miterlimit:10;}
+			.st10{fill:#484848;}
+			.st11{font-size:12px;}
+			.st12{fill:none;stroke:#484848;stroke-width:2;stroke-miterlimit:10;}
+		g
+			rect#s37.rect(x='181.4', y='193.5', width='296.4', height='70')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 325.5179 232.7822)') 37
+		g
+			rect#s30.rect(x='532.5', y='98.9', width='67.9', height='70')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 559.6766 133.8783)') 30
+		g
+			rect#s31.rect(x='470.6', y='98.9', width='61.9', height='70')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 496.3239 133.8781)') 31
+		g
+			rect#s32.rect(x='426.8', y='98.9', width='43.8', height='70')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 443.0268 133.8783)') 32
+		g
+			rect#s32a.rect(x='382.6', y='98.9', width='44.2', height='70')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 395.6585 133.8783)') 32&acy;
+		g
+			rect#s33.rect(x='320.7', y='98.9', width='61.9', height='70')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 348.0014 133.8781)') 33
+		g
+			rect#s36.rect(x='117.2', y='98.9', width='64.2', height='164.6')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 144.6345 186.4859)') 36
+		g
+			rect#s34.rect(x='225.4', y='98.9', width='95.3', height='70')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 269.475 133.8783)') 34
+		g
+			rect#s38.rect(x='526.5', y='193.5', width='73.9', height='70')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 559.6768 232.7822)') 38
+		g
+			rect#s39.rect(x='600.4', y='224.5', width='82.4', height='39')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 634.4006 249.0656)') 39
+		g
+			rect#s35.rect(x='190.4', y='133.9', width='35', height='35')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 200.3019 151.3779)') 35
+			g
+				text.st5.str_numb.st8(transform='matrix(1 0 0 1 193.2856 161.6885)') &pcy;&ucy;&scy;&tcy;&ucy;&iecy;&tcy;
+		g
+			rect.st9(x='547.2', y='308.5', width='135.6', height='192.7')
+			text(transform='matrix(1 0 0 1 601.0037 396.9229)')
+				tspan.st10.str_numb.st11(x='0', y='0') &Ocy;&fcy;&icy;&scy;
+				tspan.st10.str_numb.st11(x='-27.7', y='14.4') &Acy;&dcy;&mcy;&icy;&ncy;&icy;&scy;&tcy;&rcy;&acy;&tscy;&icy;&yacy;
+		g
+			polygon.rect(points='600.4,98.9 682.8,98.9 682.8,113.3 660.7,113.3 660.7,142.5 627.8,142.5 627.8,169 600.4,168.9 	')
+			g
+				text.str_numb(transform='matrix(1 0 0 1 627.7961 133.8781)') 29
+		polygon.st12(points='117.2,98.9 682.8,98.9 682.8,501.1 547.2,501.1 547.2,263.5 117.2,263.5 ')
+		rect.st0(x='181.4', y='98.9', width='44', height='34.6')
+		rect.st1(x='477.8', y='193.5', width='48.7', height='70')
+		rect.st0(x='600.4', y='193.5', width='46.9', height='31')
+		rect.st0(x='552.7', y='269', width='45', height='34')
+		rect.st2(x='627.8', y='142.5', width='43.9', height='26.4')
+		rect.st2(x='161.4', y='105.6', width='20', height='28.2')
+		polygon.st3(points='671.7,142.5 660.7,142.5 660.7,113.3 682.8,113.3 682.8,168.9 671.7,169 ')

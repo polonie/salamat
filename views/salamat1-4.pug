@@ -1,96 +1,48 @@
-extends layout.pug
-block css
-	link(rel="stylesheet" href="./css/plan.css")
+extends plan.pug
 block content
-	.content-wrapper
-		.plan-container
-			.floor-plan-header
-				h2.salamat-title Саламат 1
-				h3.floor-title четвертый этаж
-			.tooltip-block
-				h3.title
-				ul.tooltip-list
-					li.tooltip-list-item-salamat.tooltip-item
-					li.tooltip-list-item-boutique.tooltip-item
-				.tooltip-button.tooltip-item Перейти
-			.plan-wrapper.clearfix
-				.plan-controller
-					.floor-selection-block
-						.floor-selection-header
-							h3.selet-floor-title Выберите этаж:
-						.floor-selection-content
-							ul.tc-selection
-								each tc in tcs
-									li.tc-item= tc.tcname
-										i.floor-arrow.fa.fa-angle-down(aria-hidden="true")
-										ul.floor-selection
-											each floor in tc.floors
-												li.floor-item
-													a.link.floor-item-link(href= floor.link)= floor.floor
-					.floor-labels-block
-						.floor-labels-header
-							h3.floor-labels-header-title Обозначения
-						.boutiques-label.item-label
-							.boutiques-rect.label-rect
-							span.label-item-span Бутики
-						.stairs-label.item-label
-							.stairs-rect.label-rect
-							span.label-item-span Лестница
-						.elevator-label.item-label
-							.elevator-rect.label-rect
-							span.label-item-span Лифт
-						.wc-label.item-label
-							.wc-rect.label-rect
-							span.label-item-span Туалет
-						.utility-room-label.item-label
-							.utility-rect.label-rect
-							span.label-item-span Тех. помещение
-				svg.floor(version='1.1', xmlns='http://www.w3.org/2000/svg', width='800px', height='600px' x="0px" y="0px" viewBox="0 0 800 600" data-salamat='1')
-					style(type='text/css').
-						.boutique:hover .rect{fill:rgba(255, 128, 128, .45);cursor:pointer}
-						.boutique:hover .str_numb{fill:#FFFFFF}
-						.rect{fill:rgba(255, 255, 255, .1);stroke:#FF7F66;stroke-miterlimit:10;}
-						.str_numb{font-family:'Roboto';user-select=none;cursor:pointer}
-						.st0{fill:#B2DBF7;}
-						.st1{fill:#FFFBB3;}
-						.st2{fill:#FAB4FC;}
-						.st4{fill:#4F4F4F;}
-						.st6{font-size:14px;}
-						.st7{fill:none;stroke:#484848;stroke-width:2;stroke-miterlimit:10;}
-					rect.st0(x='185.6', y='162.2', width='44', height='35')
-					rect.st1(x='482', y='256.8', width='48.7', height='70')
-					rect.st0(x='604.6', y='256.8', width='46.9', height='31')
-					rect.st2(x='632', y='203.5', width='55.1', height='28.7')
-					rect.st2(x='165.6', y='168.9', width='20', height='28.2')
-					g
-						polygon#s67.rect(points='651.5,256.8 687.1,256.8 687,287.8 651.5,287.8 	')
-						g
-							text.st4.str_numb.st6(transform='matrix(1 0 0 1 663.0762 277.185)') 67
-					g
-						polygon#s66.rect(points='530.7,256.8 604.6,256.8 604.6,287.8 687,287.8 687,326.8 530.7,326.8 	')
-						g
-							text.st4.str_numb.st6(transform='matrix(1 0 0 1 561.261 294.9036)') 66
-					g
-						polygon#s64.rect(points='645.8,162.2 687,162.2 687.1,203.5 645.8,203.5 	')
-						g
-							text.st4.str_numb.st6(transform='matrix(1 0 0 1 659.5516 197.1615)') 64
-					g
-						polygon#s69.rect(points='604.6,162.2 645.8,162.2 645.8,203.5 632,203.5 632,232.3 604.6,232.2 	')
-						g
-							text.st4.str_numb.st6(transform='matrix(1 0 0 1 619.039 197.1615)') 69
-					g
-						rect#s66a.rect(x='536.7', y='162.2', width='67.9', height='70')
-						g
-							text.st4.str_numb.st6(transform='matrix(1 0 0 1 563.8852 197.2115)') 66&acy;
-					g
-						rect#s70.rect(x='474.8', y='162.2', width='61.9', height='70')
-						g
-							text.st4.str_numb.st6(transform='matrix(1 0 0 1 502.4547 197.2111)') 70
-					g
-						polygon#s71.rect(points='121.4,162.2 474.8,162.2 474.8,256.8 482,256.8 482,326.8 121.4,326.8 	')
-						g
-							text.st4.str_numb.st6(transform='matrix(1 0 0 1 301.6884 256.7552)') 71
-					rect.st7(x='121.4', y='162.2', width='565.6', height='164.6')
-block scripts
-	script(src='./js/findGroups.js')
-	script(src='./js/plan.js')
+	svg.floor(version='1.1', xmlns='http://www.w3.org/2000/svg', width='800px', height='600px' x="0px" y="0px" viewBox="0 0 800 600" data-salamat='1')
+		style(type='text/css').
+			.boutique:hover .rect{fill:rgba(255, 128, 128, .45);cursor:pointer}
+			.boutique:hover .str_numb{fill:#FFFFFF}
+			.rect{fill:rgba(255, 255, 255, .1);stroke:#FF7F66;stroke-miterlimit:10;}
+			.str_numb{font-family:'Roboto';user-select=none;cursor:pointer}
+			.st0{fill:#B2DBF7;}
+			.st1{fill:#FFFBB3;}
+			.st2{fill:#FAB4FC;}
+			.st4{fill:#4F4F4F;}
+			.st6{font-size:14px;}
+			.st7{fill:none;stroke:#484848;stroke-width:2;stroke-miterlimit:10;}
+		rect.st0(x='185.6', y='162.2', width='44', height='35')
+		rect.st1(x='482', y='256.8', width='48.7', height='70')
+		rect.st0(x='604.6', y='256.8', width='46.9', height='31')
+		rect.st2(x='632', y='203.5', width='55.1', height='28.7')
+		rect.st2(x='165.6', y='168.9', width='20', height='28.2')
+		g
+			polygon#s67.rect(points='651.5,256.8 687.1,256.8 687,287.8 651.5,287.8 	')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 663.0762 277.185)') 67
+		g
+			polygon#s66.rect(points='530.7,256.8 604.6,256.8 604.6,287.8 687,287.8 687,326.8 530.7,326.8 	')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 561.261 294.9036)') 66
+		g
+			polygon#s64.rect(points='645.8,162.2 687,162.2 687.1,203.5 645.8,203.5 	')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 659.5516 197.1615)') 64
+		g
+			polygon#s69.rect(points='604.6,162.2 645.8,162.2 645.8,203.5 632,203.5 632,232.3 604.6,232.2 	')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 619.039 197.1615)') 69
+		g
+			rect#s66a.rect(x='536.7', y='162.2', width='67.9', height='70')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 563.8852 197.2115)') 66&acy;
+		g
+			rect#s70.rect(x='474.8', y='162.2', width='61.9', height='70')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 502.4547 197.2111)') 70
+		g
+			polygon#s71.rect(points='121.4,162.2 474.8,162.2 474.8,256.8 482,256.8 482,326.8 121.4,326.8 	')
+			g
+				text.st4.str_numb.st6(transform='matrix(1 0 0 1 301.6884 256.7552)') 71
+		rect.st7(x='121.4', y='162.2', width='565.6', height='164.6')
