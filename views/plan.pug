@@ -90,9 +90,10 @@ html(lang='en')
 			.content-wrapper
 				.plan-container
 					.floor-plan-header
-						block primary
-							h2.salamat-title Саламат 1
-							h3.floor-title первый этаж
+						-var sal = 'Саламат ' + salamat.salamat_numb
+						-var fl = salamat.floor + ' этаж'
+						h2.salamat-title Саламат 1
+						h3.floor-title первый этаж
 					.tooltip-block
 						h3.title
 						ul.tooltip-list
@@ -106,7 +107,7 @@ html(lang='en')
 									h3.selet-floor-title Выберите этаж:
 								.floor-selection-content
 									ul.tc-selection
-										each tc in tcs
+										each tc in salamat.floors
 											li.tc-item= tc.tcname
 												i.floor-arrow.fa.fa-angle-down(aria-hidden="true")
 												ul.floor-selection
