@@ -74,7 +74,7 @@
 					float: left;
 					height: 40px;
 					width: 200px;
-					transform: translateY(-30%);
+					/*transform: translateY(-30%);*/
 					background-image: url(../img/logo.png);
 					background-size: 100% 100%;
 					background-repeat: no-repeat;
