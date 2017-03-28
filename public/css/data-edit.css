@@ -2,7 +2,7 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	color: #484848;
+	color: #777777;
 	font-size: 14px;
 	font-family: 'Roboto';
 	display: block;
@@ -38,6 +38,7 @@ title{
 			margin-top: 20px;
 		}
 			.query-label{
+				line-height: 40px;
 				float: left;
 				min-width: 50px;
 			}
