@@ -5,6 +5,11 @@
 	color: #484848;
 	font-size: 14px;
 	font-family: 'Roboto';
+	display: block;
+	font-weight: 200;
+}
+title{
+	display: none;
 }
 .clearfix:after{
 	content: '';
@@ -15,6 +20,7 @@
 .page-container{
 	width: 700px;
 	margin: 0 auto;
+	padding-top: 40px;
 }
 	.query-form{
 		width: 300px;
@@ -25,20 +31,29 @@
 	}
 
 		.query-form-header{
+			font-size: 20px;
+			color: #666;
+		}
+		.query-field-fow{
 
 		}
-		.query-label{
-
-		}
-		.query-input{
-			height: 40px;
-			outline: 0;
-			border: 1px solid #e0e0e0;
-			border-radius: 4px;
-			padding: 10px;
-		}
+			.query-label{
+				float: left;
+				min-width: 50px;
+			}
+			.query-input{
+				float: left;
+				height: 40px;
+				outline: 0;
+				border: 1px solid #e0e0e0;
+				border-radius: 4px;
+				padding: 10px;
+			}
 		.search-button{
-
+			padding: 5px 8px;
+			background: gray;
+			color: white;
+			border-radius: 4px;
 		}
 	.data-form{
 		margin-top: 20px;
