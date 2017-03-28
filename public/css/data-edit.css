@@ -35,7 +35,7 @@ title{
 			color: #666666;
 		}
 		.query-field-row{
-	
+			margin-top: 20px;
 		}
 			.query-label{
 				float: left;
@@ -50,6 +50,7 @@ title{
 				padding: 10px;
 			}
 		.search-button{
+			margin-top: 20px;
 			padding: 5px 8px;
 			background: gray;
 			color: white;
