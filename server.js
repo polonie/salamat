@@ -286,6 +286,8 @@ app.use('/:page?', (req, res, next)=>{
 		data.salamat = {salamat_numb: page.substr(7,1), floor: page.substr(9,1), floors: floors};
 	}else if(page == 'rent'){
 		data.rent_imgs = ['rent1.jpg', 'rent2.jpg', 'rent3.jpg', 'rent4.jpg', 'rent5.jpg']
+	}else if(page == 'dbedit'){
+		data = {};
 	}
 	res.render(page, data);
 });
