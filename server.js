@@ -269,7 +269,7 @@ app.use('/docedit', (req, res)=>{
 		}
 	}
 	console.log(findQueries);
-	res.send(findQueries);
+	res.send(updateQueries);
 });
 
 app.use('/findboutique', (req, res)=>{
