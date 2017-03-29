@@ -268,8 +268,8 @@ app.use('/docedit', (req, res)=>{
 			findQueries[key]= obj[key];
 		}
 	}
-	console.log('find: ' + findQueries + ', update: ' + updateQueries);
-	res.send(findQueries, updateQueries);
+	console.log(findQueries);
+	res.send(findQueries);
 });
 
 app.use('/findboutique', (req, res)=>{
