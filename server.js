@@ -267,9 +267,12 @@ app.use('/docedit', (req, res)=>{
 		}else{
 			findQueries[key]= obj[key];
 		}
-	}
-	console.log(findQueries);
-	res.send(updateQueries);
+	};
+	Boutique.findOneAndUpdate(findQueries, {$set:updateQueries}, {new:true})
+		.then((doc)=>{
+			res.send(doc);
+		});
+	
 });
 
 app.use('/findboutique', (req, res)=>{
