@@ -36,11 +36,12 @@ title{
 		}
 		.query-field-row{
 			margin-top: 20px;
+			height: 40px;
 		}
 			.query-label{
 				line-height: 40px;
 				float: left;
-				min-width: 50px;
+				min-width: 100px;
 			}
 			.query-input{
 				float: left;
