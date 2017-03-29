@@ -166,7 +166,7 @@ app.get('/getboutique', (req, res)=>{
 		res.send(docs);
 	})
 });
-app.get('/boutique', (req, res)=>{
+app.get('/boutiquelist', (req, res)=>{
 	var boutique = req.query.boutique;
 	var salamat = req.query.salamat;
 	Boutique.find({salamat: salamat, salon: boutique}).then((docs)=>{
@@ -257,6 +257,18 @@ app.use('/boutiques', (req, res)=>{
 		.exec((err, docs)=>{
 			res.send(docs);
 		});
+});
+
+app.use('/docedit', (req, res)=>{
+	var obj = req.query, findQueries={}, updateQueries={};
+	for(key in obj){
+		if (key!='salamat' && key!='salon'){
+			updateQueries[key] = obj[key];
+		}else{
+			findQueries[key]= obj[key];
+		}
+	}
+	console.log('find: ' + findQueries + ', update: ' + updateQueries);
 });
 
 app.use('/findboutique', (req, res)=>{
