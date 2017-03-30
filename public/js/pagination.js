@@ -1,7 +1,8 @@
 var ready = ()=>{
 	var pages = document.querySelector('.pages');
 	var list = document.querySelector('.boutiques-block-items');
-	var indx = +(list.getAttribute('data-category')) - 1;
+	var indx = +(list.getAttribute('data-category'));
+	console.log(indx);
 	pages.children[indx].classList.add('active-page');
 
 	pages.onclick = (e)=>{
