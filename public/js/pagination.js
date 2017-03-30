@@ -1,12 +1,16 @@
 var pages = document.querySelector('.pages');
 var list = document.querySelector('.boutiques-block-items');
-var activePage = pages.firstChild;
+var pagesList = querySelectorAll('.page-item');
+var indx = +list.getAttribute('data-category');
+pagesList[indx].classList.add('active-page');
+
 pages.onclick = (e)=>{
 	if (e.target.matches('.page-item')){
 		var pageNumb = e.target.getAttribute('data-page');
 		activePage.classList.remove('active-page');
 		activePage = e.target;
 		activePage.classList.add('active-page');
+		window.location.href = `/boutiques?pagenumber=${pageNumb}`;
 		// fetch(`/boutiques?pagenumber=${pageNumb}`)
 		// 	.then((response)=>{
 		// 		return response.json();

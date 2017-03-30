@@ -261,6 +261,7 @@ app.use('/boutiques', (req, res)=>{
 			data.docs = docs;
 			data.page = req.query.pagenumber;
 			data.pages = numbofpages;
+			data.category = category;
 			res.render('boutiques', data);
 		});
 });

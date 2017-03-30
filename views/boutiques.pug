@@ -25,7 +25,7 @@ block content
 								li.category.filtered-item
 									span.filtered-item-title= category
 				.boutiques-content
-					.boutiques-block-items
+					.boutiques-block-items(data-category= category)
 						each boutique in docs
 							.boutiques-block-item
 								.boutiques-item-content.clearfix
