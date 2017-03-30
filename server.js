@@ -202,6 +202,7 @@ app.use('/category', (req, res)=>{
 								data.pages = numbofpages;
 								data.parent = parentname;
 								data.grand = grandname;
+								data.page = 1;
 								data.category = categoryname;
 								res.render('boutiques', data);
 							});
@@ -250,7 +251,8 @@ app.use('/category', (req, res)=>{
 
 
 app.use('/boutiques', (req, res)=>{
-	var offset = (+req.query.pagenumber - 1) * 10;
+	var page = +req.query.pagenumber;
+	var offset = (page - 1) * 10;
 	Boutique
 		.find({total: new RegExp(category, "i")})
 		.skip(offset)
@@ -259,7 +261,7 @@ app.use('/boutiques', (req, res)=>{
 			// res.send(docs);
 			var data = _data;
 			data.docs = docs;
-			data.page = req.query.pagenumber;
+			data.page = page;
 			data.pages = numbofpages;
 			data.category = category;
 			res.render('boutiques', data);

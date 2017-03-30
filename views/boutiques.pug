@@ -59,7 +59,11 @@ block content
 							div.pages-panel
 								div.pages.clearfix
 									while i < pages
-										div.page-item(data-page= ++i)= i
+										- ++i
+										if page == i
+											div.page-item.active-page(data-page= i)= i
+										else
+											div.page-item(data-page= i)= i
 block scripts
 	script(src='./js/findBoutique.js')
 	script(src='./js/pagination.js')
