@@ -188,34 +188,23 @@
 	}
 		.pages-panel{
 			position: relative;
-			text-align: center;
 		}
 			.pages{
-				display: inline-block;
-				margin: 0 auto;
+				float: right;
 			}
 				.page-item{
 					cursor: pointer;
 					width: 25px;
 					height: 30px;
+					border-radius: 3px;
 					line-height: 30px;
 					text-align: center;
-					background: #d64242;
-					background-image: linear-gradient(to left top, rgba(243, 122, 101, 0) 0, #f37a65);
-					color: #fff;
+					color: #f77c7c;
 					float: left;
 				}
 				.active-page{
-					background: #fff;
-					color: #f77c7c;
 					border: 1px solid #f77c7c;
 				}
 				.page-item:hover{
-					background: #f77c7c;
-				}
-				.page-item:nth-child(1){
-					border-radius: 3px 0 0 3px;
-				}
-				.page-item:nth-last-child(1){
-					border-radius: 0 3px 3px 0;
+					background: #f9f9f9;
 				}
