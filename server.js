@@ -6,6 +6,7 @@ var Category = require('./db/mongoose').Category;
 var {Boutique} = require('./models/Boutique');
 const port = process.env.PORT || 3000;
 var category;
+var numbofpages;
 var links = [{link: 'home', linktitle: 'Главная'}, {link: 'news', linktitle: 'Новости'}, {link: 'rent', linktitle: 'Аренда'}, {link: 'salamat1-1', linktitle: 
 'План'}, {link: 'company', linktitle: 'О нас'}, {link: 'contacts', linktitle: 'Контакты'}];
 var floors = [
@@ -188,7 +189,7 @@ app.use('/category', (req, res)=>{
 					Category.find({id: parent[0].idparent}, (err, grand)=>{
 						var grandname = grand[0].name;
 						Boutique.count({total: new RegExp(category, "i")}, (err, numb)=>{
-							var numbofpages = (numb % 10)==0 ? (numb/10) : (Math.floor(numb/10)+1); 
+							numbofpages = (numb % 10)==0 ? (numb/10) : (Math.floor(numb/10)+1); 
 							if (numbofpages == 1){
 								numbofpages = false;
 							};
@@ -208,7 +209,7 @@ app.use('/category', (req, res)=>{
 					})
 				}else{
 					Boutique.count({total: new RegExp(category, "i")}, (err, numb)=>{
-						var numbofpages = (numb % 10)==0 ? (numb/10) : (Math.floor(numb/10)+1); 
+						numbofpages = (numb % 10)==0 ? (numb/10) : (Math.floor(numb/10)+1); 
 						if (numbofpages == 1){
 							numbofpages = false;
 						};
@@ -228,7 +229,7 @@ app.use('/category', (req, res)=>{
 			})
 		}else{
 			Boutique.count({total: new RegExp(category, "i")}, (err, numb)=>{
-				var numbofpages = (numb % 10)==0 ? (numb/10) : (Math.floor(numb/10)+1); 
+				numbofpages = (numb % 10)==0 ? (numb/10) : (Math.floor(numb/10)+1); 
 				if (numbofpages == 1){
 					numbofpages = false;
 				};
@@ -255,7 +256,12 @@ app.use('/boutiques', (req, res)=>{
 		.skip(offset)
 		.limit(10)
 		.exec((err, docs)=>{
-			res.send(docs);
+			// res.send(docs);
+			var data = _data;
+			data.docs = docs;
+			data.page = req.query.pagenumber;
+			data.pages = numbofpages;
+			res.render('boutiques', data);
 		});
 });
 
