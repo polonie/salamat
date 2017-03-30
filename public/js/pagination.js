@@ -1,6 +1,6 @@
 var pages = document.querySelector('.pages');
 var list = document.querySelector('.boutiques-block-items');
-var pagesList = querySelectorAll('.page-item');
+var pagesList = document.querySelectorAll('.page-item');
 var indx = +list.getAttribute('data-category');
 pagesList[indx].classList.add('active-page');
 
