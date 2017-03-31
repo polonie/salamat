@@ -12,19 +12,6 @@ background-repeat: no-repeat;
 background-size: cover;
 transition: opacity 2.5s ease;
 }
-.blur-block{
-	position: absolute;
-	top: 30px;
-	right: 30px;
-	width: 200px;
-	height: 200px;
-	background: rgba(255, 255, 255, 0.4);
-	-webkit-filter: blur(2px);
-	-moz-filter: blur(2px);
-	-o-filter: blur(2px);
-	-ms-filter: blur(2px);
-	filter: blur(2px);
-}
 .slide-about{
 position: absolute;
 top: 40%;
