@@ -23,13 +23,6 @@ html{
 	background: #fff;
 	min-height: 100vh;
 }
-.page-container{
-	width: 80%;
-	margin: 0 auto;
-	overflow: hidden;
-	position: relative;
-	min-height: 100%;
-}
 .page-min-container{
 	width: 65%;
 	margin: 0 auto;
