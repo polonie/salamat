@@ -89,9 +89,11 @@ opacity: 0;
 }
 .slide-interior{
 	background-image: url(../img/slides/interior_slide.jpg);
+	opacity: 0;
 }
 .slide-kitchen{
 	background-image: url(../img/slides/kitchen_slide.jpg);
+	opacity: 0;
 }
 /*SLIDER-BLOCK*/
 

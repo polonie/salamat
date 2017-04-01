@@ -1,7 +1,7 @@
 var slider = document.querySelector('.slider-block');
 var currentSlide;
 var len = slider.children.length;
-var numb = len;
+var numb = 0;
 console.log(len);
 
 setInterval(()=>{
