@@ -110,7 +110,7 @@ margin-top: 10px;
 padding: 20px;
 float: left;
 width: calc((100% - 30px) / 3);
-height: 400px;
+height: 250px;
 margin-right: 15px;
 }
 .services-block-item:nth-last-child(1){
@@ -126,18 +126,21 @@ background: #f2f3f7;
 .services-block-item__img{
 float: left;
 display: block;
-width: 60px;
-height: 60px;
+width: 50px;
+height: 50px;
 }
 .services-block-item-about{
 float: left;
 margin-left: 10px;
 }
 .services-block-item-about__heading{
-line-height: 60px;
-font-size: 16px;
+line-height: 50px;
+font-size: 20px;
 font-weight: 700;
 color: #484848;
+}
+.services-block-item-body{
+	margin-top: 20px;
 }
 .services-block-item-about__text{
 font-size: 14px;
