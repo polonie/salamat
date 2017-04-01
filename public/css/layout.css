@@ -200,6 +200,10 @@
 				width: 240px;
 				height: 100%;
 				padding: 0 20px;
+				background-color: #d64929;
+				background-image:-webkit-linear-gradient(#6a250a 0px, #d64929 4px);
+				background-image:-o-linear-gradient(#6a250a 0px, #d64929 4px);
+				background-image:linear-gradient(#6a250a 0px, #d64929 4px);
 			}
 			.header-nav-category:hover .side-menu-block{
 				display: block;
