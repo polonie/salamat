@@ -93,6 +93,7 @@
 				float: left;
 				height: 40px;
 				margin-right: 100px;
+				min-width: 200px;
 			}
 				.link-item{
 					color: #484848;
@@ -100,7 +101,6 @@
 					float: left;
 					cursor: pointer;
 					height: 40px;
-					min-width: 200px;
 					font-weight: 200;
 				}
 				.link-item:nth-last-child(1){
