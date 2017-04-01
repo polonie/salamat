@@ -1,4 +1,25 @@
 /*TOP LINE*/
+.page-container{
+	width: 1170px;
+	padding: 0 20px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+@media screen and (min-width: 1200px){
+	.page-container{
+		width: 1170px;
+	}
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+	.page-container{
+		width: 970px;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+	.page-container{
+		width: 750px;
+	}
+}
 	.page-top-line{
 		background: #f8f8f8;
 		padding: 10px 0;
