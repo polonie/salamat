@@ -107,6 +107,7 @@ opacity: 0;
 margin-top: 10px;
 }
 .services-block-item{
+padding: 20px;
 float: left;
 width: calc((100% - 30px) / 3);
 height: 400px;
@@ -131,7 +132,6 @@ height: 60px;
 .services-block-item-about{
 float: left;
 margin-left: 10px;
-width: calc(100% - 40px);
 }
 .services-block-item-about__heading{
 line-height: 60px;
