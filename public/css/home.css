@@ -120,7 +120,7 @@ margin-right: 15px;
 background: #f2f3f7;
 }
 .services-block-item-header{
-	display: inline-block;
+	max-width: 90%;
 	margin: 0 auto;
 	padding-bottom: 15px;
 	border-bottom: 1px solid #e0e0e0;
