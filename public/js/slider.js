@@ -9,4 +9,4 @@ setInterval(()=>{
 	++numb;
 	numb = numb % len;
 	slider.children[numb].style.opacity = 1;
-}, 4000);
+}, 2200);
