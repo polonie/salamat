@@ -68,7 +68,6 @@
 	}
 		.page-header-main-wrap{
 			display: flex;
-			flex-wrap: wrap;
 			box-sizing: content-box;
 			width: 80%;
 			margin: 0 auto;
@@ -118,7 +117,7 @@
 			.page-header-search{
 				flex: 1;
 				height: 40px;
-				min-height: 250px;
+				min-width: 250px;
 			}
 				.search-block{
 					width: 100%;
