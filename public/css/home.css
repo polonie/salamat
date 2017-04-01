@@ -23,6 +23,7 @@
 
 /*SLIDER-BLOCK*/
 .slider-block{
+margin-top: 40px;
 width: 100%;
 height: 400px;
 position: relative;
@@ -83,7 +84,7 @@ font-weight: 200;
 color: #333;
 }
 .slide-tools{
-background-image: url(../img/toolsbg.jpg);
+background-image: url(../img/tools_slide.jpg);
 opacity: 0;
 }
 /*SLIDER-BLOCK*/
