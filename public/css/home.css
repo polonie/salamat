@@ -146,12 +146,11 @@ font-weight: 700;
 color: #484848;
 }
 .services-block-item-body{
-	
-}
-.services-block-item-about__text{
 position: relative;
 top: 50%;
 transform: translateY(-50%);
+}
+.services-block-item-about__text{
 text-align: center;
 font-size: 16px;
 font-weight: 200;
