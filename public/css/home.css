@@ -66,11 +66,11 @@ margin-top: 10px;
 cursor: pointer;
 }
 .slide-building-materials{
-background-image: url(../img/стройматериалы.jpg);
+background-image: url(../img/slides/bmaterials_slide.jpg);
 opacity: 1;
 }
 .slide-bath{
-background-image: url(../img/bath.jpg);
+background-image: url(../img/slides/bath_slide.jpg);
 color: #333;
 opacity: 0;
 }
@@ -84,8 +84,14 @@ font-weight: 200;
 color: #333;
 }
 .slide-tools{
-background-image: url(../img/tools_slide.jpg);
+background-image: url(../img/slides/tools_slide.jpg);
 opacity: 0;
+}
+.slide-interior{
+	background-image: url(../img/slides/interior_slide.jpg);
+}
+.slide-kitchen{
+	background-image: url(../img/slides/kitchen_slide.jpg);
 }
 /*SLIDER-BLOCK*/
 
