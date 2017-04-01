@@ -120,8 +120,9 @@ margin-right: 15px;
 background: #f2f3f7;
 }
 .services-block-item-header{
+	margin: 0 auto;
 	padding-bottom: 15px;
-	border-bottom: 1px solid #d0d0d0;
+	border-bottom: 1px solid #e0e0e0;
 }
 .services-block-item__img{
 float: left;
@@ -143,6 +144,7 @@ color: #484848;
 	margin-top: 20px;
 }
 .services-block-item-about__text{
+text-align: center;
 font-size: 14px;
 color: #666666;
 }
