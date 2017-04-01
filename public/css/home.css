@@ -107,7 +107,6 @@ opacity: 0;
 margin-top: 10px;
 }
 .services-block-item{
-text-align: center;
 padding: 20px;
 float: left;
 width: calc((100% - 30px) / 3);
@@ -121,10 +120,13 @@ margin-right: 15px;
 background: #f2f3f7;
 }
 .services-block-item-header{
-	display: inline-block;
-	margin: 0 auto;
+	text-align: center;
 	padding-bottom: 15px;
 	border-bottom: 1px solid #e0e0e0;
+}
+.services-block-item-header-wrap{
+	display: inline-block;
+	margin: 0 auto;
 }
 .services-block-item__img{
 float: left;
