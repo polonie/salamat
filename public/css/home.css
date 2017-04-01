@@ -34,7 +34,7 @@ height:100%;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-transition: opacity 2.5s ease;
+transition: opacity 1.5s ease;
 }
 .slide-about{
 position: absolute;
@@ -83,7 +83,7 @@ font-weight: 200;
 color: #333;
 }
 .slide-tools{
-background-image: url(../img/instruments.jpg);
+background-image: url(../img/toolsbg.jpg);
 opacity: 0;
 }
 /*SLIDER-BLOCK*/

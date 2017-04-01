@@ -89,8 +89,8 @@ html(lang='en')
 							a.nav-menu-link.link(href= link.link)= link.linktitle
 		.page-content
 			block content
-		.page-footer.footer-container
-			.page-container
+		.page-footer
+			.footer-container
 				.footer-block-header
 				.footer-block-items-row.clearfix
 					each item in footer
@@ -105,7 +105,7 @@ html(lang='en')
 										input.footer-block-item-subscribe-input.subscribe-item
 										.footer-block-item-subscribe-button.subscribe-item Отправить
 									.footer-block-item-socicons
-				.footer-block-bottom
+			.footer-block-bottom
 		script(src='./js/searchbox.js')
 		script(src='./js/side-menu.js')
 		block scripts
