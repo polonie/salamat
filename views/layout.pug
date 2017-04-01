@@ -89,6 +89,23 @@ html(lang='en')
 							a.nav-menu-link.link(href= link.link)= link.linktitle
 		.page-content
 			block content
+		.page-footer.footer-container
+			.container
+				.footer-block-header
+				.footer-block-items-row.clearfix
+					each item in footer
+						.footer-block-item
+							h3.footer-block-item-header= item.title
+								if item.links
+									each link in item.links
+										.footer-block-item-link
+											span.footer-block-item-link-span= link
+								else
+									.footer-block-item-subscribe
+										input.footer-block-item-subscribe-input.subscribe-item
+										.footer-block-item-subscribe-button.subscribe-item Отправить
+									.footer-block-item-socicons
+				.footer-block-bottom
 		script(src='./js/searchbox.js')
 		script(src='./js/side-menu.js')
 		block scripts

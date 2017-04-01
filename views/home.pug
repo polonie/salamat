@@ -39,76 +39,50 @@ block content
 					img(src='./icons/services/стройматериалы.png').services-body-item__img
 					.services-body-item-about
 						h3.services-body-item-about__heading Стройматериалы
-						p.services-body-item-about__text В наших торговых центрах имеется все необходимое для строительства, ремонта и монтажа
+						p.services-body-item-about__text Все для строительства, ремонта и монтажа
 				.services-body-item.mr-block
 					img(src='./icons/services/rent.png').services-body-item__img
 					.services-body-item-about
 						h3.services-body-item-about__heading Аренда
-						p.services-body-item-about__text Общая площадь сдаваемых в аренду помещений в торговых домах Саламат 1-5 составляет 20 716 кв. м.
+						p.services-body-item-about__text Общая площадь 20 716 кв. м.
 				.services-body-item
 					img(src='./icons/services/building.png').services-body-item__img
 					.services-body-item-about
 						h3.services-body-item-about__heading Строительство
-						p.services-body-item-about__text Строительная компания категории А. В число наших объектов входят: ТД Саламат 1-5, отель "Royal Tulip Almaty", бизнес-центры, жилые дома.
-		.favourites-block.mt-block.page-block
-			.favourites-header
-				h2.favourites-header__name Популярные категории
-			.favourites-body
-				.favourites-body-row.clearfix
-					.favourites-body-item
-						img(src='./img/favourites/bmaterials.jpg').favourites-body-item__image
-						.favourites-body-item__text
-							h3.favourites-body-item__text-heading Строительные материалы
-							p.favourites-body-item__text-body Все необходимые материалы для строительства здания
-					.favourites-body-item
-						img(src='./img/favourites/moulding.jpg').favourites-body-item__image
-						.favourites-body-item__text
-							h3.favourites-body-item__text-heading Отделочные материалы
-							p.favourites-body-item__text-body Все необходимое для внутренней и внешней отделки
-					.favourites-body-item
-						img(src='./img/favourites/paint.jpg').favourites-body-item__image
-						.favourites-body-item__text
-							h3.favourites-body-item__text-heading Лакокрасочные материалы
-							p.favourites-body-item__text-body Лучшие бренды лакокрасочных материалов
-				.favourites-body-row.clearfix
-					.favourites-body-row
-						.favourites-body-item
-							.favourites-body-item__more-button Подробнее
-						.favourites-body-item.mr-block
-							.favourites-body-item__more-button Подробнее
-						.favourites-body-item
-							.favourites-body-item__more-button Подробнее
-				.favourites-body-row.clearfix
-					.favourites-body-item.mr-block
-						img(src='./img/favourites/faucet.jpg').favourites-body-item__image
-						.favourites-body-item__text
-							h3.favourites-body-item__text-heading Сантехника
-							p.favourites-body-item__text-body Огромный выбор сантехники различных дизайнов и стилей
-					.favourites-body-item.mr-block
-						img(src='./img/favourites/tools.jpg').favourites-body-item__image
-						.favourites-body-item__text
-							h3.favourites-body-item__text-heading Инструменты
-							p.favourites-body-item__text-body Инструменты для любых видов строительных и отделочных работ
-					.favourites-body-item
-						img(src='./img/favourites/household.jpg').favourites-body-item__image
-						.favourites-body-item__text
-							h3.favourites-body-item__text-heading Хозяйственные товары
-							p.favourites-body-item__text-body Все необходимое для поддержания чистоты и порядка в доме
-				.favourites-body-row.clearfix
-					.favourites-body-row
-						.favourites-body-item.mr-block
-							.favourites-body-item__more-button Подробнее
-						.favourites-body-item.mr-block
-							.favourites-body-item__more-button Подробнее
-						.favourites-body-item
-							.favourites-body-item__more-button Подробнее
-		.kitchen-block.page-block.mt-block
-			.hover-bg
-			.kitchen-about
-				h3.kitchen-about-heading Кухня вашей мечты
-				p.kitchen-about-text Компании, занимающиеся кухонным оснащением
-				.kitchen-about-button Подробнее
+						p.services-body-item-about__text Строительная компания категории А
+		.popular-categories.category-block
+			.category-header
+				h3.category-header-title Популярные категории
+			.category-body
+				.category-row-items.clearfix
+					each item in categories.pop_categories
+						- var imgurl = './img/' + item.link
+						.category-row-item.item-6
+							img.category-img(src= imgurl)
+							.category-item-hover-block
+								p.category-item-hover-block-text= item.name
+		.bath-area.category-block
+			.category-header.line-header
+				h3.category-header-title Все для ванной
+			.category-body
+				.category-row-items.clearfix
+					each item in categories.bath_category
+						- var imgurl = './img/' + item.link
+						.category-row-item.item-4
+							img.category-img(src= imgurl)
+							.category-content-title
+								h4.category-content-title-heading= item.name
+		.furniture-area.category-block
+			.category-header.line-header
+				h3.category-header-title Мебель
+			.category-body
+				.category-row-items.clearfix
+					each item in categories.furniture_category
+						- var imgurl = './img/' + item.link
+						.category-row-item.item-4
+							img.category-img(src= imgurl)
+							.category-content-title
+								h4.category-content-title-heading= item.name
 block scripts
-	//- script(src='./js/side-menu.js')
 	script(src='./js/side-menu.js')
 	script(src='./js/slider.js')

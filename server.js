@@ -52,9 +52,41 @@ var floors = [
 			]
 		}
 ];
+var categories = {
+	pop_categories: [
+		{link:'category1.jpg', name:'Строительные материалы'},
+		{link:'category2.jpg', name:'Отделочные материалы'},
+		{link:'category3.jpg', name:'Лакокрасочные материалы'},
+		{link:'category4.jpg', name:'Сантехника'},
+		{link:'category5.jpg', name:'Иснтрументы'},
+		{link:'category6.jpg', name:'Все для дома'}
+	],
+	bath_category: [
+		{link:'bath1.jpg', name: 'Унитазы/Биде'},
+		{link:'bath2.jpg', name: 'Душевые кабины'},
+		{link:'bath3.jpg', name: 'Раковины'},
+		{link:'bath4.jpg', name: 'Ванны'}
+	],
+	furniture_category: [
+		{link:'furniture1.jpg', name: 'Гостинная'},
+		{link:'furniture2.jpg', name: 'Кухня'},
+		{link:'furniture3.jpg', name: 'Спальня'},
+		{link:'furniture4.jpg', name: 'Ванна'}
+	],
+	paint_category:[
+		{link:'paint1.jpg', name: 'Внутренняя покраска'},
+		{link:'paint2.jpg', name: 'Внешняя покраска'}
+	]
+};
+var footer = [
+		{title:'О нас', links:['О компании', 'Аренда', 'Арендаторы', 'Наши контакты']},
+		{title:'План этажей', links:['Саламат 1', 'Саламат 2', 'Саламат 3', 'Саламат 4', 'Саламат 5',]},
+		{title:'Производители', links:['Итальянские', 'Китайские', 'Другие']},
+		{title:'Обратная связь', links:['Клиентам', 'Арендаторам', 'Партнерам']},
+		{title:'Подписка'}
+]
 
-
-var _data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links: links};
+var _data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links, categories, footer};
 
 
 app.set('view engine', 'pug');
