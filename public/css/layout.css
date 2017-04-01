@@ -95,11 +95,13 @@
 				margin-right: 100px;
 			}
 				.link-item{
-					color: #d2583d;
+					color: #484848;
 					margin-right: 30px;
 					float: left;
 					cursor: pointer;
 					height: 40px;
+					min-width: 200px;
+					font-weight: 200;
 				}
 				.link-item:nth-last-child(1){
 					margin-right: 0;
