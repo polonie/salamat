@@ -101,11 +101,12 @@ opacity: 0;
 
 /*SERVICE BLOCK*/
 .services-block{
-	background-image: url(./img/constructing_bg3.jpg);
+	background-image: url(./img/services_bg.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	position: relative;
+	padding: 40px;
 }
 .services-hover-block{
 	position: absolute;
