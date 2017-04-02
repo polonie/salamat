@@ -106,7 +106,7 @@
 			.page-header-co{
 				float: left;
 				height: 40px;
-				width: 30%;
+				width: 50%;
 			}
 				.link-item{
 					color: #484848;
@@ -132,7 +132,7 @@
 			.page-header-search{
 				float: left;
 				height: 40px;
-				width: 50%;
+				width: 30%;
 				padding: 0 20px;
 			}
 				.search-block{
