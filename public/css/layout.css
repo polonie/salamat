@@ -203,9 +203,9 @@
 				height: 100%;
 				padding: 0 20px;
 				background-color: #d64929;
-				background-image:-webkit-linear-gradient(#6a250a 0px, #d64929 4px);
-				background-image:-o-linear-gradient(#6a250a 0px, #d64929 4px);
-				background-image:linear-gradient(#6a250a 0px, #d64929 4px);
+				background-image:-webkit-linear-gradient(#6a250a 0px, #ad391f 4px);
+				background-image:-o-linear-gradient(#6a250a 0px, #ad391f 4px);
+				background-image:linear-gradient(#6a250a 0px, #ad391f 4px);
 			}
 			.header-nav-category:hover .side-menu-block{
 				display: block;
@@ -379,11 +379,12 @@
 					}
 				.footer-block-item-subscribe{
 					height: 30px;
+					margin-bottom: 10px;
 				}
 					.footer-block-item-subscribe-input{
 						width: 65%;
 						outline: 0;
-						border: 1px solid #d0d0d0;
+						border: 1px solid #bbb;
 						border-right: none;
 						padding-left: 10px;
 						background: #fff;
@@ -392,8 +393,8 @@
 					.footer-block-item-subscribe-button{
 						cursor: pointer;
 						line-height: 30px;
-						color: #d64929;
-						border: 1px solid #d64929;
+						color: #ff9999;
+						border: 1px solid #ff9999;
 						font-size: 12px;
 						font-weight: 300;
 						text-align: center;
