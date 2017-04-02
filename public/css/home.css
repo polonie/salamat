@@ -4,7 +4,7 @@
 }
 @media screen and (min-width: 1200px){
 	.home-page-container{
-		width: 1260px;
+		width: 1200px;
 	}
 }
 @media screen and (min-width: 992px) and (max-width: 1199px){
@@ -62,6 +62,9 @@ color: #fff;
 display: inline-block;
 margin-top: 10px;
 cursor: pointer;
+}
+.more-button:hover{
+	background: #f77c7c;
 }
 .slide-building-materials{
 background-image: url(../img/slides/bmaterials_slide.jpg);
