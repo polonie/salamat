@@ -1,6 +1,5 @@
 .page-container{
 	margin: 0 auto;
-	overflow: hidden;
 }
 @media screen and (min-width: 1200px){
 	.page-container{
@@ -91,7 +90,7 @@
 		}
 			.page-header-logo{
 				float: left;
-				width: 30%;
+				width: 20%;
 				height: 40px;
 			}
 				.logo-link{
@@ -133,7 +132,7 @@
 			.page-header-search{
 				float: left;
 				height: 40px;
-				width: 40%;
+				width: 50%;
 				padding: 0 20px;
 			}
 				.search-block{
