@@ -102,19 +102,20 @@ opacity: 0;
 /*SERVICE BLOCK*/
 .services-block{
 	padding: 40px;
+	background: #f9f9f9;
 }
 .services-block-header{
 
 }
 .services-block-header-title{
-	margin-top: 10px;
+	margin-top: 30px;
 	font-size: 30px;
 	font-weight: 300;
 	color: #333;
 	text-align: center;
 }
 .services-block-items{
-margin-top: 50px;
+margin-top: 60px;
 }
 .services-block-item{
 padding: 20px;
