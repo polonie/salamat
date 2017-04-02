@@ -100,6 +100,16 @@ block content
 							img.category-img(src= imgurl)
 							.category-content-title
 								h4.category-content-title-heading= item.name
+		.paint-area.category-block
+			.wide-paint-block
+				img.category-img(src='./img/paint.jpg')
+			.category-row-items.clearfix
+				each item in categories.paint_category
+					- var imgurl = './img/' + item.link
+					.category-row-item.item-3
+						img.category-img(src= imgurl)
+						.category-content-title
+							h4.category-content-title-heading= item.name
 block scripts
 	script(src='./js/side-menu.js')
 	script(src='./js/slider.js')
