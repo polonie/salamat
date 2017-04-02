@@ -101,8 +101,19 @@ opacity: 0;
 
 /*SERVICE BLOCK*/
 .services-block{
-	padding: 40px;
-	background: #f9f9f9;
+	background-image: url(./img/constructing_bg3.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+.services-hover-block{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.7);
 }
 .services-block-header{
 
