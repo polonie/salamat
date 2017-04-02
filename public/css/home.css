@@ -223,7 +223,7 @@ color: #777777;
 	.category-header-title{
 		font-size: 20px;
 		font-weight: 500;
-		color: #777777;
+		color: #333;
 	}
 .category-body{
 	margin-top: 10px;
@@ -248,7 +248,7 @@ color: #777777;
 		height: 25%;
 	}
 	.item-6:hover .category-item-hover-block-text{
-		display: block;
+		visibility: visible;
 	}
 	.item-4{
 		width: calc((100% - 60px) / 4);
@@ -280,7 +280,6 @@ color: #777777;
 			background: rgba(0, 0, 0, 0.9);
 			transition: height .2s ease;
 			font-size: 12px;
-			color: #fff;
 			font-weight: 300;
 			padding-left: 15px;
 		}
@@ -307,6 +306,7 @@ color: #777777;
 				position: relative;
 				top: 50%;
 				transform: translateY(-50%);
+				color: #fff;
 			}
 .popular-categories{
 
