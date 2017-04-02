@@ -90,7 +90,7 @@
 		}
 			.page-header-logo{
 				float: left;
-				width: 25%;
+				width: 20%;
 				height: 40px;
 			}
 				.logo-link{
@@ -111,7 +111,7 @@
 				.link-item{
 					color: #484848;
 					margin-right: 20px;
-					float: left;
+					float: right;
 					cursor: pointer;
 					height: 40px;
 					font-weight: 200;
@@ -132,7 +132,7 @@
 			.page-header-search{
 				float: left;
 				height: 40px;
-				width: 35%;
+				width: 40%;
 				padding: 0 20px;
 			}
 				.search-block{
