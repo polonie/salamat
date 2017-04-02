@@ -392,7 +392,8 @@
 					.footer-block-item-subscribe-button{
 						cursor: pointer;
 						line-height: 30px;
-						color: #fff;
+						color: #d64929;
+						border: 1px solid #d64929;
 						font-size: 12px;
 						font-weight: 300;
 						text-align: center;
