@@ -1,12 +1,10 @@
 .home-page-container{
-	width: 1170px;
-	padding: 0 20px;
 	margin: 0 auto;
 	overflow: hidden;
 }
 @media screen and (min-width: 1200px){
 	.home-page-container{
-		width: 1170px;
+		width: 1260px;
 	}
 }
 @media screen and (min-width: 992px) and (max-width: 1199px){
