@@ -109,15 +109,16 @@ opacity: 0;
 	padding: 40px;
 }
 .services-hover-block{
+	z-index: 10;
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: rgba(0, 0, 0, 0.7);
+	background: rgba(0, 0, 0, 0.6);
 }
 .services-block-header{
-
+	z-index: 1000;
 }
 .services-block-header-title{
 	margin-top: 30px;
@@ -128,8 +129,10 @@ opacity: 0;
 }
 .services-block-items{
 margin-top: 60px;
+z-index: 1000;
 }
 .services-block-item{
+z-index: 1000;
 padding: 20px;
 padding-bottom: 0;
 float: left;
