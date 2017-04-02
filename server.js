@@ -304,7 +304,11 @@ app.use('/docedit', (req, res)=>{
 	var obj = req.query, findQueries={}, updateQueries={};
 	for(key in obj){
 		if (key!='salamat' && key!='salon' && key!='name'){
-			updateQueries[key] = obj[key];
+			if (key =='newsalon'){
+				updateQueries.salon = key;
+			}else{
+				updateQueries[key] = obj[key];
+			}
 		}else{
 			findQueries[key]= obj[key];
 		}
