@@ -101,7 +101,7 @@ opacity: 0;
 
 /*SERVICE BLOCK*/
 .services-block{
-	background-image: url(./img/services_bg.jpg);
+	background-image: url(../img/services_bg.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
