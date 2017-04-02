@@ -101,10 +101,19 @@ opacity: 0;
 
 /*SERVICE BLOCK*/
 .services-block{
+	padding: 40px;
+}
+.services-block-header{
 
 }
+.services-block-header-title{
+	font-size: 25px;
+	font-weight: 200;
+	color: #333;
+	text-align: center;
+}
 .services-block-items{
-
+margin-top: 30px;
 }
 .services-block-item{
 padding: 20px;
