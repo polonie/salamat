@@ -237,21 +237,17 @@ color: #777777;
 		width: calc((100% - 60px) / 4);
 		margin-right: 20px;
 	}
-	.item-3{
+	.item-2{
 		width: calc((100% - 20px) / 2);
 		margin-right: 20px;
 	}
-	.item-3:nth-last-child(1){
+	.item-2:nth-last-child(1){
 		margin-right: 0;
 	}
 	.item-4:nth-last-child(1){
 		margin-right: 0;
 	}
-		.category-content-title-heading{
-			font-size: 16px;
-			color: #666666;
-			font-weight: 400;
-		}
+
 		.category-img{
 			display: block;
 			width: 100%;
@@ -273,7 +269,18 @@ color: #777777;
 		}
 		.category-content-title{
 			margin-top: 10px;
+			position: absolute;
+			bottom: 0;
+			height: 20%;
+			left: 0;
+			width: 25%;
+			background: gray;
 		}
+			.category-content-title-heading{
+				font-size: 16px;
+				color: #fff;
+				font-weight: 400;
+			}
 			.category-item-hover-block-text{
 				display: none;
 				position: relative;
