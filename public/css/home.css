@@ -147,8 +147,7 @@ color: #484848;
 }
 .services-block-item-body{
 position: relative;
-top: 50%;
-transform: translateY(-50%);
+top:30px;
 }
 .services-block-item-about__text{
 text-align: center;
@@ -192,7 +191,6 @@ color: #777777;
 
 
 .popular-categories{
-	border: 1px solid #ccc;
 	padding: 20px;
 }
 .category-block{
