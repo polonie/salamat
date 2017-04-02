@@ -268,18 +268,17 @@ color: #777777;
 			padding-left: 15px;
 		}
 		.category-content-title{
-			margin-top: 10px;
 			position: absolute;
 			bottom: 0;
 			height: 20%;
 			left: 0;
-			width: 25%;
-			background: gray;
+			width: 30%;
+			background: #333;
 		}
 			.category-content-title-heading{
-				font-size: 16px;
+				font-size: 14px;
 				color: #fff;
-				font-weight: 400;
+				font-weight: 200;
 			}
 			.category-item-hover-block-text{
 				display: none;
