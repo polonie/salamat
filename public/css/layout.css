@@ -1,3 +1,22 @@
+.page-container{
+	margin: 0 auto;
+	overflow: hidden;
+}
+@media screen and (min-width: 1200px){
+	.page-container{
+		width: 1200px;
+	}
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+	.page-container{
+		width: 970px;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 991px){
+	.page-container{
+		width: 750px;
+	}
+}
 /*TOP LINE*/
 	.page-top-line{
 		background: #f8f8f8;
@@ -5,11 +24,6 @@
 		border-bottom: 1px solid #e9e9e9;
 		height: 36px;
 	}
-		.page-top-line-wrap{
-			height: 100%;
-			width: 80%;
-			margin: 0 auto;
-		}
 			.nav-log-link{
 				float: left;
 			}
@@ -76,7 +90,7 @@
 		}
 			.page-header-logo{
 				float: left;
-				margin-right: 55px;
+				width: 25%;
 				height: 40px;
 			}
 				.logo-link{
@@ -92,7 +106,7 @@
 			.page-header-co{
 				float: left;
 				height: 40px;
-				min-width: 200px;
+				width: 25%;
 			}
 				.link-item{
 					color: #484848;
@@ -116,9 +130,9 @@
 						line-height: 40px;
 					}
 			.page-header-search{
-				flex: 1;
 				height: 40px;
-				min-width: 250px;
+				width: 50%;
+				padding: 0 20px;
 			}
 				.search-block{
 					width: 100%;
