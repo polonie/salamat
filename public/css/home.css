@@ -308,6 +308,8 @@ color: #777777;
 	color: #fff;
 }
 .paint-about-block-heading-text{
+	background: orange;
+	padding: 10px;
 	font-weight: 700;
 	font-size: 30px;
 	color: #333;
