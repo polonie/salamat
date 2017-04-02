@@ -294,5 +294,21 @@ color: #777777;
 
 
 .wide-paint-block{
+	position: relative;
 	margin-bottom: 20px;
+}
+.paint-about-block{
+	position: absolute;
+	left: 30px;
+	bottom: 100px;
+}
+.paint-about-block-heading{
+	font-size: 40px;
+	font-weight: 200;
+	color: #fff;
+}
+.paint-about-block-heading-text{
+	font-weight: 500;
+	font-size: 30px;
+	color: #333;
 }
