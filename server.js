@@ -303,7 +303,7 @@ app.use('/boutiques', (req, res)=>{
 app.use('/docedit', (req, res)=>{
 	var obj = req.query, findQueries={}, updateQueries={};
 	for(key in obj){
-		if (key!='salamat' && key!='salon'){
+		if (key!='salamat' && key!='salon' && key!='name'){
 			updateQueries[key] = obj[key];
 		}else{
 			findQueries[key]= obj[key];
@@ -312,6 +312,8 @@ app.use('/docedit', (req, res)=>{
 	Boutique.findOneAndUpdate(findQueries, {$set:updateQueries}, {new:true})
 		.then((doc)=>{
 			res.send(doc);
+		}, (err)=>{
+			res.send(err);
 		});
 	
 });
