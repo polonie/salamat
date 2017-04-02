@@ -108,15 +108,6 @@ opacity: 0;
 	position: relative;
 	padding: 40px;
 }
-.services-hover-block{
-	z-index: 10;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(0, 0, 0, 0.6);
-}
 .services-block-header{
 	z-index: 1000;
 }
@@ -223,7 +214,7 @@ color: #777777;
 
 }
 .category-header{
-
+	margin-top: 30px;
 }
 .line-header{
 	padding-bottom: 10px;
@@ -238,7 +229,7 @@ color: #777777;
 	margin-top: 10px;
 }
 	.category-row-items{
-
+		margin-top: 30px;
 	}
 	.category-row-item{
 		float: left;

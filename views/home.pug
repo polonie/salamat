@@ -42,7 +42,6 @@ block content
 				.brand-item
 					img.brand-logo-img(src='./img/brands/kronotex.jpg')
 		.services-block.mt-block.page-block
-			.services-hover-block
 			.services-block-header
 				h2.services-block-header-title Наши услуги
 			.services-block-items.clearfix
@@ -81,28 +80,6 @@ block content
 							img.category-img(src= imgurl)
 							.category-item-hover-block
 								p.category-item-hover-block-text= item.name
-		.bath-area.category-block
-			.category-header.line-header
-				h3.category-header-title Все для ванной
-			.category-body
-				.category-row-items.clearfix
-					each item in categories.bath_category
-						- var imgurl = './img/' + item.link
-						.category-row-item.item-4
-							img.category-img(src= imgurl)
-							.category-content-title
-								h4.category-content-title-heading= item.name
-		.furniture-area.category-block
-			.category-header.line-header
-				h3.category-header-title Мебель
-			.category-body
-				.category-row-items.clearfix
-					each item in categories.furniture_category
-						- var imgurl = './img/' + item.link
-						.category-row-item.item-4
-							img.category-img(src= imgurl)
-							.category-content-title
-								h4.category-content-title-heading= item.name
 		.paint-area.category-block
 			.wide-paint-block
 				img.category-img(src='./img/paint.jpg')
