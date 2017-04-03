@@ -3,7 +3,7 @@ html(lang='en')
 	head
 		meta(charset='utf-8')
 		title Саламат - центр строительных материалов
-		link(href='https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i,700,900' rel='stylesheet')
+		link(href='https://fonts.googleapis.com/css?family=Roboto:100,200,300,300i,400,500,500i,700,900' rel='stylesheet')
 		link(rel="stylesheet" href="./css/main.css")
 		link(rel="stylesheet" href="./css/layout.css")
 		link(rel="stylesheet" href="./css/plan.css")
@@ -36,6 +36,13 @@ html(lang='en')
 				.page-container.clearfix
 					.page-header-logo
 						a(href='home').logo-link.link
+					.page-header-search
+						.search-block
+							.search-box-input
+								input(placeholder='поиск...').input-search
+								.search-box-results
+							.search-box-button
+								i.fa.fa-search.button-search(aria-hidden="true" style='font-size: 1.2em; display: block')
 					.page-header-co.clearfix
 						.renters.link-item
 							i.fa.fa-address-book(aria-hidden="true" style='font-size:1.2em').link-icon
@@ -46,13 +53,6 @@ html(lang='en')
 						.partners.link-item
 							i.fa.fa-handshake-o(aria-hidden="true" style='font-size:1.2em').link-icon
 							span.co-link-title Партнеры
-					.page-header-search
-						.search-block
-							.search-box-input
-								input(placeholder='поиск...').input-search
-								.search-box-results
-							.search-box-button
-								i.fa.fa-search.button-search(aria-hidden="true" style='font-size: 1.2em; display: block')
 			.page-header-nav
 				.page-container.clearfix
 					.header-nav-category
