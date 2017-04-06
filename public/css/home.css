@@ -81,10 +81,11 @@ opacity: 0;
 
 /*SERVICE BLOCK*/
 .services-block{
-	background-image: url(../img/services_bg.jpg);
-	background-repeat: no-repeat;
+	/*background-image: url(../img/services_bg.jpg);*/
+	border: 1px solid #f77c7c;
+/*	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
+	background-size: cover;*/
 	position: relative;
 	padding: 40px;
 }

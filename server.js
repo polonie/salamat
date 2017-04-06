@@ -6,7 +6,7 @@ var Category = require('./db/mongoose').Category;
 var {Boutique} = require('./models/Boutique');
 const port = process.env.PORT || 3000;
 var category;
-// var numbofpages;
+var numbofpages;
 var links = [{link: 'home', linktitle: 'Главная'}, {link: 'news', linktitle: 'Новости'}, {link: 'rent', linktitle: 'Аренда'}, {link: 'salamat1-1', linktitle: 
 'План'}, {link: 'company', linktitle: 'О нас'}, {link: 'contacts', linktitle: 'Контакты'}];
 var floors = [
