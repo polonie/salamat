@@ -253,12 +253,13 @@ color: #777777;
 		}
 		.category-item-hover-block{
 			position: absolute;
+			border-top: 2px solid #f77c7c;
 			bottom: 0;
 			width: 100%;
 			left: 0;
 			right: 0;
 			height: 0;
-			background: rgba(0, 0, 0, 0.9);
+			background: #fff;
 			transition: height .2s ease;
 			font-size: 12px;
 			font-weight: 300;
