@@ -82,7 +82,7 @@ opacity: 0;
 /*SERVICE BLOCK*/
 .services-block{
 	/*background-image: url(../img/services_bg.jpg);*/
-	border: 1px solid #f77c7c;
+	/*border: 1px solid #f77c7c;*/
 /*	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;*/
@@ -261,7 +261,7 @@ color: #777777;
 			right: 0;
 			height: 0;
 			background: #fff;
-			transition: all .3s ease;
+			transition: all .2s ease;
 			font-size: 12px;
 			font-weight: 300;
 			padding-left: 15px;
