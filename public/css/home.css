@@ -227,6 +227,7 @@ color: #777777;
 	}
 	.item-6:hover .category-item-hover-block{
 		height: 25%;
+		border-top: 2px solid #f77c7c;
 	}
 	.item-6:hover .category-item-hover-block-text{
 		visibility: visible;
@@ -253,7 +254,7 @@ color: #777777;
 		}
 		.category-item-hover-block{
 			position: absolute;
-			border-top: 2px solid #f77c7c;
+			border-top: 2px solid transparent;
 			bottom: 0;
 			width: 100%;
 			left: 0;
@@ -288,7 +289,7 @@ color: #777777;
 				position: relative;
 				top: 50%;
 				transform: translateY(-50%);
-				color: #fff;
+				color: #777;
 			}
 .popular-categories{
 
