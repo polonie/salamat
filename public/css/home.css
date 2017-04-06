@@ -261,7 +261,7 @@ color: #777777;
 			right: 0;
 			height: 0;
 			background: #fff;
-			transition: height .2s ease;
+			transition: all .3s ease;
 			font-size: 12px;
 			font-weight: 300;
 			padding-left: 15px;
