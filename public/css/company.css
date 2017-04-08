@@ -27,7 +27,7 @@ title{
 	height: 500px;
 	background-image: url('../img/services.jpg');
 	background-repeat: no-repeat;
-	background-size: cover;		
+	background-size: cover;
 	background-position: center;
 }
 	.page-header-hover{
@@ -74,7 +74,9 @@ title{
 					color: #666;
 					font-weight: 400;
 					font-size: 14px;
-
+				}
+				.top-nav-menu-link:hover{
+					color: #ccc;
 				}
 				.top-nav-menu-link:nth-last-child(1){
 					margin-right: 0;
@@ -160,7 +162,7 @@ title{
 		padding-top: 20px;
 	}
 		.constructing-block-container{
-			width: 800px;
+			width: 650px;
 			padding: 30px;
 			margin: 0 auto;
 		}
@@ -203,8 +205,3 @@ title{
 								font-size: 14px;
 								font-weight: 300;
 							}
-				.constructing-block-body-main{
-					float: left;
-					padding-top: 30px;
-					width: calc(100% - 300px)
-				}
