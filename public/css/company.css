@@ -98,3 +98,23 @@ title{
 			background-image: linear-gradient(to top left, rgba(243, 122, 101, 0) 0%, #f37a65);
 			padding: 15px 25px;
 		}
+.page-content{
+	padding-top: 30px;
+}
+	.page-container{
+		width: 700px;
+		padding: 30px;
+	}
+	.company-history-block{
+
+	}
+	.company-history-block-title{
+		font-size: 30px;
+		font-weight: 200;
+		color: #666;
+		text-align: center;
+	}
+	.company-history-block-text{
+		color: #777;
+		font-weight: 300;
+	}
