@@ -165,14 +165,13 @@ title{
 			margin: 0 auto;
 		}
 			.constructing-block-title{
-				padding-top: 30px
 				font-size: 25px;
 				font-weight: 300;
 				color: #484848;
 				text-align: center;
 			}
 			.constructing-block-body{
-				margin-bottom: 20px;
+				margin-top: 20px;
 			}
 				.constructing-block-body-side{
 					float: left;
