@@ -175,7 +175,7 @@ title{
 			}
 				.constructing-block-body-side{
 					float: left;
-					width: 250px;
+					width: 200px;
 					margin-right: 50px;
 					padding-top: 30px;
 				}
@@ -192,6 +192,6 @@ title{
 					}
 				.constructing-block-body-main{
 					padding-top: 30px;
-					width: 290px;
+					width: 340px;
 					margin-left: 300px;
 				}
