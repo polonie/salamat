@@ -120,9 +120,9 @@ title{
 			}
 				.body-text{
 					line-height: 1.5em;
-					font-size: 15px;
-					font-weight: 400;
-					color: #333;
+					font-size: 16px;
+					font-weight: 300;
+					color: #444;
 				}
 	.services-block{
 		
@@ -141,7 +141,6 @@ title{
 				margin-top: 30px;
 			}
 				.services-block-list{
-					display: list-item;
 					padding-left: 20px;
 				}
 				.services-block-list-item{
