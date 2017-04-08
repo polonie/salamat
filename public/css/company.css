@@ -74,20 +74,25 @@ title{
 	}
 		.header-panel-title{
 			font-size: 50px;
-			font-weight: 500;
+			font-weight: 200;
 			color: #fff;
 			text-align: center;
 		}
 		.header-panel-text{
 			font-size: 30px;
-			font-weight: 500;
+			font-weight: 200;
 			color: #fff;
 			text-align: center;
 		}
 		.contact-button{
+			display: inline-block;
+			margin: 0 auto;
 			margin-top: 40px;
 			border-radius: 4px;
 			text-align: center;
-			background: #f77c7c;
+			background: #d64242;
+			background-image: -webkit-linear-gradient(bottom right, rgba(243, 122, 101, 0) 0%, #f37a65);
+			background-image: -o-linear-gradient(bottom right, rgba(243, 122, 101, 0) 0%, #f37a65);
+			background-image: linear-gradient(to top left, rgba(243, 122, 101, 0) 0%, #f37a65);
 			padding: 10px 15px;
 		}
