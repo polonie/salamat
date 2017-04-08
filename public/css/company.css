@@ -112,12 +112,13 @@ title{
 	.company-history-block-title{
 		font-size: 30px;
 		font-weight: 300;
-		color: #666;
+		color: #484848;
 		text-align: center;
 	}
 	.company-history-block-body{
 		margin-top: 40px;
 	}
 		.company-history-block-text{
-			
+			line-height: 1.5em;
+			color: #484848;
 		}
