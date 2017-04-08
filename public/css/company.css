@@ -65,7 +65,8 @@ title{
 			box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
 			bottom: 0;
 			height: 50%;
-			margin: 0 auto;
+			left: 25%;
+			right: 25%;
 			
 		}
 .page-content{
