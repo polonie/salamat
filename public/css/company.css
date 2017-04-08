@@ -8,6 +8,13 @@
 	color: #484848;
 	box-sizing: border-box;
 }
+.clearfix:after{
+	content: '.';
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
 a{
 	cursor: pointer;
 	text-decoration: none;
@@ -160,13 +167,14 @@ title{
 				font-size: 25px;
 				font-weight: 300;
 				color: #484848;
+				text-align: center;
 			}
 			.constructing-block-body{
 
 			}
 				.constructing-block-body-side{
 					float: left;
-					width: 200px
+					width: 200px;
 					margin-right: 40px;
 					padding-top: 20px;
 				}
