@@ -30,14 +30,13 @@ title{
 			.top-nav-menu-logo{
 				float: left;
 			}
-				.home-link{
-					width: 200px;
+				.company-title{
+					font-size: 30px;
+					font-weight: 200;
+					color: #333;
 				}
-					.home-img-link{
-						width: 100%;
-						height: auto;
-					}
-			.top-nav-menu-link{
+					
+			.top-nav-menu-links{
 				float: right;
 			}
 				.top-nav-menu-link{
