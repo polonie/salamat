@@ -24,6 +24,8 @@ title{
 	}
 		.top-nav-menu-container{
 			width: 960px;
+			padding-left: 30px;
+			padding-right: 30px;
 			margin-left: auto;
 			margin-right: auto;
 			height: 40px;
@@ -55,6 +57,15 @@ title{
 		.banner{
 			width: 100%;
 			height: auto;
+		}
+		.banner-panel{
+			position: absolute;
+			width: 50%;
+			background: #fff;
+			box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+			bottom: 0;
+			height: 400px;
+			
 		}
 .page-content{
 
