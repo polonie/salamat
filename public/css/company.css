@@ -190,15 +190,16 @@ title{
 						}
 						.side-item-body{
 							padding: 20px;
+							background: #fff;
 						}
 							.side-item-body-title{
 								font-size: 20px;
-								font-weight: 500;
-								color: orange;
+								font-weight: 300;
+								color: #ff8861;
 							}
 							.side-item-body-text{
-								color: #333;
-								font-size: 16px;
+								color: #484848;
+								font-size: 14px;
 								font-weight: 300;
 							}
 				.constructing-block-body-main{
