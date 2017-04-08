@@ -165,6 +165,7 @@ title{
 			margin: 0 auto;
 		}
 			.constructing-block-title{
+				padding-top: 30px
 				font-size: 25px;
 				font-weight: 300;
 				color: #484848;
@@ -189,6 +190,7 @@ title{
 						padding-left: 20px;
 						color: #484848;
 						font-size: 16px;
+						padding-top: 40px;
 					}
 				.constructing-block-body-main{
 					float: left;
