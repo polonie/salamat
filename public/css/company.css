@@ -2,7 +2,6 @@
 	padding: 0;
 	margin: 0;
 	display: block;
-	overflow: hidden;
 	font-size: 14px;
 	font-family: 'Roboto';
 	font-weight: 300;
@@ -53,10 +52,12 @@ title{
 				}
 	.header-banner{
 		position: relative;
+		height: 500px;
 	}
 		.banner{
-			width: 100%;
-			height: auto;
+			background-image: url(../img/company.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 		.banner-panel{
 			/*border-radius: 4px;*/
