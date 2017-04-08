@@ -169,6 +169,7 @@ title{
 				font-weight: 300;
 				color: #484848;
 				text-align: center;
+				margin-bottom: 30px;
 			}
 			.constructing-block-body{
 				margin-top: 20px;
@@ -192,7 +193,7 @@ title{
 							background: #fff;
 						}
 							.side-item-body-title{
-								font-size: 20px;
+								font-size: 17px;
 								font-weight: 300;
 								color: #ff8861;
 							}
