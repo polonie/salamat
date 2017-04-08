@@ -53,11 +53,12 @@ title{
 	.header-banner{
 		position: relative;
 		height: 500px;
+		background-image: url('../img/company.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;		
 	}
 		.banner{
-			background-image: url(../img/company.jpg);
-			background-repeat: no-repeat;
-			background-size: cover;
+
 		}
 		.banner-panel{
 			/*border-radius: 4px;*/
