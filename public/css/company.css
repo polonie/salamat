@@ -75,13 +75,13 @@ title{
 	}
 		.header-panel-title{
 			font-size: 50px;
-			font-weight: 200;
+			font-weight: 400;
 			color: #fff;
 			text-align: center;
 		}
 		.header-panel-text{
 			font-size: 30px;
-			font-weight: 200;
+			font-weight: 400;
 			color: #fff;
 			text-align: center;
 		}
@@ -96,5 +96,5 @@ title{
 			background-image: -webkit-linear-gradient(bottom right, rgba(243, 122, 101, 0) 0%, #f37a65);
 			background-image: -o-linear-gradient(bottom right, rgba(243, 122, 101, 0) 0%, #f37a65);
 			background-image: linear-gradient(to top left, rgba(243, 122, 101, 0) 0%, #f37a65);
-			padding: 10px 15px;
+			padding: 20px;
 		}
