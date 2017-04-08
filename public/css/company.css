@@ -51,8 +51,8 @@ title{
 			}
 				.company-title{
 					font-size: 30px;
-					font-weight: 200;
-					color: #333;
+					font-weight: 700;
+					color: #fff;
 					line-height: 40px;
 				}
 					
@@ -69,111 +69,27 @@ title{
 				.top-nav-menu-link:nth-last-child(1){
 					margin-right: 0;
 				}
-	.header-banner{
-		position: relative;
-		height: 500px;
-		background-image: url('../img/services.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;		
-		background-position: center;
-	}
-		.banner{
-
-		}
-		.banner-panel{
-			/*border-radius: 4px;*/
-			position: absolute;
-			background: rgba(0,0,0,.6);
-			/*box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);*/
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;		
-		}
-.page-content{
-
-}
-	.company-about-block{
-		padding: 40px;
-	}
-		.about-block-header{
-			text-align: center;
-			font-size: 26px;
-			font-weight: 200;
-			margin-bottom: 50px;
-		}
-		.about-block-body{
-			width: 65%;
-			margin: 0 auto;
-		}
-			.history-block-text{
-				font-size: 15px;
-				font-weight: 200;
-				margin-bottom: 20px
-			}
-	.buildings-block{
+	.header-panel{
 		margin-top: 40px;
 	}
-		.buildings-block-items{
-		
+		.header-panel-container{
+			width: 900px;
+			margin: 0 auto;
 		}
-			.buildings-block-item{
-				margin-right: 60px;
-				width: calc((100% - 120px) / 3);
-				float: left;
+			.header-panel-container-left{
+				width: 50%;
+				border-right: 1px solid #fff;
 			}
-			.buildings-block-item:nth-last-child(1){
-				margin-right: 0;
-			}
-			.bg-buildings-block-item{
-				height: 200px;
-				background-repeat: no-repeat;
-				background-position: center;
-				background-size: cover;
-			}
-				.bg-buildings-block-item-hover{
-					position: relative;
-					height: 100%;
-					background-color: rgba(0,0,0, 0.4);
-				}
-					.bg-buildings-block-item-header{
-						position: absolute;
-						height: 50px;
-						bottom: 0;
-						left: 0;
-						width: 100%;
-						background-color: rgba(0,0,0,0.7);
-					}
-						.bg-buildings-block-item-header__title{
-							font-size: 16px;
-							font-weight: 700;
-							color: #fff;
-							padding-left: 20px;
-							line-height: 50px;
-						}
-			.text-buildings-block-item{
-				background: #fff;
-				padding: 30px;
-			}
-				.text-buildings-block-item__header{
-					color: #484848;
-					font-weight: 700;
-					font-size: 16px;
-					margin-bottom: 20px;
-				}
-				.text-buildings-block-item__body{
+				.header-panel-container-left-title1{
+					font-size: 50px;
 					font-weight: 200;
-					font-size: 14px
+					color: #fff;
 				}
-			.royal{
-				background-image: url(../img/royaltulip.jpg);
+				.header-panel-container-left-title2{
+					font-size: 30px;
+					font-weight: 200;
+					color: #fff;
+				}
+			.header-panel-container-right{
+				width: 50%;
 			}
-			.grandballroom{
-				background-image: url(../img/grandballroom.jpg);
-			}
-			.stoletovo{
-				background-image: url(../img/stoletovo.jpg);
-			}
-.page-footer{
-	
-}
