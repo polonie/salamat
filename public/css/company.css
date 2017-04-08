@@ -101,24 +101,33 @@ title{
 .page-content{
 	padding-top: 30px;
 }
-	.page-container{
-		width: 700px;
-		padding: 30px;
-		margin: 0 auto;
-	}
 	.company-history-block{
 
 	}
-	.company-history-block-title{
-		font-size: 30px;
-		font-weight: 300;
-		color: #484848;
-		text-align: center;
+		.company-history-block-container{
+			width: 650px;
+			padding: 30px;
+			margin: 0 auto;
+		}
+			.company-history-block-title{
+				font-size: 30px;
+				font-weight: 300;
+				color: #484848;
+			}
+			.company-history-block-body{
+				margin-top: 40px;
+			}
+				.body-text{
+					line-height: 1.5em;
+					font-size: 15px;
+					font-weight: 300;
+					color: #484848;
+				}
+	.services-block{
+
 	}
-	.company-history-block-body{
-		margin-top: 40px;
-	}
-		.company-history-block-text{
-			line-height: 1.5em;
-			color: #484848;
+		.services-block-container{
+			width: 650px;
+			padding: 30px;
+			margin: 0 auto;
 		}
