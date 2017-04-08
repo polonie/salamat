@@ -52,7 +52,7 @@ title{
 			}
 				.company-title{
 					font-size: 30px;
-					font-weight: 400;
+					font-weight: 300;
 					color: #333;
 					line-height: 40px;
 				}
@@ -65,8 +65,8 @@ title{
 					float: left;
 					line-height: 40px;
 					color: #484848;
-					font-weight: 400;
-					font-size: 16px;
+					font-weight: 300;
+					font-size: 14px;
 
 				}
 				.top-nav-menu-link:nth-last-child(1){
@@ -154,4 +154,33 @@ title{
 		.constructing-block-container{
 			width: 800px;
 			padding: 30px;
+			margin: 0 auto;
 		}
+			.constructing-block-title{
+				font-size: 25px;
+				font-weight: 300;
+				color: #484848;
+			}
+			.constructing-block-body{
+
+			}
+				.constructing-block-body-side{
+					float: left;
+					width: 200px
+					margin-right: 40px;
+					padding-top: 20px;
+				}
+					.side-item-img{
+						width: 100%;
+						height: auto;
+					}
+					.side-item-body{
+						background: #fff;
+						height: 100px;
+						padding-left: 20px;
+						color: #484848;
+						font-size: 16px;
+					}
+				.constructing-block-body-main{
+					width: 600px;
+				}
