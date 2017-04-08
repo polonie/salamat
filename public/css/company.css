@@ -138,7 +138,8 @@ title{
 				color: #484848;
 			}
 			.services-block-list{
-
+				list-style-type: disc;
+				padding-left: 20px;
 			}
 			.services-block-list-item{
 
