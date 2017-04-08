@@ -10,6 +10,7 @@
 }
 a{
 	cursor: pointer;
+	text-decoration: none;
 }
 title{
 	display: none;
@@ -115,13 +116,13 @@ title{
 				color: #484848;
 			}
 			.company-history-block-body{
-				margin-top: 40px;
+				margin-top: 30px;
 			}
 				.body-text{
 					line-height: 1.5em;
 					font-size: 15px;
-					font-weight: 300;
-					color: #484848;
+					font-weight: 400;
+					color: #333;
 				}
 	.services-block{
 
@@ -131,3 +132,14 @@ title{
 			padding: 30px;
 			margin: 0 auto;
 		}
+			.services-block-title{
+				font-size: 25px;
+				font-weight: 300;
+				color: #484848;
+			}
+			.services-block-list{
+
+			}
+			.services-block-list-item{
+
+			}
