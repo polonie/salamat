@@ -9,6 +9,9 @@
 	color: #484848;
 	box-sizing: border-box;
 }
+a{
+	cursor: pointer;
+}
 title{
 	display: none;
 }
@@ -25,7 +28,7 @@ title{
 			margin-right: auto;
 		}
 			.top-nav-menu-logo{
-
+				float: left;
 			}
 				.home-link{
 					width: 200px;
@@ -34,6 +37,15 @@ title{
 						width: 100%;
 						height: auto;
 					}
+			.top-nav-menu-link{
+				float: right;
+			}
+				.top-nav-menu-link{
+					margin-right: 20px;
+				}
+				.top-nav-menu-link:nth-last-child(1){
+					margin-right: 0;
+				}
 	.header-banner{
 
 	}
