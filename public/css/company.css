@@ -79,6 +79,7 @@ title{
 			.header-panel-container-left{
 				width: 50%;
 				border-right: 1px solid #fff;
+				padding: 50px;
 			}
 				.header-panel-container-left-title1{
 					font-size: 50px;
