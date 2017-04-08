@@ -41,6 +41,7 @@ title{
 			}
 				.top-nav-menu-link{
 					margin-right: 20px;
+					float: left;
 				}
 				.top-nav-menu-link:nth-last-child(1){
 					margin-right: 0;
