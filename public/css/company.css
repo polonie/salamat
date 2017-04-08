@@ -70,7 +70,8 @@ title{
 					margin-right: 0;
 				}
 	.header-panel{
-		margin-top: 100px;
+		margin-top: 150px;
+		text-align: center;
 	}
 		.header-panel-title{
 			font-size: 50px;
@@ -85,8 +86,9 @@ title{
 			text-align: center;
 		}
 		.contact-button{
+			color: #fff;
 			display: inline-block;
-			margin: 0 auto;
+			font-weight: 400;
 			margin-top: 40px;
 			border-radius: 4px;
 			text-align: center;
