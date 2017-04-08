@@ -104,17 +104,20 @@ title{
 	.page-container{
 		width: 700px;
 		padding: 30px;
+		margin: 0 auto;
 	}
 	.company-history-block{
 
 	}
 	.company-history-block-title{
 		font-size: 30px;
-		font-weight: 200;
+		font-weight: 300;
 		color: #666;
 		text-align: center;
 	}
-	.company-history-block-text{
-		color: #777;
-		font-weight: 300;
+	.company-history-block-body{
+		margin-top: 40px;
 	}
+		.company-history-block-text{
+			
+		}
