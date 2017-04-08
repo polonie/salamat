@@ -191,7 +191,7 @@ title{
 						font-size: 16px;
 					}
 				.constructing-block-body-main{
+					float: left;
 					padding-top: 30px;
-					width: 390px;
-					margin-left: 300px;
+					width: calc(100% - 300px)
 				}
