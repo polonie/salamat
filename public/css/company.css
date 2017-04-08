@@ -183,6 +183,7 @@ title{
 					.side-item{
 						border: 1px solid #dbdbdb;
 						margin-bottom: 20px;
+						float: left;
 					}
 						.side-item-img{
 							width: 100%;
