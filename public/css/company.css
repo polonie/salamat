@@ -72,25 +72,22 @@ title{
 	.header-panel{
 		margin-top: 100px;
 	}
-		.header-panel-container{
-			width: 900px;
-			margin: 0 auto;
+		.header-panel-title{
+			font-size: 50px;
+			font-weight: 500;
+			color: #fff;
+			text-align: center;
 		}
-			.header-panel-container-left{
-				width: 50%;
-				border-right: 1px solid #fff;
-				padding: 40px;
-			}
-				.header-panel-container-left-title1{
-					font-size: 70px;
-					font-weight: 100;
-					color: #fff;
-				}
-				.header-panel-container-left-title2{
-					font-size: 30px;
-					font-weight: 200;
-					color: #fff;
-				}
-			.header-panel-container-right{
-				width: 50%;
-			}
+		.header-panel-text{
+			font-size: 30px;
+			font-weight: 500;
+			color: #fff;
+			text-align: center;
+		}
+		.contact-button{
+			margin-top: 40px;
+			border-radius: 4px;
+			text-align: center;
+			background: #f77c7c;
+			padding: 10px 15px;
+		}
