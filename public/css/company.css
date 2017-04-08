@@ -180,18 +180,27 @@ title{
 					margin-right: 50px;
 					padding-top: 30px;
 				}
-					.side-item-img{
-						width: 100%;
-						height: auto;
+					.side-item{
+						border: 1px solid #dbdbdb;
+						margin-bottom: 20px;
 					}
-					.side-item-body{
-						background: #fff;
-						height: 100px;
-						padding-left: 20px;
-						color: #484848;
-						font-size: 16px;
-						padding-top: 40px;
-					}
+						.side-item-img{
+							width: 100%;
+							height: auto;
+						}
+						.side-item-body{
+							padding: 20px;
+						}
+							.side-item-body-title{
+								font-size: 20px;
+								font-weight: 500;
+								color: orange;
+							}
+							.side-item-body-text{
+								color: #333;
+								font-size: 16px;
+								font-weight: 300;
+							}
 				.constructing-block-body-main{
 					float: left;
 					padding-top: 30px;
