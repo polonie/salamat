@@ -70,7 +70,7 @@ title{
 					margin-right: 0;
 				}
 	.header-panel{
-		margin-top: 40px;
+		margin-top: 100px;
 	}
 		.header-panel-container{
 			width: 900px;
@@ -79,11 +79,11 @@ title{
 			.header-panel-container-left{
 				width: 50%;
 				border-right: 1px solid #fff;
-				padding: 50px;
+				padding: 40px;
 			}
 				.header-panel-container-left-title1{
-					font-size: 50px;
-					font-weight: 200;
+					font-size: 70px;
+					font-weight: 100;
 					color: #fff;
 				}
 				.header-panel-container-left-title2{
