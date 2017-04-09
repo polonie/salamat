@@ -8,6 +8,7 @@ title{
 	display: none;
 }
 .hover-block{
+	display: none;
 	background: rgba(0, 0, 0, .5);
 	position: absolute;
 	top: 0;
@@ -16,7 +17,6 @@ title{
 	bottom: 0;
 }
 .current-photo{
-	background: red;
 	position: relative;
 	width: 1000px;
 	height: 533px;
@@ -24,6 +24,25 @@ title{
 	margin-right: auto;
 	top: 100px;
 }
+	.photo-block{
+		width: 800px;
+		float: left;
+	}
+		.current-img{
+		 width: 100%;
+		 height: auto;
+		}
+	.info-block{
+		width: 200px;
+		float: left;
+		height: 100%;
+	}
+		.current-sm{
+
+		}
+		.current-link{
+
+		}
 .plan-container{
 width: 800px;
 margin: 0 auto;
