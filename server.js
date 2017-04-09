@@ -7,7 +7,7 @@ var {Boutique} = require('./models/Boutique');
 const port = process.env.PORT || 3000;
 var category;
 var numbofpages;
-var links = [{link: 'home', linktitle: 'Главная'}, {link: 'news', linktitle: 'Новости'}, {link: 'rent', linktitle: 'Аренда'}, {link: 'salamat1-1', linktitle: 
+var links = [{link: 'home', linktitle: 'Главная'}, {link: 'news', linktitle: 'Новости'}, {link: 'rent', linktitle: 'Аренда'}, {link: 'newplan', linktitle: 
 'План'}, {link: 'company', linktitle: 'О нас'}, {link: 'contacts', linktitle: 'Контакты'}];
 var floors = [
 		{
@@ -353,7 +353,7 @@ app.use('/:page?', (req, res, next)=>{
 		data.salamat = {salamat_numb: page.substr(7,1), floor: page.substr(9,1), floors: floors};
 	}else if(page == 'rent'){
 		data.rent_imgs = ['rent1.jpg', 'rent2.jpg', 'rent3.jpg', 'rent4.jpg', 'rent5.jpg']
-	}else if(page == 'dbedit'){
+	}else if(page == 'dbedit' || page == 'newplan'){
 		data = {};
 	}
 	res.render(page, data);

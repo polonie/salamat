@@ -102,8 +102,8 @@ title{
 		}
 			.lint-item{
 				font-size: 14px;
-				font-weight: 300;
-				color: #777;
+				font-weight: 400;
+				color: #666;
 				margin-right: 25px;
 				line-height: 40px;
 				float: left;
@@ -112,6 +112,9 @@ title{
 			}
 			.lint-item:nth-last-child(1){
 				margin-right: 0;
+			}
+			.link-item:hover{
+				color: #ccc;
 			}
 .plan-container{
 width: 800px;
