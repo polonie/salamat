@@ -101,14 +101,23 @@ title{
 			float: right;
 		}
 			.lint-item{
+				font-size: 14px;
+				font-weight: 300;
+				color: #777;
+				margin-right: 25px;
 				line-height: 40px;
 				float: left;
 				text-decoration: none;
 				cursor: pointer;
 			}
+			.lint-item:nth-last-child(1){
+				margin-right: 0;
+			}
 .plan-container{
 width: 800px;
-margin: 0 auto;
+margin-left: auto;
+margin-right: auto;
+margin-top: 50px;
 }
 .plan-main{
 
