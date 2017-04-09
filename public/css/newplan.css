@@ -56,7 +56,7 @@ title{
 		}
 		.current-link{
 			text-decoration: none;
-			margin-top: 30px;
+			margin-top: 20px;
 			display: inline-block;
 			color: #fff;
 			padding: 7px 8px;
@@ -75,9 +75,37 @@ title{
 			right: 0;
 			top: 0;
 			font-size: 12px;
-			font-weight: 200;
-			color: #666;
+			font-weight: 300;
+			color: #484848;
+			cursor: pointer;
 		}
+.page-header{
+
+}
+	.page-header-container{
+		width: 900px;
+		height: 40px;
+		margin: 0 auto;
+	}
+		.logo-block{
+			float: left;
+		}
+			.home-link{
+				
+			}
+				.home-link-img{
+					height: 40px;
+					width: auto;
+				}
+		.links-block{
+			float: right;
+		}
+			.lint-item{
+				line-height: 40px;
+				float: left;
+				text-decoration: none;
+				cursor: pointer;
+			}
 .plan-container{
 width: 800px;
 margin: 0 auto;
