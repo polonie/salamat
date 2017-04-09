@@ -195,7 +195,7 @@ title{
 	}
 	.side-item{
 		border: 1px solid #dbdbdb;
-		width: calc((100% - 60px) / 4)
+		width: calc((100% - 60px) / 4);
 		margin-right: 20px;
 		float: left;
 	}
