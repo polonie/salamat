@@ -3,16 +3,16 @@ html(lang='en')
 	head
 		meta(charset='utf-8')
 		title Саламат - схема местности
+		link(href='https://fonts.googleapis.com/css?family=Roboto:100,200,300,300i,400,500,500i,700,900' rel='stylesheet')
 	body
 		svg.plan-main(version='1.1', xmlns='http://www.w3.org/2000/svg', width='800px', height='600px' x="0px" y="0px" viewBox="0 0 800 600")
 			style(type='text/css').
-				.salamat:hover{fill:#f77c7c;}
+				.salamat:hover .rect{fill:#f77c7c;}
+				.salamat:hover .str_numb{fill:#fff;}
+				.str_numb{fill:#4F4F4F;font-family:'Roboto';font-size:14px;user-select:none;cursor:pointer;}
 				.st0{fill:#FFFFFF;stroke:#777777;stroke-miterlimit:10;}
 				.st1{fill:none;stroke:#777777;stroke-miterlimit:10;}
-				.st2{fill:#FFFFFF;stroke:#FF9999;stroke-miterlimit:10;}
-				.st3{fill:#484848;}
-				.st4{font-family:'MyriadPro-Regular';}
-				.st5{font-size:14px;}
+				.rect{fill:#FFFFFF;stroke:#FF9999;stroke-miterlimit:10;}
 				.st6{fill:#FFFFFF;}
 				.st7{fill:#FF9999;}
 				.st8{fill:#D4DAF9;}
@@ -29,20 +29,20 @@ html(lang='en')
 			ellipse.st0(transform='matrix(0.9993 -3.857191e-02 3.857191e-02 0.9993 -9.0865 24.0307)', cx='618.2', cy='247.5', rx='12', ry='12')
 			//- САЛАМАТЫ***********************************************
 			g.salamat.salamat-1
-				polygon.st2(points='488.2,353.5 622.2,353.5 622.2,411.5 546.2,411.5 546.2,495.5 488.2,495.5')
-				text.st3.st4.st5(transform='matrix(1 0 0 1 529.9775 383.9062)') &Scy;&acy;&lcy;&acy;&mcy;&acy;&tcy; 1
+				polygon.rect(points='488.2,353.5 622.2,353.5 622.2,411.5 546.2,411.5 546.2,495.5 488.2,495.5')
+				text.str_numb(transform='matrix(1 0 0 1 529.9775 383.9062)') &Scy;&acy;&lcy;&acy;&mcy;&acy;&tcy; 1
 			g.salamat.salamat-2
-				rect.st2(x='589.2', y='429.5', width='33', height='132')
-				text.st3.st4.st5(transform='matrix(3.267949e-07 1 -1 3.267949e-07 601.9871 462.0803)') &Scy;&acy;&lcy;&acy;&mcy;&acy;&tcy; 2
+				rect.rect(x='589.2', y='429.5', width='33', height='132')
+				text.str_numb(transform='matrix(3.267949e-07 1 -1 3.267949e-07 601.9871 462.0803)') &Scy;&acy;&lcy;&acy;&mcy;&acy;&tcy; 2
 			g.salamat.salamat-5
-				polygon.st2(points='459.2,353.5 423.2,353.5 423.2,561.5 563.2,561.5 563.2,518.5 472.2,518.5 472.2,353.5')
-				text.st3.st4.st5(transform='matrix(3.267949e-07 1 -1 3.267949e-07 444.866 425.6074)') &Scy;&acy;&lcy;&acy;&mcy;&acy;&tcy; 5
+				polygon.rect(points='459.2,353.5 423.2,353.5 423.2,561.5 563.2,561.5 563.2,518.5 472.2,518.5 472.2,353.5')
+				text.str_numb(transform='matrix(3.267949e-07 1 -1 3.267949e-07 444.866 425.6074)') &Scy;&acy;&lcy;&acy;&mcy;&acy;&tcy; 5
 			g.salamat.salamat-4
-				rect.st2(x='334.2', y='199.5', width='223', height='55')
-				text.st3.st4.st5(transform='matrix(1 0 0 1 413.7683 229.9279)') &Scy;&acy;&lcy;&acy;&mcy;&acy;&tcy; 4
+				rect.rect(x='334.2', y='199.5', width='223', height='55')
+				text.str_numb(transform='matrix(1 0 0 1 413.7683 229.9279)') &Scy;&acy;&lcy;&acy;&mcy;&acy;&tcy; 4
 			g.salamat.salamat-3
-				rect.st2(x='274.2', y='59.5', width='60', height='195')
-				text.st3.st4.st5(transform='matrix(3.267949e-07 1 -1 3.267949e-07 299.6013 122.876)') &Scy;&acy;&lcy;&acy;&mcy;&acy;&tcy; 3
+				rect.rect(x='274.2', y='59.5', width='60', height='195')
+				text.str_numb(transform='matrix(3.267949e-07 1 -1 3.267949e-07 299.6013 122.876)') &Scy;&acy;&lcy;&acy;&mcy;&acy;&tcy; 3
 			//- САЛАМАТЫ***********************************************
 			text.st3.st4.st5(transform='matrix(1 0 0 1 387.9405 310.3782)') &ucy;&lcy;&icy;&tscy;&acy; &SHcy;&iecy;&vcy;&chcy;&iecy;&ncy;&kcy;&ocy;
 			text.st3.st4.st5(transform='matrix(3.267949e-07 1 -1 3.267949e-07 191.7927 247.4995)') &ucy;&lcy;&icy;&tscy;&acy; &Rcy;&ocy;&zcy;&ycy;&bcy;&acy;&kcy;&icy;&iecy;&vcy;&acy;
