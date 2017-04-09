@@ -55,6 +55,7 @@ title{
 			font-weight: 300;
 		}
 		.current-link{
+			display: inline-block;
 			color: #fff;
 			padding: 7px 8px;
 			font-size: 14px;
