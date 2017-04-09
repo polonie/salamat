@@ -4,6 +4,9 @@
 	margin: 0;
 	padding: 0;
 }
+title{
+	display: none;
+}
 .hover-block{
 	background: rgba(0, 0, 0, .5);
 	position: absolute;
@@ -22,8 +25,6 @@
 	top: 100px;
 }
 .plan-container{
-margin-top: 100px;
-padding-top: 200px;
 width: 800px;
 margin: 0 auto;
 }
