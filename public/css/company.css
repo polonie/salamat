@@ -223,27 +223,13 @@ title{
 			}
 .page-footer{
 	margin-top: 50px;
+	background: #f5f6f7;
 }
-	.footer-container{
-		width: 1170px;
+	.page-footer-container{
+		width: 1000px;
 		padding: 0 20px;
 		margin: 0 auto;
 		overflow: hidden;
-	}
-	@media screen and (min-width: 1200px){
-		.footer-container{
-			width: 1170px;
-		}
-	}
-	@media screen and (min-width: 992px) and (max-width: 1199px){
-		.footer-container{
-			width: 970px;
-		}
-	}
-	@media screen and (min-width: 768px) and (max-width: 991px){
-		.footer-container{
-			width: 750px;
-		}
 	}
 		.footer-block-header{
 			padding-top: 30px;
