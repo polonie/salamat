@@ -78,5 +78,24 @@ html(lang='en')
 								h3.side-item-body-title Мнонгоэтажный дом
 								p.side-item-body-text Новый многоэтажный дом
 		.page-footer
+			.page-footer-container
+				.footer-block-header
+				.footer-block-items-row.clearfix
+					each item in footer
+						.footer-block-item
+							h3.footer-block-item-header= item.title
+							if item.links
+								each link in item.links
+									.footer-block-item-link
+										span.footer-block-item-link-span= link
+							else
+								.footer-block-item-subscribe
+									input.footer-block-item-subscribe-input.subscribe-item
+									.footer-block-item-subscribe-button.subscribe-item Отправить
+								.footer-block-item-socicons(style='color: #888;')
+									span.nav-span Мы в соц. сетях:
+									i.fa.fa-lg.fa-facebook(aria-hidden="true").social-fb.social-icon
+									i.fa.fa-lg.fa-instagram(aria-hidden="true").social-insta.social-icon
+									i.fa.fa-lg.fa-vk(aria-hidden="true").social-vk.social-icon
 
 
