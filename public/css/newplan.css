@@ -3,9 +3,17 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	font-family: 'Roboto';
 }
 title{
 	display: none;
+}
+.clearfix:after{
+	content: '.';
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
 }
 .hover-block{
 	display: none;
@@ -16,7 +24,7 @@ title{
 	right: 0;
 	bottom: 0;
 }
-.current-photo{
+.current-photo-block{
 	position: relative;
 	width: 1000px;
 	height: 533px;
@@ -33,15 +41,33 @@ title{
 		 height: auto;
 		}
 	.info-block{
+		position: relative;
+		padding-top: 30px;
+		padding-left: 20px;
+		background: #fff;
 		width: 200px;
 		float: left;
 		height: 100%;
 	}
 		.current-sm{
-
+			font-size: 20px;
+			color: #f77c7c;
+			font-weight: 300;
 		}
 		.current-link{
-
+			color: #fff;
+			padding: 7px 8px;
+			font-size: 14px;
+			font-weight: 300;
+			background: #d64242;
+			background-image: -webkit-linear-gradient(bottom right, rgba(243, 122, 101, 0) 0%, #f37a65);
+			background-image: -o-linear-gradient(bottom right, rgba(243, 122, 101, 0) 0%, #f37a65);
+			background-image: linear-gradient(to top left, rgba(243, 122, 101, 0) 0%, #f37a65);
+		}
+		.close-button{
+			position: absolute;
+			right: 0;
+			top: 0;
 		}
 .plan-container{
 width: 800px;
