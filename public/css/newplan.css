@@ -56,10 +56,10 @@ title{
 		position: absolute;
 		top: 0;
 		right: 0;
-		transform: translate(50%, -50%);
+		transform: translate(15%, 150%);
 		text-decoration: none;
 		color: #fff;
-		padding: 7px 8px;
+		padding: 7px 10px;
 		font-size: 14px;
 		font-weight: 300;
 		background: #d64242;
@@ -71,16 +71,19 @@ title{
 		background: #f77c7c;
 	}
 	.close-button{
-		background: #fff;
+		background: #000;
 		position: absolute;
+		top:0;
 		right: 0;
-		transform: translateX(50%);
-		top: 40px;
-		padding: 7px 8px;
+		transform: translate(15%,-15%);
+		padding: 7px 10px;
 		font-size: 14px;
 		font-weight: 300;
-		color: #f77c7c;
+		color: #ffff;
 		cursor: pointer;
+	}
+	.close-button:hover{
+		background: #333;
 	}
 .page-header{
 	margin-top: 20px;
