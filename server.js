@@ -209,6 +209,7 @@ app.get('/boutiquelist', (req, res)=>{
 	Boutique.find({salamat: salamat, salon: boutique}).then((docs)=>{
 		var data = _data;
 		data.docs = docs;
+		data.pages = false;
 		res.render('boutiques', data);
 	});
 });

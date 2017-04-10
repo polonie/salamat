@@ -102,7 +102,7 @@ title{
 		}
 			.lint-item{
 				font-size: 14px;
-				font-weight: 400;
+				font-weight: 300;
 				color: #666;
 				margin-right: 25px;
 				line-height: 40px;
@@ -110,12 +110,13 @@ title{
 				text-decoration: none;
 				cursor: pointer;
 			}
-			.lint-item:nth-last-child(1){
-				margin-right: 0;
-			}
 			.link-item:hover{
 				color: #ccc;
 			}
+			.lint-item:nth-last-child(1){
+				margin-right: 0;
+			}
+
 .plan-container{
 width: 800px;
 margin-left: auto;

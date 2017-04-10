@@ -6,17 +6,14 @@ var boutique_field = document.querySelector('.tooltip-list-item-boutique');
 var tooltip_button = document.querySelector('.tooltip-button');
 var currentBoutique,_salamat,_boutique, doc;
 document.onclick = (e)=>{
-	if (e.target.matches('.rect') && e.target.parentElement.matches('.boutique')){
+	if (e.target.parentElement.matches('.boutique')){
 		currentBoutique = e.target.parentElement;
 		_boutique = currentBoutique.getAttribute('data-boutique');
-	}else if(e.target.matches('.str_numb')){
-		_boutique = e.target.innerHTML;
 	}else{
 		tooltip.classList.remove('tooltip-block-active');
 		return;
 	}
 	_salamat = plan.getAttribute('data-salamat');
-	console.log(`${_salamat}, ${_boutique}`);
 	fetch(`/getboutique?salamat=${_salamat}&boutique=${_boutique}`)
 		.then((response)=>{
 			return response.json();
