@@ -56,9 +56,9 @@ title{
 		position: absolute;
 		top: 0;
 		right: 0;
-		transform: translate(50%,-50%);
+		transform: translateY(-50%);
+		transform: translateX(50%);
 		text-decoration: none;
-		margin-top: 20px;
 		color: #fff;
 		padding: 7px 8px;
 		font-size: 14px;
