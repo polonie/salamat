@@ -54,8 +54,9 @@ title{
 	}
 	.current-link{
 		position: absolute;
-		top: -20px;
-		right: -20px;
+		top: 0;
+		right: 0;
+		transform: translate(50%,-50%);
 		text-decoration: none;
 		margin-top: 20px;
 		color: #fff;
@@ -73,7 +74,7 @@ title{
 	.close-button{
 		background: #fff;
 		position: absolute;
-		/*right: -20px;*/
+		right: 0;
 		transform: translateX(50%);
 		top: 40px;
 		padding: 7px 8px;
