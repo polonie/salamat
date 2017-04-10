@@ -56,7 +56,7 @@ title{
 		position: absolute;
 		top: 0;
 		right: 0;
-		transform: translate(15%, 150%);
+		transform: translate(15%, 100%);
 		text-decoration: none;
 		color: #fff;
 		padding: 7px 10px;
@@ -75,11 +75,11 @@ title{
 		position: absolute;
 		top:0;
 		right: 0;
-		transform: translate(15%,-15%);
+		transform: translate(15%,-20%);
 		padding: 7px 10px;
 		font-size: 14px;
 		font-weight: 300;
-		color: #ffff;
+		color: #fff;
 		cursor: pointer;
 	}
 	.close-button:hover{
