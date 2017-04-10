@@ -4,7 +4,7 @@ var currentSm = document.querySelector('.current-sm');
 var currentLink = document.querySelector('.current-link')
 
 document.onclick = (e)=>{
-	if (e.target.matches('.rect')){
+	if (e.target.matches('.act-sm')){
 		var element = e.target.parentElement;
 		var salamat_numb = element.getAttribute('data-sm');
 		var salamat_img = element.getAttribute('data-salamat');
