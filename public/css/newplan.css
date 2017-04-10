@@ -73,7 +73,8 @@ title{
 	.close-button{
 		background: #fff;
 		position: absolute;
-		right: -50%;
+		/*right: -20px;*/
+		transform: translateX(50%);
 		top: 40px;
 		padding: 7px 8px;
 		font-size: 14px;
