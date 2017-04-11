@@ -65,7 +65,7 @@ html(lang='en')
 									li(data-id= item1.id).menu-item= item1.name
 										.submenu-block.page-block
 											.submenu-img-block(style='background: url(./img/categories_1/= ${)')
-											-v ar newLn = 0;
+											- var newLn = 0;
 											each item2 in lvl2
 												if newLn == 3
 													- newLn = 0
