@@ -21,7 +21,8 @@ html{
 }
 .page{
 	background: #fdfdfd;
-	min-height: 100vh;
+	min-height: 100%;
+	position: relative;
 }
 .page-block{
 	background: #fff;

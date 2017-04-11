@@ -87,8 +87,13 @@ html(lang='en')
 							h3.footer-block-item-header= item.title
 							if item.links
 								each link in item.links
+									- var lnk;
+									if link.link
+										- lnk = link.link
+									else
+										- lnk = '#';
 									.footer-block-item-link
-										span.footer-block-item-link-span= link
+										a(href= lnk).footer-block-item-link-span= link.title
 							else
 								.footer-block-item-subscribe
 									input.footer-block-item-subscribe-input.subscribe-item
