@@ -96,14 +96,11 @@
 			}
 				.logo-link{
 					float: left;
-					height: 40px;
-					width: 200px;
-					/*transform: translateY(-30%);*/
-					background-image: url(../img/logo.png);
-					background-size: 100% 100%;
-					background-repeat: no-repeat;
-					background-position: center;
 				}
+					.logo-link-img{
+						height: 40px;
+						width: auto;
+					}
 			.page-header-co{
 				float: right;
 				height: 40px;
