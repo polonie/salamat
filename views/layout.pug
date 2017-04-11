@@ -99,7 +99,7 @@ html(lang='en')
 							if item.links
 								each link in item.links
 									- var lnk;
-									if (link.link)
+									if link.link
 										- lnk = link.link
 									else
 										- lnk = '#';
