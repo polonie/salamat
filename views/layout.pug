@@ -24,9 +24,9 @@ html(lang='en')
 					.nav-link.nav-nav-contacts
 						a(href='contacts').nav-span Наши контакты
 					.nav-link.nav-subsribe
-						span.nav-span Подпишитесь
+						a(href='contacts').nav-span Подпишитесь
 					.nav-link.nav-write
-						span.nav-span Напишите нам
+						a(href='contacts').nav-span Напишите нам
 					.nav-link.nav-social
 						span.nav-span Мы в соц. сетях
 						i.fa.fa-lg.fa-facebook(aria-hidden="true").social-fb.social-icon
@@ -99,7 +99,7 @@ html(lang='en')
 							if item.links
 								each link in item.links
 									.footer-block-item-link
-										span.footer-block-item-link-span= link
+										a(href= if link link.link).footer-block-item-link-span= link.title
 							else
 								.footer-block-item-subscribe
 									input.footer-block-item-subscribe-input.subscribe-item

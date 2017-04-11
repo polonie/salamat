@@ -79,10 +79,10 @@ var categories = {
 	]
 };
 var footer = [
-		{title:'О нас', links:['О компании', 'Аренда', 'Арендаторы', 'Наши контакты']},
-		{title:'План этажей', links:['Саламат 1', 'Саламат 2', 'Саламат 3', 'Саламат 4', 'Саламат 5',]},
+		{title:'О нас', links:[{title:'О компании', link:'company'}, {title:'Аренда', link: 'rent'}, {title:'Наши контакты', link:'contacts'}]},
+		{title:'План этажей', links:[{title:'Саламат 1', link:'salamat1-1'}, {title:'Саламат 2', link:'salamat2-1'}, {title:'Саламат 3', link:'salamat3-0'}, {title:'Саламат 4', link:'salamat4-1'}, {title:'Саламат 5', link:'salamat5-0'},]},
 		{title:'Производители', links:['Итальянские', 'Китайские', 'Другие']},
-		{title:'Обратная связь', links:['Клиентам', 'Арендаторам', 'Партнерам']},
+		{title:'Обратная связь', links:[{title:'Клиентам', link: 'contacts'}, {title:'Арендаторам', link: 'contacts'}, {title:'Партнерам', link: 'contacts'}]},
 		{title:'Подписка'}
 ]
 

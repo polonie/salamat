@@ -49,6 +49,7 @@
 						font-size: 12px;
 						font-weight: inherit;
 						cursor: pointer;
+						text-decoration: none;
 					}
 					.nav-span:hover{
 						color: #ccc;
@@ -381,6 +382,7 @@
 						font-size: 12px;
 						font-weight: 300;
 						cursor: pointer;
+						text-decoration: none;
 					}
 					.footer-block-item-link-span:hover{
 						color: #ccc;
