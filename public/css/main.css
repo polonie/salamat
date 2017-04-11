@@ -17,11 +17,11 @@
 	height: 0;
 }
 html{
-	min-height: 100vh;
+	min-height: 100%;
 }
 .page{
-	background: #fdfdfd;
-	min-height: 100vh;
+	background: #fff;
+	min-height: 100%;
 	position: relative;
 }
 .page-content{
