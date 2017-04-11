@@ -7,7 +7,7 @@ var {Boutique} = require('./models/Boutique');
 const port = process.env.PORT || 3000;
 var category;
 var numbofpages;
-var links = [{link: 'home', linktitle: 'Главная'}, {link: 'news', linktitle: 'Новости'}, {link: 'rent', linktitle: 'Аренда'}, {link: 'newplan', linktitle: 
+var links = [{link: 'home', linktitle: 'Главная'}, {link: '#', linktitle: 'Новости'}, {link: 'rent', linktitle: 'Аренда'}, {link: 'newplan', linktitle: 
 'План'}, {link: 'company', linktitle: 'О нас'}, {link: 'contacts', linktitle: 'Контакты'}];
 var floors = [
 		{

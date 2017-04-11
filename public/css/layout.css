@@ -100,6 +100,7 @@
 					.logo-link-img{
 						height: 40px;
 						width: auto;
+						display: block;
 					}
 			.page-header-co{
 				float: right;
