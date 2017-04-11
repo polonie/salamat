@@ -54,6 +54,13 @@
 					.nav-span:hover{
 						color: #ccc;
 					}
+					.nav-span-unhover{
+						color: inherit;
+						font-size: 12px;
+						font-weight: inherit;
+						cursor: pointer;
+						text-decoration: none;
+					}
 					.social-icon{
 						cursor: pointer;
 						color: #999;
@@ -329,7 +336,8 @@
 /*********************************************FOOTER***********************************/
 .page-footer{
 	margin-top: 50px;
-	background: #f5f6f7;
+	background: #1f2531;
+	padding-bottom: 15px;
 }
 	.footer-container{
 		width: 1170px;
@@ -417,7 +425,7 @@
 					}
 		.footer-block-bottom{
 			height: 20px;
-			background: #f1f1f1;
+			background: #171c27;
 		}
 .active{
 	display: block;
