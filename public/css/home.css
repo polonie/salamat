@@ -279,6 +279,7 @@ color: #777777;
 			width: 35%;
 			min-width: 150px;
 			background: #1b2f4c;
+			border: 1px solid #fff;
 		}
 			.category-content-title-heading{
 				position: relative;
@@ -287,7 +288,7 @@ color: #777777;
 				transform: translateY(-50%);
 				font-size: 14px;
 				color: #fff;
-				font-weight: 200;
+				font-weight: 400;
 			}
 			.category-item-hover-block-text{
 				visibility: hidden;
@@ -312,13 +313,13 @@ color: #777777;
 }
 .paint-about-block-heading{
 	font-size: 50px;
-	font-weight: 100;
-	color: #fff;
+	font-weight: 500;
+	color: #353535;
 }
 .paint-about-block-heading-text{
 	background: #ff9b54;
 	padding: 10px;
 	font-weight: 700;
 	font-size: 30px;
-	color: #333;
+	color: #fff;
 }
