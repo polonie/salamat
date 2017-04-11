@@ -109,7 +109,7 @@
 				height: 40px;
 			}
 				.link-item{
-					color: #484848;
+					color: #504549;
 					margin-right: 20px;
 					float: left;
 					cursor: pointer;
@@ -128,7 +128,7 @@
 						font-size: 15px;
 						color: inherit;
 						line-height: 40px;
-						font-weight: inherit;
+						font-weight: 400;
 					}
 			.page-header-search{
 				float: left;
@@ -393,7 +393,7 @@
 						text-decoration: none;
 					}
 					.footer-block-item-link-span:hover{
-						color: #ccc;
+						color: #a3cad4;
 					}
 				.footer-block-item-subscribe{
 					height: 30px;
@@ -434,11 +434,18 @@
 					}
 					.social-footer-icon{
 						color: #dedede;
+						margin-left: 15px;
 					}
 		.footer-block-bottom{
 			height: 20px;
 			background: #171c27;
+			text-align: center;
 		}
+			.footer-block-bottom-span{
+				font-size: 12px;
+				color: #d4d4d4;
+				font-weight: 300;
+			}
 .active{
 	display: block;
 }
