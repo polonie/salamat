@@ -434,17 +434,18 @@
 					}
 					.social-footer-icon{
 						color: #dedede;
-						margin-left: 15px;
+						margin-left: 7px;
 					}
 		.footer-block-bottom{
-			height: 20px;
+			height: 25px;
 			background: #171c27;
 			text-align: center;
 		}
 			.footer-block-bottom-span{
+				line-height: 25px;
 				font-size: 12px;
-				color: #d4d4d4;
-				font-weight: 300;
+				color: #4e5b84;
+				font-weight: 400;
 			}
 .active{
 	display: block;

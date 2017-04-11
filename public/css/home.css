@@ -227,7 +227,12 @@ color: #777777;
 	}
 	.item-6:hover .category-item-hover-block{
 		height: 25%;
-		border-top: 2px solid #f77c7c;
+		border-top: 4px solid #e25f5f;
+	}
+	.category-item-hover-block-text{
+		font-size: 14px;
+		color: #646567;
+		font-weight: 500;
 	}
 	.item-6:hover .category-item-hover-block-text{
 		visibility: visible;
