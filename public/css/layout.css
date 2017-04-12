@@ -66,6 +66,9 @@
 						color: #999;
 						margin-left: 10px;
 					}
+					.social-link{
+						text-decoration: none;
+					}
 					.social-icon:hover{
 						color: #ccc;
 					}
