@@ -360,7 +360,9 @@ app.use('/:page?', (req, res, next)=>{
 		data.rent_imgs = ['rent1.jpg', 'rent2.jpg', 'rent3.jpg', 'rent4.jpg', 'rent5.jpg']
 	}else if(page == 'dbedit' || page == 'newplan'){
 		data = {};
-	}
+	}else if(!checkLink[page]){
+		res.redirect('/');
+	};
 	res.render(page, data);
 });
 // *************************************************************   R   O    U    T    E    S   ************************************************************
