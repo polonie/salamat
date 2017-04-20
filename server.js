@@ -7,6 +7,7 @@ var {Boutique} = require('./models/Boutique');
 const port = process.env.PORT || 3000;
 var category;
 var numbofpages;
+var checkLink = {home: true, rent: true, newplan: true, company: true, contacts: true};
 var links = [{link: 'home', linktitle: 'Главная'}, {link: '#', linktitle: 'Новости'}, {link: 'rent', linktitle: 'Аренда'}, {link: 'newplan', linktitle: 
 'План'}, {link: 'company', linktitle: 'О нас'}, {link: 'contacts', linktitle: 'Контакты'}];
 var floors = [
@@ -348,6 +349,9 @@ app.use('/findboutique', (req, res)=>{
 
 app.use('/:page?', (req, res, next)=>{
 	var page = req.params.page, data = _data;
+	if (!checkLink[page]){
+		res.redirect('/');
+	}
 	if (!page){
 		page = 'home';
 	}else if (page.substr(0, 7) == 'salamat'){
