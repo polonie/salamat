@@ -4,66 +4,46 @@ block css
 block content
 	.page-boutiques-wrap
 		.page-boutiques-container
-			.boutiques-page-block.clearfix
-				.sidebar
-					.filter-block
-						.filter-block-header.clearfix
-							span.filter-title Ваш фильтр
-							.clean-filter-block
-								i.fa.fa-times(aria-hidden="true")
-								span.clean-filter Сбросить
-						.filter-block-body
-							ul.filtered-items
-								if grand
-									li.grand.filtered-item
-										i.fa.fa-level-down(aria-hidden="true")
-										span.filtered-item-title= grand
-								if parent
-									li.parent.filtered-item
-										i.fa.fa-level-down(aria-hidden="true")
-										span.filtered-item-title= parent
-								li.category.filtered-item
-									span.filtered-item-title= category
-				.boutiques-content
-					.boutiques-block-items(data-category= category)
-						each boutique in docs
-							.boutiques-block-item
-								.boutiques-item-content.clearfix
-									.boutiques-item-content-logo
-										- var url = './img/boutiques/' + boutique.logo
-										img.boutique-img-logo(src= url)
-									.boutiques-item-content-body
-										.boutiques-content-header.clearfix
-											.boutique-name
-												h3.boutique-title= boutique.name
-											.boutique-show(data-salamat= boutique.salamat, data-salon= boutique.salon)
-												span.boutique-show-span перейти к компании
-												i.link-boutique-arrow.fa.fa-angle-right(aria-hidden="true")
-										.boutiques-content-body
-											.boutique-description
-												h3.boutique-about-title Описание компании:
-												p.boutique-about-text= boutique.about
-								.boutiques-item-foooter.clearfix
-									.boutiques-item-foooter-icons
-									.boutiques-item-foooter-body.clearfix
-										.boutique-item-search-path
-										.boutique-item-location
-											span.bot-item-span.boutique-item-label Саламат:
-											span.bot-item-span.boutique-item-salamat= boutique.salamat
-											span.bot-item-span.boutique-item-label Салон:
-											span.bot-item-span.boutique-item-salon= boutique.salon
-											span.bot-item-span.boutique-item-map-link показать на карте
-					.boutiques-block-pages
-						- var i = 0
-						if pages
-							div.pages-panel.clearfix
-								div.pages.clearfix
-									while i < pages
-										- ++i
-										if page == i
-											div.page-item.active-page(data-page= i)= i
-										else
-											div.page-item(data-page= i)= i
+			.boutiques-content
+				.boutiques-block-items(data-category= category)
+					each boutique in docs
+						.boutiques-block-item
+							.boutiques-item-content.clearfix
+								.boutiques-item-content-logo
+									- var url = './img/boutiques/' + boutique.logo
+									img.boutique-img-logo(src= url)
+								.boutiques-item-content-body
+									.boutiques-content-header.clearfix
+										.boutique-name
+											h3.boutique-title= boutique.name
+										.boutique-show(data-salamat= boutique.salamat, data-salon= boutique.salon)
+											span.boutique-show-span перейти к компании
+											i.link-boutique-arrow.fa.fa-angle-right(aria-hidden="true")
+									.boutiques-content-body
+										.boutique-description
+											h3.boutique-about-title Описание компании:
+											p.boutique-about-text= boutique.about
+							.boutiques-item-foooter.clearfix
+								.boutiques-item-foooter-icons
+								.boutiques-item-foooter-body.clearfix
+									.boutique-item-search-path
+									.boutique-item-location
+										span.bot-item-span.boutique-item-label Саламат:
+										span.bot-item-span.boutique-item-salamat= boutique.salamat
+										span.bot-item-span.boutique-item-label Салон:
+										span.bot-item-span.boutique-item-salon= boutique.salon
+										span.bot-item-span.boutique-item-map-link показать на карте
+				.boutiques-block-pages
+					- var i = 0
+					if pages
+						div.pages-panel.clearfix
+							div.pages.clearfix
+								while i < pages
+									- ++i
+									if page == i
+										div.page-item.active-page(data-page= i)= i
+									else
+										div.page-item(data-page= i)= i
 block scripts
 	script(src='./js/findBoutique.js')
 	script(src='./js/pagination.js')

@@ -5,61 +5,10 @@
 .page-boutiques-container{
 	width: 960px;
 	margin: 0 auto;
-	padding: 30px;
+	padding: 0 60px;
 }
-.boutiques-page-block{
-
-}
-.sidebar{
-	float: left;
-	width: 22%;
-	margin-right: 20px;
-}
-	.filter-block{
-		border: 1px solid #e0e0e0;
-		border-radius: 4px;
-		padding: 10px;
-	}
-		.filter-block-header{
-			padding-bottom: 10px;
-			/*border-bottom: 1px solid #e0e0e0;*/
-		}
-			.filter-title{
-				color: inherit;
-			}
-			.clean-filter-block{
-				float: right;
-			}
-				.clean-filter{
-					margin-left: 3px;
-					color: #0084B4;
-					font-weight: 400;
-					font-size: 12px;
-				}
-		.filter-block-body{
-
-		}
-			.filtered-items{
-			}
-				.filtered-item{
-					color: #666;
-				}
-				.grand{
-					padding-left: 0;
-				}
-				.parent{
-					padding-left: 5px;
-				}
-				.category{
-					padding-left: 15px;
-				}
-					.filtered-item-title{
-						margin-left: 3px;
-						color: inherit;
-					}
 .boutiques-content{
-	float: left;
-	width: calc(78% - 20px);
+
 }
 	.boutiques-block-items{
 		background: whitesmoke;
