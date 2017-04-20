@@ -349,9 +349,6 @@ app.use('/findboutique', (req, res)=>{
 
 app.use('/:page?', (req, res, next)=>{
 	var page = req.params.page, data = _data;
-	if (!checkLink[page]){
-		res.redirect('/');
-	}
 	if (!page){
 		page = 'home';
 	}else if (page.substr(0, 7) == 'salamat'){
