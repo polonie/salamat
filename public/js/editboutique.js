@@ -16,7 +16,7 @@ form.onclick = function(e) {
 		button.classList.toggle('save-button');
 		input.blur();
 		input.disabled=true;
-	}else if(e.target.matches('.edit-button')){
+	}else if(button.matches('.edit-button')){
 		button.classList.toggle('save-button')
 		button.innerText='Сохранить';
 		const cancel = document.createElement('div');
@@ -28,7 +28,9 @@ form.onclick = function(e) {
 		value = input.value;
 		input.value = value;
 	}else if(button.matches('.cancel-button')){
+		button = button.parentNode;
+		button.removeChild(this.children[0]);
+		input = button.previousElementSibling;
 		input.value = value;
-		button.remove();
-	}
+	};
 };
