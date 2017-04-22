@@ -1,5 +1,5 @@
-var form = document.querySelector('.results-form');
-
+const form = document.querySelector('.results-form');
+var value;
 
 form.onfocus = function(e) {
 	if (e.target.matches('.results-field-input')){
@@ -19,8 +19,16 @@ form.onclick = function(e) {
 	}else if(e.target.matches('.edit-button')){
 		button.classList.toggle('save-button')
 		button.innerText='Сохранить';
+		const cancel = document.createElement('div');
+		cancel.classList.add('cancel-button');
+		cancel.innerText = 'Отменить';
+		button.appendChild(cancel);
 		input.disabled = false;
 		input.focus();
-		input.value = input.value;
+		value = input.value;
+		input.value = value;
+	}else if(button.matches('.cancel-button')){
+		input.value = value;
+		button.remove();
 	}
 };
