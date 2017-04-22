@@ -348,7 +348,7 @@ app.use('/boutique', (req, res)=>{
 });
 
 app.get('/findboutique', (req,res)=>{
-	if (!req.query){
+	if (req.query=={}){
 		console.log('no query');
 		res.render('findboutique');
 	}else{
