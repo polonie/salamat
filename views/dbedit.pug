@@ -4,66 +4,50 @@ html(lang='en')
 		meta(charset='utf-8')
 		title Data document edit
 		link(href='https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i,700,900' rel='stylesheet')
+		link(rel="stylesheet" href="./css/main.css")
 		link(rel="stylesheet" href="./css/data-edit.css")
 	body.page-body
 		.page-container
-			.query-form
-				h3.query-form-header Поиск по саламату и бутику
-				.query-field-row.clearfix
-					label.query-label(for="salamat") Саламат
-					input.query-input(type="text" name="salamat")
-				.query-field-row.clearfix
-					label.query-label(for="salon") Салон
-					input.query-input(type="salon" name="salon")
-				.search-button Найти
-			.data-form
-				h3.data-form-header Найден салон
-				.results
-					.res-row.clearfix
-						label.data-label name
-						input.data-input
-						.edit_save
-					.res-row.clearfix
-						label.data-label salamat
-						input.data-input
-						.edit_save
-					.res-row.clearfix
-						label.data-label salon
-						input.data-input
-						.edit_save
-					.res-row.clearfix
-						label.data-label phone
-						input.data-input
-						.edit_save
-					.res-row.clearfix
-						label.data-label total
-						input.data-input
-						.edit_save
-					.res-row.clearfix
-						label.data-label about
-						input.data-input
-						.edit_save
-					.res-row.clearfix
-						label.data-label logo
-						input.data-input
-						.edit_save
-					.res-row.clearfix
-						label.data-label picts
-						input.data-input
-						.edit_save
-					.res-row.clearfix
-						label.data-label son
-						input.data-input
-						.edit_save
-					.res-row.clearfix
-						label.data-label email
-						input.data-input
-						.edit_save
-					.res-row.clearfix
-						label.data-label site
-						input.data-input
-						.edit_save
-				.send-buton
-	script(src='./js/search-data.js')
-
-
+			h1.page-title
+			.query-form-block
+				h2.query-form-title Поиск бутика
+				.query-form
+					.query-form-field
+						label.field-label(for="salamat") Саламат
+						input.field-input(type="text" name= 'salamat')
+					.query-form-field
+						label.field-label(for="salon") Салон
+						input.field-input(type="text" name= 'salon')
+			.results-block
+				.results-form-block
+					h2.results-form-title
+					each item in docs
+						.results-form
+							.results-field
+								label.field-form(for="salamat") Саламат
+								input.field-input(name='salamat')
+								span.edit-button
+							.results-field
+								label.field-form(for="floor") Этаж
+								input.field-input(name='floor')
+								span.edit-button
+							.results-field
+								label.field-form(for="salon") Салон
+								input.field-input(name='salon')
+								span.edit-button
+							.results-field
+								label.field-form(for="name") Компания
+								input.field-input(name='name')
+								span.edit-button
+							.results-field
+								label.field-form(for="salamat") Описание
+								input.field-input(name='salamat')
+								span.edit-button
+							.results-field
+								label.field-form(for="salamat") Email
+								input.field-input(name='salamat')
+								span.edit-button
+							.results-field
+								label.field-form(for="salamat") Сайт
+								input.field-input(name='salamat')
+								span.edit-button

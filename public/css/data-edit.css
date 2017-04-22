@@ -1,93 +1,23 @@
-*{
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	color: #777777;
-	font-size: 14px;
-	font-family: 'Roboto';
-	display: block;
-	font-weight: 200;
-}
-title{
-	display: none;
-}
-.clearfix:after{
-	content: '.';
-	height: 0;
-	clear: both;
-	visibility: hidden;
-}
 .page-container{
-	width: 700px;
+	width: 1000px;
 	margin: 0 auto;
-	padding-top: 40px;
 }
-	.query-form{
-		width: 300px;
-		border: 1px solid #e0e0e0;
-		border-radius: 4px;
-		margin: 0 auto;
-		padding: 20px;
+	.page-title{
+
 	}
+	.query-form-block{
 
-		.query-form-header{
-			font-size: 20px;
-			color: #666666;
-		}
-		.query-field-row{
-			margin-top: 20px;
-			height: 40px;
-		}
-			.query-label{
-				line-height: 40px;
-				float: left;
-				min-width: 100px;
-			}
-			.query-input{
-				float: left;
-				height: 40px;
-				outline: 0;
-				border: 1px solid #e0e0e0;
-				border-radius: 4px;
-				padding: 10px;
-			}
-		.search-button{
-			margin-top: 20px;
-			padding: 5px 8px;
-			background: gray;
-			color: white;
-			border-radius: 4px;
-		}
-	.data-form{
-		margin-top: 20px;
-		border: 1px solid #e0e0e0;
-		border-radius: 4px;
-		padding: 20px;
 	}
-		.data-form-header{
-			font-size: 20px;
-			color: #666666;
+		.query-form-title{
+			font-size: 24px;
 		}
-		.results{
-			
+		.query-form{
+			width: 500px;
+			margin: 0 auto;
 		}
-			.res-row{
-				margin-top: 15px;
+			.query-form-field{
+
 			}
-				.data-label{
+.results-block{
 
-				}
-				.data-input{
-					float: left;
-					height: 40px;
-					outline: 0;
-					border: 1px solid #e0e0e0;
-					border-radius: 4px;
-					padding: 10px;
-				}
-				.edit_save{
-
-				}
-		.send-buton{
-
-		}
+}
