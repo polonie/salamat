@@ -44,7 +44,7 @@ margin-top: 80px;
 					color: #4fa2f3;
 					font-weight: 300;
 					font-size: 14px;
-					float: right;
+					display: inline-block;
 					height: 34px;
 					line-height: 34px;
 					cursor: pointer;
@@ -59,7 +59,7 @@ margin-top: 80px;
 					color: #a2f999;
 				}
 				.cancel-button{
-					color: red;
+					color: #e87a7a;
 					position: absolute;
 					left: 110%;
 					top: 0;
