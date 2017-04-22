@@ -354,7 +354,6 @@ app.use('/findboutique', (req,res)=>{
 	var salamat = req.query.salamat;
 	var salon = req.query.salon;
 	var data;
-
 	Boutique.find({salamat, salon}).
 		then(
 			(docs)=>{
