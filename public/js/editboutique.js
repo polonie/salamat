@@ -10,9 +10,9 @@ form.onfocus = function(e) {
 };
 form.onclick = function(e) {
 	if (e.target.matches('.edit-button')){
-		const edit = e.target;
-		edit.previousElementSibling.disabled = false;
-		edit.previousElementSibling.focus();
-		return;
+		const input = e.target.previousElementSibling;
+		input.disabled = false;
+		input.focus();
+		input.value = input.value;
 	}
 };
