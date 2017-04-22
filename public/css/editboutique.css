@@ -40,10 +40,11 @@ margin-top: 80px;
 				line-height: 1.5em;
 			}
 				.edit-button{
+					margin-left: 10px;
 					position: relative;
 					color: #4fa2f3;
 					font-weight: 300;
-					font-size: 14px;
+					font-size: 16px;
 					display: inline-block;
 					height: 34px;
 					line-height: 34px;
@@ -59,15 +60,15 @@ margin-top: 80px;
 					color: #a2f999;
 				}
 				.cancel-button{
-					color: #e87a7a;
+					color: #ff8989;
 					position: absolute;
-					left: 110%;
+					left: 115%;
 					top: 0;
 					height: 34px;
 					line-height: 34px;
 					cursor: pointer;
 					font-weight: 300;
 				}
-				.returned-message{
-
+				.cancel-button:hover{
+					#ffafaf;
 				}
