@@ -348,9 +348,13 @@ app.use('/boutique', (req, res)=>{
 });
 
 app.use('/findboutique', (req,res)=>{
+	if (!req.query){
+		res.render('findboutique');
+	}
 	var salamat = req.query.salamat;
 	var salon = req.query.salon;
 	var data;
+
 	Boutique.find({salamat, salon}).
 		then(
 			(docs)=>{
