@@ -46,4 +46,8 @@
 					border-radius: 3px;
 					padding: 0 15px;
 					line-height: 34px;
+					cursor: pointer;
+				}
+				.search-button{
+					background: #a2cfef;
 				}
