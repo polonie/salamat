@@ -29,8 +29,12 @@ form.onclick = function(e) {
 		input.value = value;
 	}else if(button.matches('.cancel-button')){
 		button = button.parentElement;
-		button.removeChild(this.children[0]);
+		button.removeChild(button.firstChild);
+		button.classList.toggle('save-button');
+		button.innerText = 'Редактировать';
 		input = button.previousElementSibling;
 		input.value = value;
+		input.blur();
+		input.disabled=true;
 	};
 };
