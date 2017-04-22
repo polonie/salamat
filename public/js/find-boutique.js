@@ -3,9 +3,6 @@ const salamat = document.getElementById('salamat');
 const salon = document.getElementById('salon');
 const message = document.querySelector('.returned-message');
 
-document.onclick= function(e) {
-	console.log(e.target);
-}
 search_button.onclick = function(e) {
 	console.log('salem');
 	if (salamat.value && salon.value){
