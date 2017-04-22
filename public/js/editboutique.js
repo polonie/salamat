@@ -9,8 +9,8 @@ form.onfocus = function(e) {
 	}
 };
 form.onclick = function(e) {
-	const button = e.target;
-	const input = button.previousElementSibling;
+	var button = e.target;
+	var input = button.previousElementSibling;
 	if(button.classList.contains('save-button')){
 		button.innerText = 'Редактировать';
 		button.classList.toggle('save-button');
@@ -28,7 +28,7 @@ form.onclick = function(e) {
 		value = input.value;
 		input.value = value;
 	}else if(button.matches('.cancel-button')){
-		button = button.parentNode;
+		button = button.parentElement;
 		button.removeChild(this.children[0]);
 		input = button.previousElementSibling;
 		input.value = value;
