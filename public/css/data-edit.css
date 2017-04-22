@@ -1,9 +1,12 @@
 .page-container{
 	width: 1000px;
 	margin: 0 auto;
+	padding-top: 50px;
 }
 	.page-title{
-
+		font-size: 30px;
+		font-weight: 300;
+		color: #424242;
 	}
 	.query-form-block{
 
@@ -12,12 +15,49 @@
 			font-size: 24px;
 		}
 		.query-form{
-			width: 500px;
+			width: 400px;
 			margin: 0 auto;
 		}
 			.query-form-field{
 
 			}
-.results-block{
+				.field-label{
+					display: block;
+					font-size: 16px;
+					font-weight: 300;
+					line-height: 1.5em;
+				}
+				.field-input{
+					outline: 0;
+					border: 1px solid #e0e0e0;
+					border-radius: 4px;
+					height: 34px;
+					width: 100%;
+					padding-left: 10px;
+				}
 
+.results-block{
+margin-top: 80px;
 }
+	.results-form-block{
+
+	}
+		.results-form-title{
+			font-size: 24px;
+		}
+		.results-form{
+			width: 500px;
+			margin: 0 auto
+		}
+			.results-field{
+
+			}
+				.field-label{
+
+				}
+				.field-input{
+
+				}
+				.edit-button{
+
+				}
