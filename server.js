@@ -348,8 +348,8 @@ app.use('/boutique', (req, res)=>{
 });
 
 app.get('/findboutique', (req,res)=>{
-	var void = {};
-	if (req.query==void){
+	var voidobject = {};
+	if (req.query==voidobject){
 		console.log('no query');
 		res.render('findboutique');
 	}else{
