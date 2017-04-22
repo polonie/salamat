@@ -328,7 +328,7 @@ app.use('/docedit', (req, res)=>{
 	
 });
 
-app.use('/findboutique', (req, res)=>{
+app.use('/boutique', (req, res)=>{
 	Boutique.find({salamat: req.query.data_salamat, salon: req.query.data_salon}, (err, docs)=>{
 		var boutique = docs[0], picts, data;
 		var pictsjpg = [];
@@ -355,7 +355,7 @@ app.use('/:page?', (req, res, next)=>{
 		data.salamat = {salamat_numb: page.substr(7,1), floor: page.substr(9,1), floors: floors};
 	}else if(page == 'rent'){
 		data.rent_imgs = ['rent1.jpg', 'rent2.jpg', 'rent3.jpg', 'rent4.jpg', 'rent5.jpg']
-	}else if(page == 'dbedit' || page == 'newplan'){
+	}else if(page == 'dbedit' || page == 'newplan' || page == 'findboutique' || page=='editboutique'){
 		data = {};
 	}else if(!checkLink[page]){
 		res.redirect('/');
