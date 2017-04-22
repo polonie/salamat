@@ -13,7 +13,7 @@ form.onclick = function(e) {
 		const button = e.target
 		const input = button.previousElementSibling;
 		button.classList.add('cancel-button');
-		console.log(button.classList);
+		console.log(button.classList[1]);
 		input.disabled = false;
 		input.focus();
 		input.value = input.value;
