@@ -347,6 +347,24 @@ app.use('/boutique', (req, res)=>{
 	});
 });
 
+app.use('/findboutique', (req,res)=>{
+	var salamat = req.query.salamat;
+	var salon = req.query.salon;
+	var data;
+	Boutique.find({salamat, salon}).
+		then(
+			(docs)=>{
+				if (docs){
+					data = {docs};
+				}else{
+					data = {message: 'Ничего не найдено'};
+				}
+				res.render('editboutique', data);
+			}, (err)=>{
+				res.redirect('/');
+			}
+		);
+})
 app.use('/:page?', (req, res, next)=>{
 	var page = req.params.page, data = _data;
 	if (!page){

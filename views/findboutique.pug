@@ -13,8 +13,10 @@ html(lang='en')
 				.query-form
 					.query-form-field
 						label.field-label(for="salamat") Саламат
-						input.field-input(type="text" name= 'salamat')
+						input.field-input#salamat(type="text" name= 'salamat')
 					.query-form-field
 						label.field-label(for="salon") Салон
-						input.field-input(type="text" name= 'salon')
+						input.field-input#salon(type="text" name= 'salon')
 					.search-button Найти
+					.returned-message
+		.script(src='./js/find-boutique.js')
