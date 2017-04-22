@@ -5,6 +5,7 @@ const message = document.querySelector('.returned-message');
 
 
 search_button.onclick = function(e) {
+	console.log('salem');
 	if (salamat.value && salon.value){
 		window.location.href = `/findboutique?salamat=${salamat.value}&salon=${salon.value}`;
 	}else{

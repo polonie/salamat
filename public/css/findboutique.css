@@ -48,6 +48,6 @@
 					line-height: 34px;
 					cursor: pointer;
 				}
-				.search-button{
+				.search-button:hover{
 					background: #a2cfef;
 				}
