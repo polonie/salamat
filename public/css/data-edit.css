@@ -63,8 +63,9 @@ margin-top: 80px;
 				height: 34px;
 			}
 				.edit-button{
+					color: #4fa2f3;
+					font-size: 12px;
 					float: right;
-					padding: 5px 7px;
 					height: 34px;
 					line-height: 34px;
 				}
