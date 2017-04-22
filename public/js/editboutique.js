@@ -10,9 +10,12 @@ form.onfocus = function(e) {
 };
 form.onclick = function(e) {
 	if (e.target.matches('.edit-button')){
-		const input = e.target.previousElementSibling;
+		const button = e.target
+		const input = button.previousElementSibling;
+		button.className = 'cancel-button';
 		input.disabled = false;
 		input.focus();
 		input.value = input.value;
+
 	}
 };
