@@ -9,14 +9,17 @@ form.onfocus = function(e) {
 	}
 };
 form.onclick = function(e) {
-	if (e.target.matches('.edit-button')){
-		const button = e.target
-		const input = button.previousElementSibling;
-		button.classList.add('cancel-button');
-		console.log(button.classList[1]);
+	const button = e.target;
+	const input = button.previousElementSibling;
+	if(button.classList.contains('save-button')){
+		button.innerText = 'Редактировать';
+		button.classList.toggle('save-button');
+		input.blur();
+		input.disabled=true;
+	}else if(e.target.matches('.edit-button')){
+		button.classList.toggle('save-button');
 		input.disabled = false;
 		input.focus();
 		input.value = input.value;
-
 	}
 };

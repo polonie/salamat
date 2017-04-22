@@ -49,7 +49,10 @@ margin-top: 80px;
 					cursor: pointer;
 				}
 				.save-button{
-					color: green;
+					color: #45bf38;
+				}
+				.save-button:hover{
+					color: #a2f999;
 				}
 				.cancel-button{
 					color: red;
