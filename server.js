@@ -353,6 +353,7 @@ app.get('/findboutique', (req,res)=>{
 		console.log('no query');
 		res.render('findboutique');
 	}else{
+		console.log(req.query);
 		var salamat = req.query.salamat;
 		var salon = req.query.salon;
 		var data;
