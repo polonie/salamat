@@ -12,13 +12,12 @@
 			text-align: center;
 		}
 		.query-form{
-			padding: 30px;
 			border: 1px solid #e0e0e0;
 			width: 400px;
 			margin: 0 auto;
 		}
 			.query-form-field{
-
+				margin-top: 20px;
 			}
 				.field-label{
 					display: block;
@@ -47,11 +46,14 @@ margin-top: 80px;
 			text-align: center;
 		}
 		.results-form{
-			width: 300px;
+			width: 400px;
 			margin: 0 auto;
 			border: 1px solid #e0e0e0;
 			padding: 30px;
 		}
+			.results-field{
+				margin-top: 20px;
+			}
 			.results-field-input{
 				width: 300px;
 				border: 1px solid #e0e0e0;
@@ -59,13 +61,8 @@ margin-top: 80px;
 				height: 24px;
 				padding-left: 10px;
 				display: inline-block;
+				margin-right: 15px;
 			}
-				.field-label{
-
-				}
-				.field-input{
-
-				}
 				.edit-button{
 					width: 85px;
 					height: 34px;
