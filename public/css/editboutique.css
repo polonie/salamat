@@ -48,6 +48,9 @@ margin-top: 80px;
 					line-height: 34px;
 					cursor: pointer;
 				}
+				.edit-button:hover{
+					color: #9fcfff;
+				}
 				.save-button{
 					color: #45bf38;
 				}
@@ -56,9 +59,6 @@ margin-top: 80px;
 				}
 				.cancel-button{
 					color: red;
-				}
-				.edit-button:hover{
-					color: #9fcfff;
 				}
 				.returned-message{
 

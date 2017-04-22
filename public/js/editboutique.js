@@ -17,7 +17,8 @@ form.onclick = function(e) {
 		input.blur();
 		input.disabled=true;
 	}else if(e.target.matches('.edit-button')){
-		button.classList.toggle('save-button').innerText='Сохранить';
+		button.classList.toggle('save-button')
+		button.innerText='Сохранить';
 		input.disabled = false;
 		input.focus();
 		input.value = input.value;
