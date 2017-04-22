@@ -347,8 +347,9 @@ app.use('/boutique', (req, res)=>{
 	});
 });
 
-app.use('/findboutique', (req,res)=>{
+app.get('/findboutique', (req,res)=>{
 	if (!req.query){
+		console.log('no query');
 		res.render('findboutique');
 	}else{
 		var salamat = req.query.salamat;
