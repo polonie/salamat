@@ -2,37 +2,6 @@
 	width: 1000px;
 	margin: 0 auto;
 }
-	.query-form-block{
-
-	}
-		.query-form-title{
-			font-size: 24px;
-			font-weight: 300;
-			text-align: center;
-		}
-		.query-form{
-			border: 1px solid #e0e0e0;
-			width: 400px;
-			margin: 0 auto;
-		}
-			.query-form-field{
-				margin-top: 20px;
-			}
-				.field-label{
-					display: block;
-					font-size: 16px;
-					font-weight: 300;
-					line-height: 1.5em;
-				}
-				.field-input{
-					outline: 0;
-					border: 1px solid #e0e0e0;
-					border-radius: 4px;
-					height: 34px;
-					width: 100%;
-					padding-left: 10px;
-				}
-
 .results-block{
 margin-top: 80px;
 }
@@ -64,6 +33,12 @@ margin-top: 80px;
 				float: left;
 				height: 34px;
 			}
+			.field-label{
+				display: block;
+				font-size: 16px;
+				font-weight: 300;
+				line-height: 1.5em;
+			}
 				.edit-button{
 					color: #4fa2f3;
 					font-weight: 300;
@@ -72,4 +47,7 @@ margin-top: 80px;
 					height: 34px;
 					line-height: 34px;
 					cursor: pointer;
+				}
+				.edit-button:hover{
+					color: #9fcfff;
 				}
