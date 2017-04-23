@@ -306,6 +306,25 @@ app.use('/boutiques', (req, res)=>{
 		});
 });
 
+
+app.use('/editboutique', (req, res)=>{
+	var query = req.query, findQueries={}, updateQueries={};
+	for(key in query){
+		if (key !== 'newvalue' && key!=='field'){
+			findQueries[key]= query[key];
+		}else{
+			updateQueries[query.field] = req.query[key];
+		}
+	};
+	Boutique.findOneAndUpdate(findQueries, {$set:updateQueries}, {new:true})
+		.then((doc)=>{
+			res.send(doc);
+		}, (err)=>{
+			res.send(err);
+		});
+});
+
+
 app.use('/docedit', (req, res)=>{
 	var obj = req.query, findQueries={}, updateQueries={};
 	for(key in obj){

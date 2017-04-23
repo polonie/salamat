@@ -12,10 +12,24 @@ form.onclick = function(e) {
 	var button = e.target;
 	var input = button.previousElementSibling;
 	if(button.classList.contains('save-button')){
-		button.innerText = 'Редактировать';
-		button.classList.toggle('save-button');
-		input.blur();
-		input.disabled=true;
+		const salamat = document.querySelector('.salamat').getAttribute('name');
+		const salon = document.querySelector('.salon').getAttribute('name');
+		const name = document.querySelector('.name').getAttribute('name');
+		var newvalue = input.value;
+		var field = input.getAttribute('name');
+		button.classList.add('disabled');
+		fetch(`/editboutique?salamat=${salamat}&salon=${salon}&name=${name}&newvalue=${newvalue}&field=${field}`)
+			.then((response)=>{
+				return response.json();
+			})
+			.then((doc)=>{
+				button.classList.remove('disabled');
+				button.innerText = 'Редактировать';
+				button.classList.toggle('save-button');
+				console.log(doc);
+				input.blur();
+				input.disabled=true;
+			});
 	}else if(button.matches('.edit-button')){
 		button.classList.toggle('save-button')
 		button.innerText='Сохранить';

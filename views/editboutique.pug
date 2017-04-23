@@ -15,7 +15,7 @@ html(lang='en')
 							h2.results-form-title= item.name
 							.results-field.clearfix
 								label.field-label(for="salamat") Саламат
-								input.results-field-input(disabled name='salamat' value= item.salamat)
+								input.results-field-input.salamat(disabled name='salamat' value= item.salamat)
 								.edit-button Редактировать
 							.results-field.clearfix
 								label.field-label(for="floor") Этаж
@@ -23,22 +23,22 @@ html(lang='en')
 								.edit-button Редактировать
 							.results-field.clearfix
 								label.field-label(for="salon") Салон
-								input.results-field-input(disabled name='salon' value= item.salon)
+								input.results-field-input.salon(disabled name='salon' value= item.salon)
 								.edit-button Редактировать
 							.results-field.clearfix
 								label.field-label(for="name") Компания
-								input.results-field-input(disabled name='name' value= item.name)
+								input.results-field-input.name(disabled name='name' value= item.name)
 								.edit-button Редактировать
 							.results-field.clearfix
 								label.field-label(for="salamat") Описание
-								input.results-field-input(disabled name='salamat' value= item.about)
+								input.results-field-input(disabled name='about' value= item.about)
 								.edit-button Редактировать
 							.results-field.clearfix
 								label.field-label(for="salamat") Email
-								input.results-field-input(disabled name='salamat' value= item.email)
+								input.results-field-input(disabled name='email' value= item.email)
 								.edit-button Редактировать
 							.results-field.clearfix
 								label.field-label(for="salamat") Сайт
-								input.results-field-input(disabled name='salamat' value= item.site)
+								input.results-field-input(disabled name='site' value= item.site)
 								.edit-button Редактировать
 		script(src='./js/editboutique.js')
