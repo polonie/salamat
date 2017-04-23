@@ -13,12 +13,13 @@ form.onclick = function(e) {
 	var input = button.previousElementSibling;
 	if(button.classList.contains('save-button')){
 		const salamat = document.querySelector('.salamat').getAttribute('name');
-		const salon = document.querySelector('.salon').getAttribute('name');
+		const salon = document.querySelector('.salon');
+		var salon1 = salon.getAttribute('name');
 		const name = document.querySelector('.name').getAttribute('name');
 		var newvalue = input.value;
 		var field = input.getAttribute('name');
 		// button.classList.add('disabled');
-		fetch(`/editboutique?salamat=${salamat}&salon=${salon}&name=${name}&newvalue=${newvalue}&field=${field}`)
+		fetch(`/editboutique?salamat=${salamat}&salon=${salon1}&name=${name}&newvalue=${newvalue}&field=${field}`)
 			.then((response)=>{
 				console.log(response);
 				return response.json();
