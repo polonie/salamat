@@ -309,6 +309,7 @@ app.use('/boutiques', (req, res)=>{
 
 app.use('/editboutique', (req, res)=>{
 	var query = req.query, findQueries={}, updateQueries={};
+	console.log(query);
 	for(key in query){
 		if (key !== 'newvalue' && key!=='field'){
 			findQueries[key]= query[key];

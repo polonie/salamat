@@ -17,13 +17,14 @@ form.onclick = function(e) {
 		const name = document.querySelector('.name').getAttribute('name');
 		var newvalue = input.value;
 		var field = input.getAttribute('name');
-		button.classList.add('disabled');
+		// button.classList.add('disabled');
 		fetch(`/editboutique?salamat=${salamat}&salon=${salon}&name=${name}&newvalue=${newvalue}&field=${field}`)
 			.then((response)=>{
+				console.log(response);
 				return response.json();
 			})
 			.then((doc)=>{
-				button.classList.remove('disabled');
+				// button.classList.remove('disabled');
 				button.innerText = 'Редактировать';
 				button.classList.toggle('save-button');
 				console.log(doc);
