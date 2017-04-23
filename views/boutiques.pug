@@ -42,7 +42,7 @@ block content
 					- var i = 0
 					if pages
 						div.pages-panel.clearfix
-							div.pages.clearfix
+							div.pages(data-id= categoryID).clearfix
 								while i < pages
 									- ++i
 									if page == i

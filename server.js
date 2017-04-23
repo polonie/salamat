@@ -5,7 +5,6 @@ var mongoose = require('./db/mongoose');
 var Category = require('./db/mongoose').Category;
 var {Boutique} = require('./models/Boutique');
 const port = process.env.PORT || 3000;
-var category;
 var numbofpages;
 var checkLink = {home: true, rent: true, newplan: true, company: true, contacts: true};
 var links = [{link: 'home', linktitle: 'Главная'}, {link: '#', linktitle: 'Новости'}, {link: 'rent', linktitle: 'Аренда'}, {link: 'newplan', linktitle: 
@@ -303,6 +302,7 @@ app.use('/category', (req,res)=>{
 			data.docs = docs;
 			data.pages = numbofpages;
 			data.page = 1;
+			data.categoryID = categoryID;
 			res.render('boutiques', data);
 		});
 
@@ -312,9 +312,10 @@ app.use('/category', (req,res)=>{
 
 app.use('/boutiques', (req, res)=>{
 	var page = +req.query.pagenumber;
+	var categoryID = req.query.categoryID;
 	var offset = (page - 1) * 10;
 	Boutique
-		.find({total: new RegExp(category, "i")})
+		.find({total: new RegExp(categoryID, "i")})
 		.skip(offset)
 		.limit(10)
 		.exec((err, docs)=>{
