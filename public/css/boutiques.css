@@ -11,6 +11,7 @@
 
 }
 	.boutiques-block-items{
+		box-shadow: -10px 0px 10px 1px #aaaaaa;
 		background: #fff;
 		border-radius: 4px;
 	}
