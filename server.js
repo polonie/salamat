@@ -296,7 +296,7 @@ app.use('/category', (req,res)=>{
 			numbofpages = false;
 		};
 		Boutique
-		.find({total: new RegExp(category, "i")})
+		.find({total: new RegExp(categoryID, "i")})
 		.limit(10)
 		.exec((err, docs)=>{
 			var data = _data;
