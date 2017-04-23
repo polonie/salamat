@@ -10,7 +10,12 @@ block content
 						.boutiques-block-item
 							.boutiques-item-content.clearfix
 								.boutiques-item-content-logo
-									- var url = './img/boutiques/' + boutique.logo
+									- var logo = boutique.logo
+									- var url
+									if logo.substr(0,4)=='http'
+										- url = logo
+									else
+										- url = './img/boutiques/' + logo
 									img.boutique-img-logo(src= url)
 								.boutiques-item-content-body
 									.boutiques-content-header.clearfix
