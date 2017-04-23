@@ -313,7 +313,7 @@ app.use('/editboutique', (req, res)=>{
 	for(key in query){
 		if (key !== 'newvalue' && key!=='field'){
 			findQueries[key]= query[key];
-		}else{
+		}else if(key!=='field'){
 			updateQueries[query.field] = req.query[key];
 		}
 	};
