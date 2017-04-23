@@ -11,7 +11,8 @@ var Boutique = mongoose.model('Boutique', {
 	picts: String,
 	son: String,
 	email: String,
-	site: String
+	site: String,
+	etazh: String
 });
 
 module.exports = {Boutique};

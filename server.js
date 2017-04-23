@@ -101,7 +101,7 @@ app.use('/newplan', (req, res)=>{
 
 // ****************************************     WRITE/READ DATA     ***********************************
 app.get('/rw-boutiques', (req, res)=>{
-	if (!req.query.name && !req.query.salamat && !req.query.salon && !req.query.phone && !req.query.total && !req.query.about && !req.query.logo && !req.query.picts && !req.query.site && !req.query.email && !req.query.son){
+	if (!req.query.name && !req.query.salamat && !req.query.salon && !req.query.phone && !req.query.total && !req.query.about && !req.query.logo && !req.query.picts && !req.query.site && !req.query.email && !req.query.son && !req.query.etazh){
 		Boutique.find().then(
 			(boutiques)=>{
 				res.send({
@@ -125,7 +125,8 @@ app.get('/rw-boutiques', (req, res)=>{
 		picts: req.query.picts,
 		son: req.query.son,
 		email: req.query.email,
-		site: req.query.site
+		site: req.query.site,
+		etazh: req.query.etazh
 	});
 	boutique.save().then(
 		(bot)=>{
