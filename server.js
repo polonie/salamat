@@ -302,7 +302,6 @@ app.use('/category', (req,res)=>{
 			var data = _data;
 			data.docs = docs;
 			data.pages = numbofpages;
-			data.category = categoryname;
 			data.page = 1;
 			res.render('boutiques', data);
 		});
