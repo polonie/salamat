@@ -23,7 +23,8 @@
 			border-right: 1px solid #ececec;
 		}
 		.boutiques-block-item:hover{
-			box-shadow: 1px 2px 4px rgba(0,0,0,0.2);
+			box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+			background: #fdfeff;
 		}
 			.boutiques-item-content{
 
