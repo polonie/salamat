@@ -7,8 +7,13 @@ block content
 			.boutique-page-block.clearfix
 				.boutique-profile-block
 					.profile-logo-block
-						- var url = './img/boutiques/' + boutique.logo
-						img.profile-logo-img(src= url)
+						- var logo = boutique.logo
+						- var url
+						if logo.substr(0,4)=='http'
+							- url = logo
+						else
+							- url = './img/boutiques/' + logo
+						img.boutique-img-logo(src= url)
 					.profile-tags-block
 				.boutique-content-block
 					.boutique-content-header
