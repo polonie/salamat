@@ -62,7 +62,7 @@ inputSearch.onkeyup = (e)=>{
 };
 
 searchedResults.onclick = (e)=>{
-	if (e.target.matches('find-item')){
+	if (e.target.matches('.find-item')){
 		window.location.href = `/category?dataid=${e.target.getAttribute('data-id')}`;
 	}
 };
