@@ -36,7 +36,7 @@ inputSearch.onkeyup = (e)=>{
 	};
 	findList = document.createElement('ul');
 	findList.classList.add('list');
-	searchedResults.appendChild(findList);	
+	searchedResults.appendChild(findList);
 	const len = e.target.value.length
 	if (len !== 0){
 		var newarr = arr.filter((i)=>{
@@ -44,13 +44,14 @@ inputSearch.onkeyup = (e)=>{
 				searchedResults.classList.add('active');
 				var itemFind = document.createElement('li')
 				itemFind.className ='find-item';
+				itemFind.setAttribute('data-id', i.id);
 				itemFind.innerHTML = i.name;
 				findList.appendChild(itemFind);
-				itemFind.onclick = (e)=>{
-					inputSearch.value = e.target.innerHTML;
-					inputSearch.setAttribute('data-id', i.id);
-					searchedResults.classList.remove('active');
-				}
+				// itemFind.onclick = (e)=>{
+				// 	inputSearch.value = e.target.innerHTML;
+				// 	inputSearch.setAttribute('data-id', i.id);
+				// 	searchedResults.classList.remove('active');
+				// }
 			}else{
 				return;
 			}
@@ -59,6 +60,14 @@ inputSearch.onkeyup = (e)=>{
 		searchedResults.classList.remove('active');
 	};
 };
+
+searchedResults.onclick = (e)=>{
+	if (e.target.matches('find-item')){
+		window.location.href = `/category?dataid=${e.target.getAttribute('data-id')}`;
+	}
+};
+
+
 
 document.onclick = (e)=>{
 	if (e.target !== inputSearch){
