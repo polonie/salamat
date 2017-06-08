@@ -58,6 +58,14 @@
 				width: 25%;
 				text-align: center;
 			}
+			.inactive-button{
+				background: #b5b5b5;
+				cursor: wait;
+			}
+			.inactive-button:hover{
+				background: #b5b5b5;
+				cursor: wait;
+			}
 			.form-message{
 				margin-top: 20px;
 				color: #fff;

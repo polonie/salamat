@@ -5,20 +5,22 @@ var form_textarea = document.querySelector('.form-textarea');
 var form_message = document.querySelector('.form-message');
 form_message.style.opacity = '0';
 
-button.onclick = (e)=>{
+
+button.addEventListener('click', sendMyEmail);
+
+sendMyEmail = (e)=>{
 	var val1 = form_input_name.value;
 	var val2 = form_input_email.value;
 	var val3 = form_textarea.value;
 	if (val1 && val2 && val3){
+		button.removeEventListener('click', sendMyEmail);
+		button.classList.add('inactive-button');
 		form_message.classList.remove('form-message-error');
 		form_message.classList.add('form-message-success');
-		// form_message.style.opacity = '1';
-		// form_message.innerText = 'Спасибо, ваши данные отправлены!';
-		// setTimeout(()=>{
-		// 	form_message.style.opacity = '0';
-		// }, 1100);
 		emailjs.send("mail_ru","template_4cwfGNrw", {name: val1, email: val2, text: val3})
 		.then(function(response) {
+			button.addEventListener('click', sendMyEmail);
+			button.classList.remove('inactive-button');
 			form_message.innerText = 'Спасибо, ваши данные отправлены!'
 			form_message.classList.remove('form-message-error');
 			form_message.classList.add('form-message-success');
