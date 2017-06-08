@@ -8,7 +8,7 @@ form_message.style.opacity = '0';
 
 button.addEventListener('click', sendMyEmail);
 
-sendMyEmail = (e)=>{
+const sendMyEmail = (e)=>{
 	var val1 = form_input_name.value;
 	var val2 = form_input_email.value;
 	var val3 = form_textarea.value;
