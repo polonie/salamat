@@ -18,4 +18,4 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Salamat',
 		});
 	});
 });
-module.exports = {lvl1: lvl1, lvl2: lvl2, lvl3: lvl3, Category: Category};
+module.exports = {lvl1, lvl2, lvl3, Category};
