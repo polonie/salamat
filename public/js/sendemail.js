@@ -6,9 +6,7 @@ var form_message = document.querySelector('.form-message');
 form_message.style.opacity = '0';
 
 
-button.addEventListener('click', sendMyEmail);
-
-const sendMyEmail = (e)=>{
+var sendMyEmail = (e)=>{
 	var val1 = form_input_name.value;
 	var val2 = form_input_email.value;
 	var val3 = form_textarea.value;
@@ -44,3 +42,5 @@ const sendMyEmail = (e)=>{
 		}, 1100);
 	};
 };
+
+button.addEventListener('click', sendMyEmail);
