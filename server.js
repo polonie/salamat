@@ -412,8 +412,8 @@ app.get('/findboutique', (req,res)=>{
 				}
 			);
 	};
-
 })
+
 app.use('/:page?', (req, res, next)=>{
 	var page = req.params.page, data = _data;
 	if (!page){
