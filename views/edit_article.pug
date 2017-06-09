@@ -1,0 +1,17 @@
+extends articles_layout
+block content
+	.container
+			.col-lg-6.col-md-8.col-sm-12
+				h1 Редактирование записи
+				br
+				form(method='POST' action='/article/edit/' + article.id)
+					.form-group
+						label Заголовок
+						input.form-control(name='title' type='text' value=article.title)
+					.form-group
+						label Краткое описание
+						input.form-control(name='description' type='text' value=article.description)
+					.form-group
+						label Текст
+						textarea.form-control(name='body')= article.body
+					input.btn.btn-primary(type='submit' value='Отправить')
