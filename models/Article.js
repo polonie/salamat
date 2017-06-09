@@ -15,6 +15,6 @@ let articleSchema = mongoose.Schema({
 	}
 });
 
-let Article = mongoose.Model('Article', articleSchema);
+let Article = mongoose.model('Article', articleSchema);
 
 module.exports = {Article};
