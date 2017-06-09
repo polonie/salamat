@@ -110,9 +110,8 @@ app.post('/articles/add', (req, res)=>{
 app.get('/article-list', (req, res)=>{
 	Article.find({}, (err, articles)=>{
 		res.render('article_list', {articles})
-	};
+	});
 });
-
 
 app.use('/newplan', (req, res)=>{
 	res.render('newplan');
