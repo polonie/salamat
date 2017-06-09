@@ -9,9 +9,13 @@ let articleSchema = mongoose.Schema({
 		type: String,
 		required: true
 	},
-	body:{
+	body: {
 		type: String,
 		required: true
+	},
+	created: {
+		type: Date,
+		default: Date.now
 	}
 });
 

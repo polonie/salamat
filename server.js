@@ -93,6 +93,12 @@ var footer = [
 
 var _data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links, categories, footer};
 
+app.get('/drop/:model', (req, res)=>{
+	mongoose.connection.db.dropCollection(req.params.model, function(err, result) {
+		res.send(result);
+	});
+})
+
 app.get('/articles/add', (req, res)=>{
 	res.render('add_article', {page: 'new'});
 });
