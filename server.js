@@ -93,25 +93,25 @@ var footer = [
 
 var _data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links, categories, footer};
 
-// app.get('/articles/add', (req, res)=>{
-// 	res.render('add_article');
-// });
-// app.post('/articles/add', (req, res)=>{
-// 	let article = new Article({title: req.body.title, description:req.body.description, body: req.body.body});
-// 	article.save((err)=>{
-// 		if (err){
-// 			console.log(err);
-// 		}else{
-// 			res.redirect('/article-list');
-// 		}
-// 	})
-// });
+app.get('/articles/add', (req, res)=>{
+	res.render('add_article');
+});
+app.post('/articles/add', (req, res)=>{
+	let article = new Article({title: req.body.title, description:req.body.description, body: req.body.body});
+	article.save((err)=>{
+		if (err){
+			console.log(err);
+		}else{
+			res.redirect('/article-list');
+		}
+	})
+});
 
-// app.get('/article-list', (req, res)=>{
-// 	Article.find({}, (err, articles)=>{
-// 		res.render('article_list', {articles})
-// 	});
-// });
+app.get('/article-list', (req, res)=>{
+	Article.find({}, (err, articles)=>{
+		res.render('article_list', {articles})
+	});
+});
 
 app.use('/newplan', (req, res)=>{
 	res.render('newplan');
