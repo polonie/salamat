@@ -19,7 +19,11 @@ html(lang='en')
 						li
 							a(href='home') Главная
 						li
-							a(href='#about') Все записи
+							if page == 'list'
+								a(href='/articles/add') Добавить запись
+							else
+								a(href='/article-list') Все записи
+
 		.container
 			block content
 			br
