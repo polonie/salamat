@@ -4,7 +4,7 @@ const app = express();
 var mongoose = require('./db/mongoose');
 var Category = require('./db/mongoose').Category;
 var {Boutique} = require('./models/Boutique');
-// var {Article} = require('./models/Article');
+var {Article} = require('./models/Article');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.set('view engine', 'pug');
