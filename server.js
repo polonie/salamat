@@ -93,7 +93,11 @@ var footer = [
 
 var _data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links, categories, footer};
 
-
+app.get('/articles/edit/:id', function(req, res) {
+	Article.findById(req.params.id, function(err, article) {
+		res.render('edit_article', {article});
+	});
+});
 
 app.get('/article/:id', function(req, res) {
 	Article.findById(req.params.id, function(err, article) {
