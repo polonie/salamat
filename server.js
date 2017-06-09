@@ -108,9 +108,7 @@ app.get('/rw-boutiques', (req, res)=>{
 	if (!req.query.name && !req.query.salamat && !req.query.salon && !req.query.phone && !req.query.total && !req.query.about && !req.query.logo && !req.query.picts && !req.query.site && !req.query.email && !req.query.son && !req.query.etazh){
 		Boutique.find().then(
 			(boutiques)=>{
-				res.send({
-					boutiques
-				})
+				res.send(boutiques);
 			},
 			(err)=>{
 				res.status(400).send(err)
