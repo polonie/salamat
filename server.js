@@ -94,7 +94,7 @@ var _data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, link
 
 
 
-app.use('/articles/newarticle', (req, res)=>{
+app.get('/articles/newarticle', (req, res)=>{
 	res.render('new_article');
 });
 
