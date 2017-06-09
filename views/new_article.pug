@@ -2,17 +2,16 @@ extends articles_layout
 block content
 	.container
 			.col-lg-6.col-md-8.col-sm-12
-				.container-fluid
-					h1 Новая запись
-					br
-					form(method='POST' action='/article/add')
-						.form-group
-							label Заголовок
-							input.form-control(name='title' type='text')
-						.form-group
-							label Краткое описание
-							input.form-control(name='description' type='text')
-						.form-group
-							label Текст
-							textarea.form-control(name='title')
-						input.btn.btn-primary(type='submit' value='Отправить')
+				h1 Новая запись
+				br
+				form(method='POST' action='/article/add')
+					.form-group
+						label Заголовок
+						input.form-control(name='title' type='text')
+					.form-group
+						label Краткое описание
+						input.form-control(name='description' type='text')
+					.form-group
+						label Текст
+						textarea.form-control(name='title')
+					input.btn.btn-primary(type='submit' value='Отправить')
