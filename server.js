@@ -94,7 +94,7 @@ var footer = [
 var _data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links, categories, footer};
 
 app.get('/drop/article', (req, res)=>{
-	Article.remove({}, function(req, res) {
+	Article.remove({}, function(err, result) {
 		res.redirect('/article-list');
 	});
 })
