@@ -1,9 +1,13 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
 var mongoose = require('./db/mongoose');
-// var {Category} = require('./models/Category');
 var Category = require('./db/mongoose').Category;
 var {Boutique} = require('./models/Boutique');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.set('view engine', 'pug');
+app.use(express.static('public'));
 const port = process.env.PORT || 3000;
 var numbofpages;
 var checkLink = {home: true, rent: true, newplan: true, company: true, contacts: true};
@@ -89,9 +93,10 @@ var footer = [
 var _data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links, categories, footer};
 
 
-app.set('view engine', 'pug');
-app.use(express.static('public'));
 
+app.use('/articles/newarticle', (req, res)=>{
+	res.render('new_article');
+});
 
 
 app.use('/newplan', (req, res)=>{
@@ -215,77 +220,6 @@ app.get('/boutiquelist', (req, res)=>{
 	});
 });
 // *************************************************  MAP QUERIES  ********************************************
-
-// app.use('/category', (req, res)=>{
-// 	category = req.query.dataid;
-// 	Category.find({id: category}, (err, doc)=>{
-// 		var categoryname = doc[0].name;
-// 		if (doc[0].idparent != '@'){
-// 			Category.find({id: doc[0].idparent}, (err, parent)=>{
-// 				var parentname = parent[0].name;
-// 				if (parent[0].idparent != '@'){
-// 					Category.find({id: parent[0].idparent}, (err, grand)=>{
-// 						var grandname = grand[0].name;
-// 						Boutique.count({total: new RegExp(category, "i")}, (err, numb)=>{
-// 							numbofpages = (numb % 10)==0 ? (numb/10) : (Math.floor(numb/10)+1); 
-// 							if (numbofpages == 1){
-// 								numbofpages = false;
-// 							};
-// 							Boutique
-// 							.find({total: new RegExp(category, "i")})
-// 							.limit(10)
-// 							.exec((err, docs)=>{
-// 								var data = _data;
-// 								data.docs = docs;
-// 								data.pages = numbofpages;
-// 								data.parent = parentname;
-// 								data.grand = grandname;
-// 								data.page = 1;
-// 								data.category = categoryname;
-// 								res.render('boutiques', data);
-// 							});
-// 						});
-// 					})
-// 				}else{
-// 					Boutique.count({total: new RegExp(category, "i")}, (err, numb)=>{
-// 						numbofpages = (numb % 10)==0 ? (numb/10) : (Math.floor(numb/10)+1); 
-// 						if (numbofpages == 1){
-// 							numbofpages = false;
-// 						};
-// 						Boutique
-// 						.find({total: new RegExp(category, "i")})
-// 						.limit(10)
-// 						.exec((err, docs)=>{
-// 							var data = _data;
-// 							data.docs = docs;
-// 							data.pages = numbofpages;
-// 							data.parent = parentname;
-// 							data.category = categoryname;
-// 							res.render('boutiques', data);
-// 						});
-// 					});
-// 				}
-// 			})
-// 		}else{
-// 			Boutique.count({total: new RegExp(category, "i")}, (err, numb)=>{
-// 				numbofpages = (numb % 10)==0 ? (numb/10) : (Math.floor(numb/10)+1); 
-// 				if (numbofpages == 1){
-// 					numbofpages = false;
-// 				};
-// 				Boutique
-// 				.find({total: new RegExp(category, "i")})
-// 				.limit(10)
-// 				.exec((err, docs)=>{
-// 					var data = _data;
-// 					data.docs = docs;
-// 					data.pages = numbofpages;
-// 					data.category = categoryname;
-// 					res.render('boutiques', data);
-// 				});
-// 			});
-// 		}
-// 	});
-// });
 
 app.use('/category', (req,res)=>{
 	const categoryID = req.query.dataid;
