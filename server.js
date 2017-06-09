@@ -99,7 +99,7 @@ app.get('/articles/add', (req, res)=>{
 	res.render('add_article');
 });
 app.post('/articles/add', (req, res)=>{
-	var obj = {...keys} = req.body;
+	let {...article} = req.body;
 	console.log(obj);
 });
 
