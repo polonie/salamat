@@ -4,6 +4,7 @@ const app = express();
 var mongoose = require('./db/mongoose');
 var Category = require('./db/mongoose').Category;
 var {Boutique} = require('./models/Boutique');
+var {Article} = require('./models/Article');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.set('view engine', 'pug');
@@ -94,9 +95,19 @@ var _data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, link
 
 
 
-app.get('/articles/newarticle', (req, res)=>{
-	res.render('new_article');
+app.get('/articles/add', (req, res)=>{
+	res.render('add_article');
 });
+app.post('/articles/add', (req, res)=>{
+	var obj = {...req.body};
+	console.log(obj);
+});
+
+app.get('/article-list', (req, res)=>{
+	Article.find({}, (err, articles)=>{
+		res.render('article_list', {articles})
+	};
+);
 
 
 app.use('/newplan', (req, res)=>{
