@@ -93,6 +93,20 @@ var footer = [
 
 var _data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links, categories, footer};
 
+
+
+app.get('/article/:id', function(req, res) {
+	Article.findById(req.params.id, function(err, article) {
+		res.render('article', {article});
+	});
+});
+
+app.get('/article/update/:id', function(req,res) {
+	Article.find({_id: req.params.id}, function(err, article) {
+
+	})
+})
+
 app.get('/drop/article', (req, res)=>{
 	Article.remove({}, function(err, result) {
 		res.redirect('/article-list');
@@ -108,14 +122,14 @@ app.post('/articles/add', (req, res)=>{
 		if (err){
 			console.log(err);
 		}else{
-			res.redirect('/article-list');
+			res.redirect('/articles');
 		}
 	})
 });
 
-app.get('/article-list', (req, res)=>{
+app.get('/articles', (req, res)=>{
 	Article.find({}, (err, articles)=>{
-		res.render('article_list', {articles, page: 'list'})
+		res.render('articles', {articles, page: 'list'})
 	});
 });
 
