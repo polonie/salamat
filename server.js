@@ -93,9 +93,9 @@ var footer = [
 
 var _data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links, categories, footer};
 
-app.get('/drop/:model', (req, res)=>{
-	mongoose.connection.db.dropCollection(req.params.model, function(err, result) {
-		res.send(result);
+app.get('/drop/article', (req, res)=>{
+	Article.remove({}, function(req, res) {
+		res.redirect('/article-list');
 	});
 })
 
