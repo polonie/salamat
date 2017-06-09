@@ -111,7 +111,7 @@ app.get('/article-list', (req, res)=>{
 	Article.find({}, (err, articles)=>{
 		res.render('article_list', {articles})
 	};
-);
+});
 
 
 app.use('/newplan', (req, res)=>{
