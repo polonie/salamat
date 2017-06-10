@@ -46,7 +46,7 @@ app.get('/article/:id', function(req, res) {
 
 app.get('/drop/article', (req, res)=>{
 	Article.remove({}, function(err, result) {
-		res.redirect('/article-list');
+		res.redirect('/articles');
 	});
 })
 
