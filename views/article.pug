@@ -1,10 +1,11 @@
 extends articles_layout
 block content
 	h1= article.title
-	h3= article.description
+	h4= article.description
 	p= article.body
 	p
-		span= article.created.getFullYear() 
-		span= article.created.getMonth() 
-		span= article.created.getDate()
+		span Создан: 
+		span= article.created.getDate()+'/'
+		span= article.created.getMonth() + 1 + '/'
+		span= article.created.getFullYear()
 	a.btn.btn-default(href='/article/edit/' + article._id) Редактировать
