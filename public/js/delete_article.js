@@ -6,7 +6,7 @@ $document.ready(function() {
 			type: 'DELETE',
 			url: '/article/' + id,
 			success: function(response) {
-				window.location.href = '/';
+				window.location.href = '/articles';
 			},
 			error: function(err) {
 				console.log(err);
