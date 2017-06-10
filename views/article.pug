@@ -5,7 +5,7 @@ block content
 	p= article.body
 	p
 		span Создан: 
-		span= article.created.getDate()+'/'
-		span= article.created.getMonth() + 1 + '/'
-		span= article.created.getFullYear()
+		//- span= article.created.getDate()+'/'
+		//- span= article.created.getMonth() + 1 + '/'
+		//- span= article.created.getFullYear()
 	a.btn.btn-default(href='/article/edit/' + article._id) Редактировать
