@@ -3,5 +3,8 @@ block content
 	h1= article.title
 	h3= article.description
 	p= article.body
-	h5= article.created
+	p
+		span= article.created.getFullYear() 
+		span= article.created.getMonth() 
+		span= article.created.getDate()
 	a.btn.btn-default(href='/article/edit/' + article._id) Редактировать
