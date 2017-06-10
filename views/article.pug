@@ -8,3 +8,5 @@ block content
 		span= article.created
 	a.btn.btn-default(href='/article/edit/' + article._id) Редактировать
 	button.btn.btn-danger.delete-article(data-id=article._id) Удалить
+block scripts
+	script(src='./js/delete-article.js')
