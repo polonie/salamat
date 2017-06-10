@@ -1,4 +1,4 @@
-$document.ready(function() {
+$(document).ready(function() {
 	$('.delete-article').on('click', function(e) {
 		$target = $(e.target);
 		const id = $target.attr('data-id');
