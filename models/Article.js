@@ -14,7 +14,8 @@ let articleSchema = mongoose.Schema({
 		required: true
 	},
 	created: {
-		type: Date
+		type: Date,
+		default: Date.now
 	}
 });
 

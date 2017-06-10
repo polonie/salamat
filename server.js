@@ -50,7 +50,7 @@ app.get('/articles/add', (req, res)=>{
 	res.render('add_article', {page: 'new'});
 });
 app.post('/articles/add', (req, res)=>{
-	let article = new Article({title: req.body.title, description:req.body.description, body: req.body.body, created: new Date()});
+	let article = new Article({title: req.body.title, description:req.body.description, body: req.body.body});
 	article.save((err)=>{
 		if (err){
 			console.log(err);
