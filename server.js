@@ -22,17 +22,18 @@ app.get('/article/edit/:id', function(req, res) {
 	});
 });
 
+app.post('/article/edit/:id', function(req, res) {
+	let {...article} = req.body;
+	console.log(article);
+});
+
 app.get('/article/:id', function(req, res) {
 	Article.findById(req.params.id, function(err, article) {
 		res.render('article', {article});
 	});
 });
 
-app.get('/article/update/:id', function(req,res) {
-	Article.find({_id: req.params.id}, function(err, article) {
 
-	})
-})
 
 app.get('/drop/article', (req, res)=>{
 	Article.remove({}, function(err, result) {
