@@ -23,8 +23,17 @@ app.get('/article/edit/:id', function(req, res) {
 });
 
 app.post('/article/edit/:id', function(req, res) {
-	let {...article} = req.body;
-	console.log(article);
+	let article = {};
+	article.title = req.body.title;
+	article.description = req.body.description;
+	article.body = req.body.body;
+	article.created = req.body.created;
+	let query = {_id: req.params.id};
+	Article.findOneAndUpdate(query, {$set: article}, function(err, article) {
+		res.redirect('/articles');
+	});
+
+
 });
 
 app.get('/article/:id', function(req, res) {
@@ -45,7 +54,7 @@ app.get('/articles/add', (req, res)=>{
 	res.render('add_article', {page: 'new'});
 });
 app.post('/articles/add', (req, res)=>{
-	let article = new Article({title: req.body.title, description:req.body.description, body: req.body.body});
+	let article = new Article({title: req.body.title, description:req.body.description, body: req.body.body, created: req.body.created});
 	article.save((err)=>{
 		if (err){
 			console.log(err);

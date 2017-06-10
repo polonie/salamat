@@ -3,4 +3,5 @@ block content
 	h1= article.title
 	h3= article.description
 	p= article.body
-	a(href='/article/edit/' + article._id) Редактировать
+	span= article.created
+	a.btn.btn-default(href='/article/edit/' + article._id) Редактировать
