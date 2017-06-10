@@ -27,12 +27,9 @@ app.post('/article/edit/:id', function(req, res) {
 	article.title = req.body.title;
 	article.description = req.body.description;
 	article.body = req.body.body;
-	let query = {_id: req.params.id};
-	Article.findOneAndUpdate(query, {$set: article}, function(err, article) {
+	Article.findByIdAndUpdate(req.params.id, {$set: article}, function(err, article) {
 		res.redirect('/articles');
 	});
-
-
 });
 
 app.get('/article/:id', function(req, res) {
