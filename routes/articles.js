@@ -38,10 +38,8 @@ router.get('/edit/:id', function(req, res) {
 	});
 });
 router.post('/edit/:id', function(req, res) {
-	let article = {};
-	article.title = req.body.title;
-	article.description = req.body.description;
-	article.body = req.body.body;
+	let {title, description, body} = req.body;
+	let article = {title, description, body};
 	Article.findByIdAndUpdate(req.params.id, {$set: article}, function(err, article) {
 		res.redirect('/articles');
 	});
