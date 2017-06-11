@@ -16,7 +16,9 @@ const {checkLink, links, floors, categories, footer} = require('./db/data/data')
 
 var _data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links, categories, footer};
 
-
+app.get('/add', function(req, res) {
+	res.render('add_article');
+});
 let articles = require('./routes/articles');
 app.use('/articles', articles);
 
