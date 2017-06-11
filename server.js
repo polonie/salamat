@@ -17,61 +17,9 @@ const {checkLink, links, floors, categories, footer} = require('./db/data/data')
 
 var _data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links, categories, footer};
 
-app.get('/article/edit/:id', function(req, res) {
-	Article.findById(req.params.id, function(err, article) {
-		res.render('edit_article', {article});
-	});
-});
 
-app.post('/article/edit/:id', function(req, res) {
-	let article = {};
-	article.title = req.body.title;
-	article.description = req.body.description;
-	article.body = req.body.body;
-	Article.findByIdAndUpdate(req.params.id, {$set: article}, function(err, article) {
-		res.redirect('/articles');
-	});
-});
-
-app.delete('/article/:id', function(req, res) {
-	Article.remove(req.params.id, function(err) {
-		res.send('Success');
-	});
-});
-
-app.get('/article/:id', function(req, res) {
-	Article.findById(req.params.id, function(err, article) {
-		res.render('article', {article});
-	});
-});
-
-
-
-app.get('/drop/article', (req, res)=>{
-	Article.remove({}, function(err, result) {
-		res.redirect('/articles');
-	});
-})
-
-app.get('/articles/add', (req, res)=>{
-	res.render('add_article', {page: 'new'});
-});
-app.post('/articles/add', (req, res)=>{
-	let article = new Article({title: req.body.title, description:req.body.description, body: req.body.body});
-	article.save((err)=>{
-		if (err){
-			console.log(err);
-		}else{
-			res.redirect('/articles');
-		}
-	})
-});
-
-app.get('/articles', (req, res)=>{
-	Article.find({}, (err, articles)=>{
-		res.render('articles', {articles, page: 'list'})
-	});
-});
+let articles = require('./routes/articles');
+app.use('/articles', articles);
 
 app.use('/newplan', (req, res)=>{
 	res.render('newplan');

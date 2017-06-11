@@ -4,7 +4,7 @@ block content
 			.col-lg-6.col-md-8.col-sm-12
 				h1 Редактирование записи
 				br
-				form(method='POST' action='/article/edit/' + article.id)
+				form(method='POST' action='/articles/edit/' + article.id)
 					.form-group
 						label Заголовок
 						input.form-control(name='title' type='text' value=article.title)
