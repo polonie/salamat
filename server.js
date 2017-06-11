@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('./db/mongoose');
+const path = require('path');
 
 const app = express();
 const port = process.env.PORT;
@@ -9,18 +10,13 @@ app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(express.static('public'));
-app.use('/articles', express.static('public'));
-app.use('/articles/edit', express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')))
+app.use('/articles', express.static(path.join(__dirname, 'public')))
+app.use('/articles/edit', express.static(path.join(__dirname, 'public')))
 
 const Category = require('./db/mongoose').Category;
 const {Boutique} = require('./models/Boutique');
 const {Article} = require('./models/Article');
-
-
-
-
-
 
 // var numbofpages;
 
