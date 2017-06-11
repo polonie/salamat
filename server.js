@@ -1,16 +1,22 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('./db/mongoose');
+
+const Category = require('./db/mongoose').Category;
+const {Boutique} = require('./models/Boutique');
+const {Article} = require('./models/Article');
+
+const port = process.env.PORT;
 const app = express();
-const path = require('path');
-var mongoose = require('./db/mongoose');
-var Category = require('./db/mongoose').Category;
-var {Boutique} = require('./models/Boutique');
-var {Article} = require('./models/Article');
+
+app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.set('view engine', 'pug');
-app.use(express.static(path.join(__dirname, 'public')))
-const port = process.env.PORT || 3000;
+
+app.use(express.static('public'));
+app.use('/articles', express.static('public'));
+app.use('/articles/:some', express.static('public'));
+
 // var numbofpages;
 
 const {checkLink, links, floors, categories, footer} = require('./db/data/data');
