@@ -13,8 +13,7 @@ router.get('/add', (req, res)=>{
 	res.render('add_article', {page: 'new'});
 });
 router.post('/add', (req, res)=>{
-	let article = {title, description, body} = req.body
-	// let article = new Article({title: req.body.title, description:req.body.description, body: req.body.body});
+	let article = new Article({title: req.body.title, description:req.body.description, body: req.body.body});
 	article.save((err)=>{
 		if (err){
 			console.log(err);
