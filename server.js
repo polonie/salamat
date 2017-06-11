@@ -15,7 +15,6 @@ app.use(bodyParser.json());
 
 app.use(express.static('public'));
 app.use('/articles', express.static('public'));
-app.use('/articles/:some', express.static('public'));
 
 // var numbofpages;
 
