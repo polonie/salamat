@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const path = require('path');
 var mongoose = require('./db/mongoose');
 var Category = require('./db/mongoose').Category;
 var {Boutique} = require('./models/Boutique');
@@ -8,7 +9,7 @@ var {Article} = require('./models/Article');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.set('view engine', 'pug');
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.resolve('./public')));
 const port = process.env.PORT || 3000;
 // var numbofpages;
 
@@ -16,9 +17,6 @@ const {checkLink, links, floors, categories, footer} = require('./db/data/data')
 
 var _data = {lvl1: mongoose.lvl1, lvl2: mongoose.lvl2, lvl3: mongoose.lvl3, links, categories, footer};
 
-app.get('/add', function(req, res) {
-	res.render('add_article');
-});
 let articles = require('./routes/articles');
 app.use('/articles', articles);
 
