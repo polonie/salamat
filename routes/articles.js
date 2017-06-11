@@ -28,7 +28,7 @@ router.get('/:id', function(req, res) {
 	});
 });
 router.delete('/:id', function(req, res) {
-	Article.remove(req.params.id, function(err) {
+	Article.remove({_id: req.params.id}, function(err) {
 		res.send('Success');
 	});
 });
