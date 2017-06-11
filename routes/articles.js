@@ -12,6 +12,26 @@ router.get('/', (req, res)=>{
 router.get('/add', (req, res)=>{
 	res.render('add_article', {page: 'new'});
 });
+router.post('/add', (req, res)=>{
+	let article = new Article({title: req.body.title, description:req.body.description, body: req.body.body});
+	article.save((err)=>{
+		if (err){
+			console.log(err);
+		}else{
+			res.redirect('/articles');
+		}
+	})
+});
+router.get('/:id', function(req, res) {
+	Article.findById(req.params.id, function(err, article) {
+		res.render('article', {article});
+	});
+});
+router.delete('/:id', function(req, res) {
+	Article.remove(req.params.id, function(err) {
+		res.send('Success');
+	});
+});
 router.get('/edit/:id', function(req, res) {
 	Article.findById(req.params.id, function(err, article) {
 		res.render('edit_article', {article});
@@ -26,31 +46,12 @@ router.post('/edit/:id', function(req, res) {
 		res.redirect('/articles');
 	});
 });
-router.delete('/:id', function(req, res) {
-	Article.remove(req.params.id, function(err) {
-		res.send('Success');
-	});
-});
-router.get('/:id', function(req, res) {
-	Article.findById(req.params.id, function(err, article) {
-		res.render('article', {article});
-	});
-});
 router.get('/drop', (req, res)=>{
 	Article.remove({}, function(err, result) {
 		res.redirect('/articles');
 	});
 })
 
-router.post('/add', (req, res)=>{
-	let article = new Article({title: req.body.title, description:req.body.description, body: req.body.body});
-	article.save((err)=>{
-		if (err){
-			console.log(err);
-		}else{
-			res.redirect('/articles');
-		}
-	})
-});
+
 
 module.exports = router;
