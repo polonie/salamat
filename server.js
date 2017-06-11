@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 
 app.use(express.static('public'));
 app.use('/articles', express.static('public'));
+app.use('/articles/edit', express.static('public'));
 
 const Category = require('./db/mongoose').Category;
 const {Boutique} = require('./models/Boutique');
