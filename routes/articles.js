@@ -2,6 +2,16 @@ const express = require('express');
 const {Article} = require('../models/Article');
 const router = express.Router();
 
+
+router.get('/', (req, res)=>{
+	Article.find({}, (err, articles)=>{
+		res.render('articles', {articles, page: 'list'})
+	});
+});
+
+router.get('/add', (req, res)=>{
+	res.render('add_article', {page: 'new'});
+});
 router.get('/edit/:id', function(req, res) {
 	Article.findById(req.params.id, function(err, article) {
 		res.render('edit_article', {article});
@@ -31,9 +41,7 @@ router.get('/drop', (req, res)=>{
 		res.redirect('/articles');
 	});
 })
-router.get('/add', (req, res)=>{
-	res.render('add_article', {page: 'new'});
-});
+
 router.post('/add', (req, res)=>{
 	let article = new Article({title: req.body.title, description:req.body.description, body: req.body.body});
 	article.save((err)=>{
@@ -44,9 +52,5 @@ router.post('/add', (req, res)=>{
 		}
 	})
 });
-router.get('/', (req, res)=>{
-	Article.find({}, (err, articles)=>{
-		res.render('articles', {articles, page: 'list'})
-	});
-});
+
 module.exports = router;
