@@ -9,7 +9,8 @@ var {Article} = require('./models/Article');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.set('view engine', 'pug');
-app.use(express.static(path.resolve('./public')));
+app.use(express.static('public'));
+app.use('/articles', express.static(path.join(__dirname, 'public')));
 const port = process.env.PORT || 3000;
 // var numbofpages;
 
