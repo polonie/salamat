@@ -15,6 +15,7 @@ app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/articles', express.static(path.join(__dirname, 'public')));
+app.use('/users', express.static(path.join(__dirname, 'public')));
 app.use('/articles/edit', express.static(path.join(__dirname, 'public')));
 
 app.use(session({
