@@ -18,7 +18,7 @@ const Category = require('./db/mongoose').Category;
 const {Boutique} = require('./models/Boutique');
 const {Article} = require('./models/Article');
 
-// var numbofpages;
+var numbofpages;
 
 const {checkLink, links, floors, categories, footer} = require('./db/data/data');
 
