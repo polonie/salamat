@@ -42,6 +42,7 @@ router.post('/edit/:id', function(req, res) {
 	let {title, description, body} = req.body;
 	let article = {title, description, body};
 	Article.findByIdAndUpdate(req.params.id, {$set: article}, function(err, article) {
+		req.flash('success', 'Новость обновлена');
 		res.redirect('/articles');
 	});
 });

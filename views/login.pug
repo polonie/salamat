@@ -1,0 +1,14 @@
+extends articles_layout
+block content
+	.container
+			.col-lg-6.col-md-8.col-sm-12
+				h1 Вход
+				br
+				form(method='POST' action='/users/login')
+					.form-group
+						label Имя пользователя
+						input.form-control(name='username' type='text')
+					.form-group
+						label Пароль
+						input.form-control(name='password' type='password')
+					input.btn.btn-primary(type='submit' value='Зарегистрировать')
