@@ -1,0 +1,17 @@
+extends articles_layout
+block content
+	.container
+			.col-lg-6.col-md-8.col-sm-12
+				h1 Регистрация
+				br
+				form(method='POST' action='/users/register')
+					.form-group
+						label Заголовок
+						input.form-control(name='username' type='text')
+					.form-group
+						label Email
+						input.form-control(name='email' type='text')
+					.form-group
+						label Пароль
+						input.form-control(name='password' type='text')
+					input.btn.btn-primary(type='submit' value='Зарегистрировать')
