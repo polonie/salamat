@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('./db/mongoose');
 const path = require('path');
+const expressValidator = require('express-validator');
+const session = require('express-session')
 
 const app = express();
 const port = process.env.PORT;
@@ -10,9 +12,38 @@ app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, 'public')))
-app.use('/articles', express.static(path.join(__dirname, 'public')))
-app.use('/articles/edit', express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/articles', express.static(path.join(__dirname, 'public')));
+app.use('/articles/edit', express.static(path.join(__dirname, 'public')));
+
+app.use(session({
+	secret: 'keyboard cat',
+	resave: true,
+	saveUninitialized: true
+}));
+
+app.use(require('connect-flash')());
+app.use(function (req, res, next) {
+	res.locals.messages = require('express-messages')(req, res);
+	next();
+});
+
+app.use(expressValidator({
+	errorFormatter: function(param, msg, value) {
+			var namespace = param.split('.')
+			, root    = namespace.shift()
+			, formParam = root;
+
+		while(namespace.length) {
+			formParam += '[' + namespace.shift() + ']';
+		}
+		return {
+			param : formParam,
+			msg   : msg,
+			value : value
+		};
+	}
+}));
 
 const Category = require('./db/mongoose').Category;
 const {Boutique} = require('./models/Boutique');

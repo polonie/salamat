@@ -18,6 +18,7 @@ router.post('/add', (req, res)=>{
 		if (err){
 			console.log(err);
 		}else{
+			req.flash('success', 'Новость добавлена');
 			res.redirect('/articles');
 		}
 	})
