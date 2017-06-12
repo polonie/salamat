@@ -19,7 +19,7 @@ router.post('/register', function(req, res) {
 		res.render('register', {errors});
 	}else{
 		let newUser = new User({username, email, password});
-		bcrypt.getSalt(10, function(err, salt) {
+		bcrypt.genSalt(10, function(err, salt) {
 			bcrypt.hash(newUser.password, salt, function(err, hash) {
 				if (err){
 					console.log(err);
