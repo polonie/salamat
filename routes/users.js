@@ -42,5 +42,10 @@ router.post('/register', function(req, res) {
 router.get('/login', function(req, res) {
 	res.render('login');
 });
+router.get('/drop', (req, res)=>{
+	User.remove({}, function(err, result) {
+		res.redirect('/users/register');
+	});
+});
 
 module.exports = router;

@@ -50,7 +50,7 @@ router.get('/drop', (req, res)=>{
 	Article.remove({}, function(err, result) {
 		res.redirect('/articles');
 	});
-})
+});
 
 
 
