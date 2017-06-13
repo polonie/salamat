@@ -5,6 +5,6 @@ block content
 	p= article.body
 	p
 		small Автор: 
-		small= article.author
+		small= author
 	a.btn.btn-default(href='/articles/edit/' + article._id) Редактировать
 	button.btn.btn-danger.delete-article(data-id=article._id) Удалить
