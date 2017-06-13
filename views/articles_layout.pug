@@ -28,8 +28,10 @@ html(lang='en')
 					ul.nav.navbar-nav.navbar-right
 						if user
 							li
+								a= user.name
+							li
 								a(href='/users/logout') Выйти
-							li= user.name
+							
 						else
 							li
 								a(href='/users/login') Войти
