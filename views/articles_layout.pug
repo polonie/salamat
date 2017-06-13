@@ -21,13 +21,15 @@ html(lang='en')
 							a(href='/home') Главная
 						li
 							if page == 'list'
-								a(href='/articles/add') Добавить запись
+								if user
+									a(href='/articles/add') Добавить запись
 							else
 								a(href='/articles') Все записи
 					ul.nav.navbar-nav.navbar-right
 						if user
 							li
 								a(href='/users/logout') Выйти
+							li= user.name
 						else
 							li
 								a(href='/users/login') Войти
