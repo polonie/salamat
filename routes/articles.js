@@ -10,7 +10,7 @@ router.get('/', (req, res)=>{
 	});
 });
 
-router.get('/add', (req, res)=>{
+router.get('/add', ensureAuthenticated, (req, res)=>{
 	res.render('add_article', {page: 'new'});
 });
 router.post('/add', (req, res)=>{
@@ -44,7 +44,7 @@ router.delete('/:id', function(req, res) {
 		res.send('Success');
 	});
 });
-router.get('/edit/:id', function(req, res) {
+router.get('/edit/:id', ensureAuthenticated, function(req, res) {
 	Article.findById(req.params.id, function(err, article) {
 		res.render('edit_article', {article});
 	});
@@ -63,6 +63,14 @@ router.get('/drop', (req, res)=>{
 	});
 });
 
+function ensureAuthenticated(req, res, next) {
+	if (req.isAuthenticated()){
+		return next();
+	}else{
+			req.flash('Пожалуйста, войдите под своей учетной записью');
+			res.rediret('/user/login');
+	}
+};
 
 
 module.exports = router;
