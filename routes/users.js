@@ -51,6 +51,10 @@ router.post('/login', function(req, res, next) {
 		failureFlash: true
 	})(req, res, next);
 });
+router.get('/logout', function(req, res) {
+	req.logout();
+	res.redirect('/users/login');
+});
 router.get('/drop', (req, res)=>{
 	User.remove({}, function(err, result) {
 		res.redirect('/users/register');

@@ -24,6 +24,14 @@ html(lang='en')
 								a(href='/articles/add') Добавить запись
 							else
 								a(href='/articles') Все записи
+					ul.nav.navbar-nav.navbar-right
+						if user
+							li
+								a(href='/users/logout') Выйти
+						else
+							li
+								a(href='/users/login') Войти
+
 		.container
 			!= messages('message', local)
 			if errors
