@@ -4,7 +4,7 @@ block content
 	h4= article.description
 	p= article.body
 	p
-		span Создан: 
-		span= article.created
+		small Автор: 
+		small= article.author
 	a.btn.btn-default(href='/articles/edit/' + article._id) Редактировать
 	button.btn.btn-danger.delete-article(data-id=article._id) Удалить

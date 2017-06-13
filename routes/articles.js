@@ -20,7 +20,7 @@ router.post('/add', (req, res)=>{
 	if (errors){
 		res.render('add_article', {errors});
 	}else{
-		let article = new Article({title: req.body.title, description:req.body.description, body: req.body.body});
+		let article = new Article({title: req.body.title, description:req.body.description, body: req.body.body, author: req.user._id});
 		article.save((err)=>{
 			if (err){
 				console.log(err);
