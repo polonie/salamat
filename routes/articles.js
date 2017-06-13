@@ -11,7 +11,7 @@ router.get('/', (req, res)=>{
 });
 
 router.get('/add', ensureAuthenticated, (req, res)=>{
-	res.render('add_article', {page: 'new'});
+	res.render('add_article');
 });
 router.post('/add', (req, res)=>{
 	req.checkBody('title', 'Необходимо ввести заголовок').notEmpty();
@@ -40,12 +40,25 @@ router.get('/:id', function(req, res) {
 	});
 });
 router.delete('/:id', function(req, res) {
-	Article.remove({_id: req.params.id}, function(err) {
-		res.send('Success');
+	if(!req.user._id){
+		res.status(500).send();
+	}
+	Article.findById(req.params.id, function(err, article) {
+		if (article.author != req.user._id){
+			res.status(500).send();
+		}else{
+			Article.remove({_id: req.params.id}, function(err) {
+				res.send('Success');
+			});
+		}
 	});
 });
 router.get('/edit/:id', ensureAuthenticated, function(req, res) {
 	Article.findById(req.params.id, function(err, article) {
+		if (article.author != req.user._id){
+			req.flash('danger', 'Пожалуйста, авторизуйтесь');
+			res.redirect('/articles');
+		}
 		res.render('edit_article', {article});
 	});
 });
