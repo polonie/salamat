@@ -13,15 +13,23 @@ router.get('/add', (req, res)=>{
 	res.render('add_article', {page: 'new'});
 });
 router.post('/add', (req, res)=>{
-	let article = new Article({title: req.body.title, description:req.body.description, body: req.body.body});
-	article.save((err)=>{
-		if (err){
-			console.log(err);
-		}else{
-			req.flash('success', 'Новость добавлена');
-			res.redirect('/articles');
-		}
-	})
+	req.checkBody('title', 'Необходимо ввести заголовок').notEmpty();
+	req.checkBody('description', 'Необходимо ввести краткое описание').notEmpty();
+	req.checkBody('body', 'Необходимо ввести текст статьи').notEmpty();
+	let errors = req.validationErrors();
+	if (errors){
+		res.render('add_article', {errors});
+	}else{
+		let article = new Article({title: req.body.title, description:req.body.description, body: req.body.body});
+		article.save((err)=>{
+			if (err){
+				console.log(err);
+			}else{
+				req.flash('success', 'Новость добавлена');
+				res.redirect('/articles');
+			}
+		});
+	}
 });
 router.get('/:id', function(req, res) {
 	Article.findById(req.params.id, function(err, article) {

@@ -13,6 +13,9 @@ let articleSchema = mongoose.Schema({
 		type: String,
 		required: true
 	},
+	author: {
+		type: String
+	},
 	created: {
 		type: Date,
 		default: Date.now
