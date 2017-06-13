@@ -3,8 +3,8 @@ const bodyParser = require('body-parser');
 const mongoose = require('./db/mongoose');
 const path = require('path');
 const expressValidator = require('express-validator');
+const passport = require('passport');
 const session = require('express-session')
-const flash = require('connect-flash');
 
 const app = express();
 const port = process.env.PORT;
@@ -46,6 +46,10 @@ app.use(expressValidator({
 		};
 	}
 }));
+
+require('./config/passport')(passport);
+app.use(passport.initialize());
+app.use(passport.session());
 
 const Category = require('./db/mongoose').Category;
 const {Boutique} = require('./models/Boutique');

@@ -1,10 +1,11 @@
 var mongoose = require('mongoose');
+const config = require('../config/database');
 var categorySchema = new mongoose.Schema({index: String, id: String, idparent: String, name: String, count: String, idgrand: String});
 var Category = mongoose.model('Category',categorySchema);
 var lvl1 = [], lvl2 = [], lvl3 = [];
 mongoose.Promise = global.Promise;
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Salamat', function(){
+mongoose.connect(config.database, function(){
 	console.log('Connected to database');
 	Category.find({}).then((docs)=>{
 		docs.forEach((item, i, arr)=>{
