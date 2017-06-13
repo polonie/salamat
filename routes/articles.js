@@ -1,5 +1,6 @@
 const express = require('express');
 const {Article} = require('../models/Article');
+const {User} = require('../models/User');
 const router = express.Router();
 
 
@@ -33,7 +34,9 @@ router.post('/add', (req, res)=>{
 });
 router.get('/:id', function(req, res) {
 	Article.findById(req.params.id, function(err, article) {
-		res.render('article', {article});
+		User.findById(article.author, function(err, user) {
+			res.render('article', {article, author: user.name});
+		});
 	});
 });
 router.delete('/:id', function(req, res) {
