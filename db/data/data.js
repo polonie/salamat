@@ -1,5 +1,5 @@
 const checkLink = {home: true, rent: true, newplan: true, company: true, contacts: true};
-const links = [{link: 'home', linktitle: 'Главная'}, {link: '#', linktitle: 'Новости'}, {link: 'rent', linktitle: 'Аренда'}, {link: 'newplan', linktitle: 
+const links = [{link: 'home', linktitle: 'Главная'}, {link: 'articles', linktitle: 'Новости'}, {link: 'rent', linktitle: 'Аренда'}, {link: 'newplan', linktitle: 
 'План'}, {link: 'company', linktitle: 'О нас'}, {link: 'contacts', linktitle: 'Контакты'}];
 const floors = [
 		{
