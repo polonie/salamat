@@ -5,9 +5,10 @@ const router = express.Router();
 
 
 router.get('/', (req, res)=>{
-	Article.find({}, sort({created: -1}).exec((err, articles)=>{
-		res.render('articles', {articles, page: 'list'})
-	}));
+	Article.find({}).sort({date: -1})
+		.exec(function(err, articles) {
+			res.render('articles', {articles, page: 'list'});
+		});
 });
 
 router.get('/add', ensureAuthenticated, (req, res)=>{
