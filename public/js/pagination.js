@@ -5,7 +5,7 @@ var ready = ()=>{
 	pages.onclick = (e)=>{
 		if (e.target.matches('.page-item')){
 			var pageNumb = e.target.getAttribute('data-page');
-			window.location.href = `/boutiques?pagenumber=${pageNumb}&categoryID=${dataID}&pages=${data-pages}`;
+			window.location.href = `/boutiques?pagenumber=${pageNumb}&categoryID=${dataID}&pages=${data_pages}`;
 		};
 	};
 };
