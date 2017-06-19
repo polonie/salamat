@@ -59,7 +59,7 @@ app.get('*', function(req, res, next) {
 const Category = require('./db/mongoose').Category;
 const {Boutique} = require('./models/Boutique');
 
-var numbofpages;
+// var numbofpages;
 
 const {checkLink, links, floors, categories, footer} = require('./db/data/data');
 
@@ -119,15 +119,15 @@ app.use('/category', (req,res)=>{
 			data.categoryID = categoryID;
 			res.render('boutiques', data);
 		});
-
 	})
 })
 
 
 app.use('/boutiques', (req, res)=>{
-	var page = +req.query.pagenumber;
-	var categoryID = req.query.categoryID;
-	var offset = (page - 1) * 10;
+	const page = +req.query.pagenumber;
+	const pages = +req.query.pages;
+	const categoryID = req.query.categoryID;
+	const offset = (page - 1) * 10;
 	Boutique
 		.find({total: new RegExp(categoryID, "i")})
 		.skip(offset)
@@ -137,52 +137,52 @@ app.use('/boutiques', (req, res)=>{
 			var data = _data;
 			data.docs = docs;
 			data.page = page;
-			data.pages = numbofpages;
+			data.pages = pages;
 			data.categoryID = categoryID;
 			res.render('boutiques', data);
 		});
 });
 
 
-app.use('/editboutique', (req, res)=>{
-	var query = req.query, findQueries={}, updateQueries={};
-	console.log(query);
-	for(key in query){
-		if (key !== 'newvalue' && key!=='field'){
-			findQueries[key]= query[key];
-		}else if(key!=='field'){
-			updateQueries[query.field] = req.query[key];
-		}
-	};
-	Boutique.findOneAndUpdate(findQueries, {$set:updateQueries}, {new:true})
-		.then((doc)=>{
-			res.send(doc);
-		}, (err)=>{
-			res.send(err);
-		});
-});
+// app.use('/editboutique', (req, res)=>{
+// 	var query = req.query, findQueries={}, updateQueries={};
+// 	console.log(query);
+// 	for(key in query){
+// 		if (key !== 'newvalue' && key!=='field'){
+// 			findQueries[key]= query[key];
+// 		}else if(key!=='field'){
+// 			updateQueries[query.field] = req.query[key];
+// 		}
+// 	};
+// 	Boutique.findOneAndUpdate(findQueries, {$set:updateQueries}, {new:true})
+// 		.then((doc)=>{
+// 			res.send(doc);
+// 		}, (err)=>{
+// 			res.send(err);
+// 		});
+// });
 
 
-app.use('/docedit', (req, res)=>{
-	var obj = req.query, findQueries={}, updateQueries={};
-	for(key in obj){
-		if (key!='salamat' && key!='salon' && key!='name'){
-			if (key =='newsalon'){
-				updateQueries.salon = obj[key];
-			}else{
-				updateQueries[key] = obj[key];
-			}
-		}else{
-			findQueries[key]= obj[key];
-		}
-	};
-	Boutique.findOneAndUpdate(findQueries, {$set:updateQueries}, {new:true})
-		.then((doc)=>{
-			res.send(doc);
-		}, (err)=>{
-			res.send(err);
-		});
-});
+// app.use('/docedit', (req, res)=>{
+// 	var obj = req.query, findQueries={}, updateQueries={};
+// 	for(key in obj){
+// 		if (key!='salamat' && key!='salon' && key!='name'){
+// 			if (key =='newsalon'){
+// 				updateQueries.salon = obj[key];
+// 			}else{
+// 				updateQueries[key] = obj[key];
+// 			}
+// 		}else{
+// 			findQueries[key]= obj[key];
+// 		}
+// 	};
+// 	Boutique.findOneAndUpdate(findQueries, {$set:updateQueries}, {new:true})
+// 		.then((doc)=>{
+// 			res.send(doc);
+// 		}, (err)=>{
+// 			res.send(err);
+// 		});
+// });
 
 app.use('/boutique', (req, res)=>{
 	Boutique.find({salamat: req.query.data_salamat, salon: req.query.data_salon}, (err, docs)=>{
@@ -203,29 +203,29 @@ app.use('/boutique', (req, res)=>{
 	});
 });
 
-app.get('/findboutique', (req,res)=>{
-	if (Object.keys(req.query).length === 0){
-		res.render('findboutique');
-	}else{
-		console.log(req.query);
-		var salamat = req.query.salamat;
-		var salon = req.query.salon;
-		var data;
-		Boutique.find({salamat, salon}).
-			then(
-				(docs)=>{
-					if (docs){
-						data = {docs};
-					}else{
-						data = {message: 'Ничего не найдено'};
-					}
-					res.render('editboutique', data);
-				}, (err)=>{
-					res.redirect('/');
-				}
-			);
-	};
-})
+// app.get('/findboutique', (req,res)=>{
+// 	if (Object.keys(req.query).length === 0){
+// 		res.render('findboutique');
+// 	}else{
+// 		console.log(req.query);
+// 		var salamat = req.query.salamat;
+// 		var salon = req.query.salon;
+// 		var data;
+// 		Boutique.find({salamat, salon}).
+// 			then(
+// 				(docs)=>{
+// 					if (docs){
+// 						data = {docs};
+// 					}else{
+// 						data = {message: 'Ничего не найдено'};
+// 					}
+// 					res.render('editboutique', data);
+// 				}, (err)=>{
+// 					res.redirect('/');
+// 				}
+// 			);
+// 	};
+// });
 
 app.use('/:page?', (req, res, next)=>{
 	var page = req.params.page, data = _data;
