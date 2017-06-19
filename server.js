@@ -59,7 +59,6 @@ app.get('*', function(req, res, next) {
 const Category = require('./db/mongoose').Category;
 const {Boutique} = require('./models/Boutique');
 
-// var numbofpages;
 
 const {checkLink, links, floors, categories, footer} = require('./db/data/data');
 
