@@ -82,7 +82,7 @@ function ensureAuthenticated(req, res, next) {
 		return next();
 	}else{
 			req.flash('Пожалуйста, войдите под своей учетной записью');
-			res.rediret('/user/login');
+			res.redirect('/user/login');
 	}
 };
 
